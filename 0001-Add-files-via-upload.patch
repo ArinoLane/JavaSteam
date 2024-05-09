@@ -1,0 +1,477 @@
+From b70934e42502029a652458b530c2a9312667f603 Mon Sep 17 00:00:00 2001
+From: ReDThunDeR33 <mdarko190@gmail.com>
+Date: Fri, 10 May 2024 01:20:01 +0600
+Subject: [PATCH] Add files via upload
+
+---
+ RegisterFrame.java | 147 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ admin.java         | 119 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ create.java        | 152 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ start.java         |  13 +++++++++++++
+ 4 files changed, 431 insertions(+)
+ create mode 100644 RegisterFrame.java
+ create mode 100644 admin.java
+ create mode 100644 create.java
+ create mode 100644 start.java
+
+diff --git a/RegisterFrame.java b/RegisterFrame.java
+new file mode 100644
+index 0000000..f47d4bf
+--- /dev/null
++++ b/RegisterFrame.java
+@@ -0,0 +1,147 @@
++import java.lang.*;
++import javax.swing.*;
++import java.awt.*;
++import java.awt.event.*;
++
++public class RegisterFrame extends JFrame implements ActionListener
++{
++	JPanel panel;
++	JLabel namelabel, passlabel,imglabel,adminp;
++	JTextField namefield;
++	JPasswordField passfield;
++	JButton signBut,CreatAccnount,adminbtn;
++	JButton signupbtn, backbtn;
++	ImageIcon img;
++	JScrollPane scrollPane;
++	
++
++	public RegisterFrame()
++	{
++		super("LOG IN");
++		
++		this.setSize(500,700);
++		this.setLocation(550,100);
++		//this.setLayout(null);
++		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
++
++		panel = new JPanel ();
++		panel.setLayout(null);
++		panel.setBackground(new Color(25,28,35));
++		panel.setBounds(0,0,500,500);
++
++		// JScrollPane scrollPanel = new JScrollPane(panel, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
++		// scrollPanel.setBounds(0, 0, 487,500); // ekhane 500 pojronto dekhabe.eta panel er o setBounds karon panel etar modde dukano ase.
++		// panel.setPreferredSize(new Dimension(500, 900)); //ekhane 900 porjonto jabe but dekhabe sudu 500 porjonto. ami scrole kore 900 porjonto jet parbo.
++
++
++		JLabel signIntext = new JLabel("Sign in");
++		signIntext.setBounds(180,50,150,100);
++		signIntext.setForeground(new Color(250,250,250));
++		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
++		panel.add(signIntext);
++
++		/*panelSlid = new JPanel();
++		panelSlid.setLayout(null);
++		panelSlid.setBounds(12,12,50,50);
++		panelSlid.setBackground(Color.WHITE);
++		panelSlid.setVisible(true);
++		this.add(panelSlid);*/
++
++
++		JLabel creatNew = new JLabel("New to Steam?");
++		creatNew.setBounds(190,490,120,30);
++		creatNew.setForeground(new Color(250,250,250));
++		creatNew.setFont(new Font("Arial", Font.BOLD, 15));
++		panel.add(creatNew);
++		
++		JLabel adminp = new JLabel("Log As Admin");
++		adminp.setBounds(190,420,120,30);
++		adminp.setForeground(new Color(250,250,250));
++		adminp.setFont(new Font("Arial", Font.BOLD, 15));
++		panel.add(adminp);
++
++		namelabel = new JLabel ("SING IN WITH ACCOUNT NAME");
++		namelabel.setBounds(140,180,195,30);
++		namelabel.setForeground(new Color(27,151,255));
++		panel.add(namelabel);
++		
++		namefield = new JTextField();
++		namefield.setBounds(140,205,195,30);
++		namefield.setBackground(new Color(232,240,254));
++		panel.add(namefield);
++		
++		adminbtn = new JButton("Log In");
++		adminbtn.setBounds(140, 450, 195, 30);
++		adminbtn.setForeground(new Color(250,250,250));
++		adminbtn.setFont(new Font("Arial", Font.PLAIN, 15));
++		adminbtn.setBackground(new Color(7, 187, 255));
++		adminbtn.addActionListener(this);
++		adminbtn.setOpaque(true);
++		panel.add(adminbtn);
++		
++		passlabel = new JLabel ("PASSWORD");
++		passlabel.setForeground(new Color(27,151,255));
++		passlabel.setBounds(140,260,195,30);
++		panel.add(passlabel);
++		
++		passfield = new JPasswordField();
++		passfield.setBounds(140,285,195,30);
++		passfield.setBackground(new Color(232,240,254));
++		passfield.setEchoChar('•');
++		panel.add(passfield);
++		
++		JCheckBox box = new JCheckBox("REMEMBER ME");
++		box.setBounds(140, 330, 100,20);
++		box.setFont(new Font("Arial", Font.PLAIN, 10));
++		panel.add(box);
++		
++		signBut = new JButton ("Sign up");
++		signBut.setBounds(140, 350, 195, 30);
++		signBut.setForeground(new Color(250,250,250));
++		signBut.setFont(new Font("Arial", Font.PLAIN, 15));
++		signBut.setBackground(new Color(7, 187, 255));
++		signBut.setOpaque(true);
++		panel.add(signBut);
++		
++		CreatAccnount = new JButton ("Creat an account");
++		CreatAccnount.setBounds(140, 525, 195, 30);
++		CreatAccnount.setForeground(new Color(250,250,250));
++		CreatAccnount.setFont(new Font("Arial", Font.PLAIN, 15));
++		CreatAccnount.setBackground(new Color(7, 187, 255));
++		CreatAccnount.setOpaque(true);
++		CreatAccnount.addActionListener(this);
++		panel.add(CreatAccnount);
++		
++	
++		
++		
++		img=new ImageIcon("logo_steam.png");
++		imglabel=new JLabel(img);
++		imglabel.setBounds(150,20,200,50);
++		panel.add(imglabel);
++		
++		this.add(panel);
++        //this.add(scrollPane);
++		//this.add(panel);
++	}
++	public void mouseClicked(MouseEvent me){}
++	public void mousePressed(MouseEvent me){}
++	public void mouseReleased(MouseEvent me){}
++	public void mouseEntered(MouseEvent me){}
++	public void mouseExited(MouseEvent me){}
++	
++	public void actionPerformed(ActionEvent ae){
++		if(ae.getSource()==CreatAccnount){
++			create c1 = new create ();
++			c1.setVisible(true);
++			//this.setVisible(false);
++			
++		}
++		else if (ae.getSource()==adminbtn){
++			
++			admin a1 = new admin ();
++			a1.setVisible(true);
++		}
++	}
++	
++}
+diff --git a/admin.java b/admin.java
+new file mode 100644
+index 0000000..d08c46a
+--- /dev/null
++++ b/admin.java
+@@ -0,0 +1,119 @@
++import java.lang.*;
++import javax.swing.*;
++import java.awt.*;
++import java.awt.event.*;
++
++public class admin extends JFrame implements MouseListener, ActionListener
++
++{
++	JPanel panel;
++	Color mycolor;
++	ImageIcon img;
++	JLabel name,pass,imglabel;
++	JTextField namef;
++	JPasswordField passf,rpassf;
++	JButton loginbtn,backbtn;
++	public admin()
++	{
++		super("Admin Login");
++		this.setSize(500,700);
++		this.setLocation(550,100);
++		
++		mycolor=new Color(25,28,35);
++		
++		panel=new JPanel();
++		panel.setLayout(null);
++		panel.setBackground(mycolor);
++		
++		JLabel createIntext = new JLabel("LOG IN AS ADMIN");
++		createIntext.setBounds(110,100,400,100);
++		createIntext.setForeground(new Color(250,250,250));
++		createIntext.setFont(new Font("Cascadia Code", Font.BOLD, 30));
++		panel.add(createIntext);
++		
++		name=new JLabel("ADMIN NAME");
++		name.setForeground(new Color(250,250,250));
++		name.setOpaque(true);
++		name.setBounds(100, 250, 284, 30);
++		name.setForeground(new Color(27,151,255));
++		name.setBackground(new Color(25,28,35));
++		name.setFont(new Font("Arial",Font.PLAIN, 17));
++		panel.add(name);
++		
++		namef=new JTextField();
++		namef.setBounds(100, 290, 282, 30);
++		panel.add(namef);
++		
++		pass=new JLabel("ENTER PASSWORD");
++		pass.setBounds(100, 370, 282, 30);
++		pass.setForeground(new Color(27,151,255));
++		pass.setBackground(new Color(25,28,35));
++		pass.setFont(new Font("Arial",Font.PLAIN, 17));
++		pass.setOpaque(true);
++		panel.add(pass);
++		
++		passf=new JPasswordField();
++		passf.setBounds(100, 410, 282, 30);
++		passf.setEchoChar('•');
++		panel.add(passf);
++		
++		loginbtn=new JButton("Log In");
++		loginbtn.setBounds(130, 490, 100, 30);
++		loginbtn.setFont(new Font("Arial", Font.PLAIN, 15));
++		loginbtn.setForeground(new Color(250,250,250));
++		loginbtn.setBackground(new Color(7, 187, 255));
++		loginbtn.addMouseListener(this);
++		loginbtn.addActionListener(this);
++		panel.add(loginbtn);
++		
++		backbtn=new JButton("Back");
++		backbtn.setBounds(260,490, 80, 30);
++		backbtn.setForeground(new Color(250,250,250));
++		backbtn.setBackground(new Color(7, 187, 255));
++		backbtn.addMouseListener(this);
++		backbtn.addActionListener(this);
++		panel.add(backbtn);
++		
++		img=new ImageIcon("logo_steam.png");
++		imglabel=new JLabel(img);
++		imglabel.setBounds(150,20,200,50);
++		panel.add(imglabel);
++		
++		this.add(panel);
++	}
++		
++	public void mouseClicked(MouseEvent me){}
++	public void mousePressed(MouseEvent me){}
++	public void mouseReleased(MouseEvent me){}
++	public void mouseEntered(MouseEvent me){}
++	public void mouseExited(MouseEvent me){}
++	
++	public void actionPerformed(ActionEvent ae)
++	{
++		String s1=namef.getText();
++		String s2=passf.getText();
++		
++		if(ae.getSource()==loginbtn)
++		{
++			if(s1.isEmpty()||s2.isEmpty())
++			{
++				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
++			}
++			else{
++			JOptionPane.showMessageDialog(this,"HELLO BOSS");
++			RegisterFrame p1=new RegisterFrame();
++			p1.setVisible(true);
++			this.setVisible(false);
++			}
++		}
++		else if(ae.getSource()==backbtn)
++		{
++			RegisterFrame p1=new RegisterFrame();
++			p1.setVisible(true);
++			this.setVisible(false);
++		}
++	}
++	
++}
++		
++	
+\ No newline at end of file
+diff --git a/create.java b/create.java
+new file mode 100644
+index 0000000..7e42fa9
+--- /dev/null
++++ b/create.java
+@@ -0,0 +1,152 @@
++import java.lang.*;
++import javax.swing.*;
++import java.awt.*;
++import java.awt.event.*;
++
++public class create extends JFrame implements MouseListener, ActionListener
++{
++	JPanel panel;
++	Color mycolor;
++	ImageIcon img;
++	JLabel name,pass,email,rpass,imglabel,createIntext;
++	JTextField namef,emailf;
++	JPasswordField passf,rpassf;
++	JButton createupbtn,backbtn;
++	JCheckBox s1;
++	public create()
++	{
++		super("Create Account");
++		this.setSize(500,700);
++		this.setLocation(550,100);
++		
++		mycolor=new Color(25,28,35);
++		
++		panel=new JPanel();
++		panel.setLayout(null);
++		panel.setBackground(mycolor);
++		
++		JLabel createIntext = new JLabel("CREATE NEW ACCOUNT");
++		createIntext.setBounds(70,100,400,100);
++		createIntext.setForeground(new Color(250,250,250));
++		createIntext.setFont(new Font("Cascadia Code", Font.BOLD, 30));
++		panel.add(createIntext);
++		
++		name=new JLabel("Create A Steam Account Name");
++		name.setForeground(new Color(250,250,250));
++		name.setOpaque(true);
++		name.setBounds(100, 210, 284, 30);
++		name.setForeground(new Color(27,151,255));
++		name.setBackground(new Color(25,28,35));
++		name.setFont(new Font("Arial",Font.PLAIN, 17));
++		panel.add(name);
++		
++		namef=new JTextField();
++		namef.setBounds(100, 250, 282, 30);
++		panel.add(namef);
++		
++		
++		email=new JLabel("Enter Your Email Address");
++		email.setForeground(new Color(250,250,250));
++		email.setOpaque(true);
++		email.setBounds(100, 290, 284, 30);
++		email.setForeground(new Color(27,151,255));
++		email.setBackground(new Color(25,28,35));
++		email.setFont(new Font("Arial",Font.PLAIN, 17));
++		panel.add(email);
++		
++		emailf=new JTextField();
++		emailf.setBounds(100, 330, 282, 30);
++		panel.add(emailf);
++		
++		pass=new JLabel("Choose A Password");
++		pass.setBounds(100, 370, 282, 30);
++		pass.setForeground(new Color(27,151,255));
++		pass.setBackground(new Color(25,28,35));
++		pass.setFont(new Font("Arial",Font.PLAIN, 17));
++		pass.setOpaque(true);
++		panel.add(pass);
++		
++		passf=new JPasswordField();
++		passf.setBounds(100, 410, 282, 30);
++		passf.setEchoChar('•');
++		panel.add(passf);
++		
++		rpass=new JLabel("Re-Enter The Password");
++		rpass.setBounds(100, 450, 282, 30);
++		rpass.setForeground(new Color(27,151,255));
++		rpass.setBackground(new Color(25,28,35));
++		rpass.setFont(new Font("Arial",Font.PLAIN, 17));
++		rpass.setOpaque(true);
++		panel.add(rpass);
++		
++		rpassf=new JPasswordField();
++		rpassf.setBounds(100, 490, 282, 30);
++		rpassf.setEchoChar('•');
++		panel.add(rpassf);
++		
++		createupbtn=new JButton("Create");
++		createupbtn.setBounds(110, 580, 100, 30);
++		createupbtn.setFont(new Font("Arial", Font.PLAIN, 15));
++		createupbtn.setForeground(new Color(250,250,250));
++		createupbtn.setBackground(new Color(7, 187, 255));
++		createupbtn.addMouseListener(this);
++		createupbtn.addActionListener(this);
++		panel.add(createupbtn);
++		
++		backbtn=new JButton("Back");
++		backbtn.setBounds(270, 580, 80, 30);
++		backbtn.setForeground(new Color(250,250,250));
++		backbtn.setBackground(new Color(7, 187, 255));
++		backbtn.addMouseListener(this);
++		backbtn.addActionListener(this);
++		panel.add(backbtn);
++		
++		img=new ImageIcon("logo_steam.png");
++		imglabel=new JLabel(img);
++		imglabel.setBounds(150,20,200,50);
++		panel.add(imglabel);
++		
++		s1 = new JCheckBox("I agree to the terms and privacy policy of Steam");
++		s1.setForeground(new Color(27,151,255));
++		s1.setBackground(new Color(25,28,35));
++		s1.setBounds(100, 540, 500, 20);
++		panel.add(s1);
++		
++		this.add(panel);
++		
++	}
++	public void mouseClicked(MouseEvent me){}
++	public void mousePressed(MouseEvent me){}
++	public void mouseReleased(MouseEvent me){}
++	public void mouseEntered(MouseEvent me){}
++	public void mouseExited(MouseEvent me){}
++	
++	public void actionPerformed(ActionEvent ae)
++	{
++		String s1=namef.getText();
++		String s2=emailf.getText();
++		String s3=passf.getText();
++		String s4=rpassf.getText();
++		
++		if(ae.getSource()==createupbtn)
++		{
++			if(s1.isEmpty()||s2.isEmpty()||s3.isEmpty()||s4.isEmpty())
++			{
++				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
++			}
++			else{
++			JOptionPane.showMessageDialog(this,"SUCCESSFULLY CREATED AN ACCOUNT");
++			RegisterFrame p1=new RegisterFrame();
++			p1.setVisible(true);
++			this.setVisible(false);
++			}
++		}
++		else if(ae.getSource()==backbtn)
++		{
++			RegisterFrame p1=new RegisterFrame();
++			p1.setVisible(true);
++			this.setVisible(false);
++		}
++	}
++	
++}
+\ No newline at end of file
+diff --git a/start.java b/start.java
+new file mode 100644
+index 0000000..ccddb37
+--- /dev/null
++++ b/start.java
+@@ -0,0 +1,13 @@
++import java.lang.*;
++import javax.swing.*;
++
++
++public class start{
++public static void main (String[] args){
++	
++	RegisterFrame R1 = new RegisterFrame();
++	R1.setVisible(true);
++	
++	
++}
++}
+\ No newline at end of file
+--
+libgit2 1.7.2
+
