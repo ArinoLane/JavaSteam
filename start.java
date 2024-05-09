@@ -7,6 +7,7 @@ public static void main (String[] args){
 	
 	RegisterFrame R1 = new RegisterFrame();
 	R1.setVisible(true);
+	//This is a java text
 	
 	
 }
