@@ -9,6 +9,8 @@ public static void main (String[] args){
 	R1.setVisible(true);
 	//This is a java text
 	
+	//test 2 from my pc this time
+	
 	
 }
 }
