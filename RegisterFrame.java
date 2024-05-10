@@ -31,7 +31,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 
 
 
-		JLabel signIntext = new JLabel("Sign in");
+		JLabel signIntext = new JLabel("SIGN IN");
 		signIntext.setBounds(180,50,150,100);
 		signIntext.setForeground(new Color(250,250,250));
 		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
@@ -112,7 +112,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 		panel.add(imglabel);
 		
 		this.add(panel);
-        
+	}
 	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}
