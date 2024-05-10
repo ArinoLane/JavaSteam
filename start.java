@@ -8,7 +8,7 @@ public static void main (String[] args){
 	RegisterFrame R1 = new RegisterFrame();
 	R1.setVisible(true);
 	
-	//xion is gay and loves dick more than any one!
+	
 	
 }
 }
