@@ -29,9 +29,6 @@ public class RegisterFrame extends JFrame implements ActionListener
 		panel.setBackground(new Color(25,28,35));
 		panel.setBounds(0,0,500,500);
 
-		// JScrollPane scrollPanel = new JScrollPane(panel, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		// scrollPanel.setBounds(0, 0, 487,500); // ekhane 500 pojronto dekhabe.eta panel er o setBounds karon panel etar modde dukano ase.
-		// panel.setPreferredSize(new Dimension(500, 900)); //ekhane 900 porjonto jabe but dekhabe sudu 500 porjonto. ami scrole kore 900 porjonto jet parbo.
 
 
 		JLabel signIntext = new JLabel("Sign in");
@@ -40,12 +37,6 @@ public class RegisterFrame extends JFrame implements ActionListener
 		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
 		panel.add(signIntext);
 
-		/*panelSlid = new JPanel();
-		panelSlid.setLayout(null);
-		panelSlid.setBounds(12,12,50,50);
-		panelSlid.setBackground(Color.WHITE);
-		panelSlid.setVisible(true);
-		this.add(panelSlid);*/
 
 
 		JLabel creatNew = new JLabel("New to Steam?");
@@ -121,9 +112,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 		panel.add(imglabel);
 		
 		this.add(panel);
-        //this.add(scrollPane);
-		//this.add(panel);
-	}
+        
 	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}
@@ -134,7 +123,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 		if(ae.getSource()==CreatAccnount){
 			create c1 = new create ();
 			c1.setVisible(true);
-			//this.setVisible(false);
+		
 			
 		}
 		else if (ae.getSource()==adminbtn){
