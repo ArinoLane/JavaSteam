@@ -92,6 +92,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 		signBut.setFont(new Font("Arial", Font.PLAIN, 15));
 		signBut.setBackground(new Color(7, 187, 255));
 		signBut.setOpaque(true);
+		signBut.addActionListener(this);
 		panel.add(signBut);
 		
 		CreatAccnount = new JButton ("Creat an account");
@@ -120,7 +121,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 	public void mouseExited(MouseEvent me){}
 	
 	public void actionPerformed(ActionEvent ae){
-		if(ae.getSource()==CreatAccnount){
+		if(ae.getSource()==CreatAccnount ){
 			create c1 = new create ();
 			c1.setVisible(true);
 		
@@ -130,6 +131,11 @@ public class RegisterFrame extends JFrame implements ActionListener
 			
 			admin a1 = new admin ();
 			a1.setVisible(true);
+		}
+		else if (ae.getSource()==signBut){
+			
+			menu m1 = new menu ();
+			m1.setVisible(true);
 		}
 	}
 	

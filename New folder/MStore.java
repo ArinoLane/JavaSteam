@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MStore extends JFrame implements MouseListener, ActionListener
+public class MStore extends JFrame //implements MouseListener, ActionListener
 
 {
 	JPanel panel;
@@ -104,20 +104,20 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 		confirm.setFont(new Font("Arial", Font.PLAIN, 15));
 		confirm.setForeground(new Color(250,250,250));
 		confirm.setBackground(new Color(7, 187, 255));
-		confirm.addActionListener(this);
+		//confirm.addActionListener(this);
 		panel.add(confirm);
 		
 		backbtn=new JButton("BACK");
 		backbtn.setBounds(300,600, 80, 30);
 		backbtn.setForeground(new Color(250,250,250));
 		backbtn.setBackground(new Color(7, 187, 255));
-		backbtn.addActionListener(this);
+		//backbtn.addActionListener(this);
 		panel.add(backbtn);
 		
 		this.add(panel);
 		
 	}
-	public void mouseClicked(MouseEvent me){}
+	/*public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}
 	public void mouseEntered(MouseEvent me){}
@@ -137,16 +137,16 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 			else{
 			JOptionPane.showMessageDialog(this,"PAYMENT SUCCESSFULL");
 			//RegisterFrame p1=new RegisterFrame(); main frame er class
-			p1.setVisible(true);
+			m1.setVisible(true);
 			this.setVisible(false);
 			}
 		}
 		else if(ae.getSource()==backbtn)
 		{
 			//RegisterFrame p1=new RegisterFrame(); main frame er class
-			p1.setVisible(true);
+			m1.setVisible(true);
 			this.setVisible(false);
 		}
-	}
+	}*/
 	}
 
