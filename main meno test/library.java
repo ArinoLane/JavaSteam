@@ -65,6 +65,7 @@ public class library extends JFrame implements ActionListener
         library.setOpaque(false);
         library.setForeground(new Color(177,179,182));
         library.setBorderPainted(false);
+        library.addActionListener(this);
         upperPanel.add(library);
 
 
