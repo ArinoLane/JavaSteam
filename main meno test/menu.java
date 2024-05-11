@@ -64,6 +64,7 @@ public class menu extends JFrame implements MouseListener, ActionListener
         library.setOpaque(false);
         library.setForeground(new Color(177,179,182));
         library.setBorderPainted(false);
+        library.addActionListener(this);
         upperPanel.add(library);
 
 
@@ -662,7 +663,12 @@ game54.add(imgLabel54);
     public void mouseEntered(MouseEvent me){}
     public void mouseExited(MouseEvent me){}
 
-    public void actionPerformed(ActionEvent ae){}
-
-
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==library )
+        {
+            library lib1 = new library ();
+            lib1.setVisible(true);
+            this.setVisible(false);
+        }
+    }
 }

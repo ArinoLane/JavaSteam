@@ -39,18 +39,6 @@ public class menu extends JFrame implements ActionListener
         imglabel.setBounds(200,25,200,50);
         upperPanel.add(imglabel);
 
-        // store = new JLabel("STORE");
-        // store.setBounds(400,25,200,50);
-        // store.setForeground(new Color(177,179,182));
-        // store.setFont(new Font("Arial", Font.BOLD, 25));
-        // upperPanel.add(store);
-
-        // userLabel = new JLabel("USERNAME");
-        // userLabel.setBounds(500,25,200,50);
-        // userLabel.setForeground(new Color(177,179,182));
-        // userLabel.setFont(new Font("Arial", Font.BOLD, 25));
-        // upperPanel.add(userLabel);
-
         store = new JButton("STORE");
         store.setBounds(400,40,100,30);
         store.setFont(new Font("Arial", Font.BOLD, 15));
@@ -58,7 +46,7 @@ public class menu extends JFrame implements ActionListener
         store.setOpaque(false);
         store.setForeground(new Color(177,179,182));
         store.setBorderPainted(false);
-		store.addActionListener(this);
+        store.addActionListener(this);
         upperPanel.add(store);
 
         userLabel = new JButton("USERNAME");
@@ -77,6 +65,7 @@ public class menu extends JFrame implements ActionListener
         library.setOpaque(false);
         library.setForeground(new Color(177,179,182));
         library.setBorderPainted(false);
+        library.addActionListener(this);
         upperPanel.add(library);
 
 
@@ -687,10 +676,10 @@ game54.add(imgLabel54);
 
 public void actionPerformed(ActionEvent ae){
 	
-	if(ae.getSource()==store)
+	if(ae.getSource()==library)
 		{
-			MStore p1=new MStore();
-			p1.setVisible(true);
+			library l1=new library();
+			l1.setVisible(true);
 			this.setVisible(false);
 		}
 }

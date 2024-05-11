@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
  
-public class library extends JFrame
+public class library extends JFrame implements ActionListener
 {
     JPanel mainPanel, upperPanel;
     ImageIcon img;
@@ -65,6 +65,7 @@ public class library extends JFrame
         library.setOpaque(false);
         library.setForeground(new Color(177,179,182));
         library.setBorderPainted(false);
+        library.addActionListener(this);
         upperPanel.add(library);
 
 

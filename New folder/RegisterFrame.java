@@ -136,6 +136,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 			
 			menu m1 = new menu ();
 			m1.setVisible(true);
+			this.setVisible(false);
 		}
 	}
 	
