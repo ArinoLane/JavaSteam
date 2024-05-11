@@ -3,15 +3,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class RegisterFrame extends JFrame implements ActionListener
+public class RegisterFrame extends JFrame implements MouseListener, ActionListener
 {
-	JPanel panel;
-	JLabel namelabel, passlabel,imglabel,adminp;
+	JPanel panel,panelContributors;
+	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel;
 	JTextField namefield;
 	JPasswordField passfield;
-	JButton signBut,CreatAccnount,adminbtn;
+	JButton signBut,CreatAccnount,adminbtn,Contributors;
 	JButton signupbtn, backbtn;
-	ImageIcon img;
+	ImageIcon img,imgContributors;
 	JScrollPane scrollPane;
 	
 
@@ -94,17 +94,27 @@ public class RegisterFrame extends JFrame implements ActionListener
 		signBut.setOpaque(true);
 		signBut.addActionListener(this);
 		panel.add(signBut);
+
+
+		Contributors = new JButton ("Contributors!");
+		Contributors.setBounds(140, 600, 195, 30);
+		Contributors.setForeground(new Color(37,51,118));
+		Contributors.setFont(new Font("Arial", Font.PLAIN, 15));
+		Contributors.setBackground(new Color(7, 187, 255));
+		Contributors.setOpaque(true);
+		Contributors.addActionListener(this);
+		panel.add(Contributors);
+
 		
 		CreatAccnount = new JButton ("Creat an account");
 		CreatAccnount.setBounds(140, 525, 195, 30);
 		CreatAccnount.setForeground(new Color(250,250,250));
 		CreatAccnount.setFont(new Font("Arial", Font.PLAIN, 15));
 		CreatAccnount.setBackground(new Color(7, 187, 255));
-		CreatAccnount.setOpaque(true);
+		CreatAccnount.setOpaque(false);
 		CreatAccnount.addActionListener(this);
 		panel.add(CreatAccnount);
 		
-	
 		
 		
 		img=new ImageIcon("logo_steam.png");
@@ -121,22 +131,26 @@ public class RegisterFrame extends JFrame implements ActionListener
 	public void mouseExited(MouseEvent me){}
 	
 	public void actionPerformed(ActionEvent ae){
-		if(ae.getSource()==CreatAccnount ){
+		if(ae.getSource()==CreatAccnount )
+		{
 			create c1 = new create ();
 			c1.setVisible(true);
-		
-			
 		}
 		else if (ae.getSource()==adminbtn){
 			
 			admin a1 = new admin ();
 			a1.setVisible(true);
 		}
-		else if (ae.getSource()==signBut){
-			
-			menu m1 = new menu ();
-			m1.setVisible(true);
+		else if (ae.getSource() == Contributors)
+		{
+			ContributorsFrame Con1 = new ContributorsFrame();
+			Con1.setVisible(true);
 		}
+		// else if (ae.getSource()==signBut){
+			
+		// 	menu m1 = new menu ();
+		// 	m1.setVisible(true);
+		// }
 	}
 	
 }
