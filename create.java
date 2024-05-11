@@ -7,8 +7,8 @@ public class create extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel;
 	Color mycolor;
-	ImageIcon img;
-	JLabel name,pass,email,rpass,imglabel,createIntext;
+	ImageIcon img,imgbackground;
+	JLabel name,pass,email,rpass,imglabel,createIntext,backgroundImglabel;
 	JTextField namef,emailf;
 	JPasswordField passf,rpassf;
 	JButton createupbtn,backbtn;
@@ -111,6 +111,12 @@ public class create extends JFrame implements MouseListener, ActionListener
 		s1.setBackground(new Color(25,28,35));
 		s1.setBounds(100, 540, 500, 20);
 		panel.add(s1);
+
+		imgbackground = new ImageIcon ("background.jpg");
+		backgroundImglabel = new JLabel (imgbackground);
+		backgroundImglabel.setBounds(0,0,500,700);
+		panel.add(backgroundImglabel);
+		
 		
 		this.add(panel);
 		

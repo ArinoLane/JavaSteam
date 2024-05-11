@@ -8,8 +8,8 @@ public class admin extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel;
 	Color mycolor;
-	ImageIcon img;
-	JLabel name,pass,imglabel;
+	ImageIcon img,imgbackground;
+	JLabel name,pass,imglabel,backgroundImglabel;
 	JTextField namef;
 	JPasswordField passf,rpassf;
 	JButton loginbtn,backbtn;
@@ -78,6 +78,12 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		imglabel=new JLabel(img);
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
+
+		imgbackground = new ImageIcon ("background.jpg");
+		backgroundImglabel = new JLabel (imgbackground);
+		backgroundImglabel.setBounds(0,0,500,700);
+		panel.add(backgroundImglabel);
+		
 		
 		this.add(panel);
 	}

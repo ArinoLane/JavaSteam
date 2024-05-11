@@ -6,12 +6,12 @@ import java.awt.event.*;
 public class RegisterFrame extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel,panelContributors;
-	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel;
+	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel, backgroundImglabel;
 	JTextField namefield;
 	JPasswordField passfield;
 	JButton signBut,CreatAccnount,adminbtn,Contributors;
 	JButton signupbtn, backbtn;
-	ImageIcon img,imgContributors;
+	ImageIcon img,imgContributors,imgbackground;
 	JScrollPane scrollPane;
 	
 
@@ -111,7 +111,6 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 		CreatAccnount.setForeground(new Color(250,250,250));
 		CreatAccnount.setFont(new Font("Arial", Font.PLAIN, 15));
 		CreatAccnount.setBackground(new Color(7, 187, 255));
-		CreatAccnount.setOpaque(false);
 		CreatAccnount.addActionListener(this);
 		panel.add(CreatAccnount);
 		
@@ -121,6 +120,11 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 		imglabel=new JLabel(img);
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
+
+		imgbackground = new ImageIcon ("background.jpg");
+		backgroundImglabel = new JLabel (imgbackground);
+		backgroundImglabel.setBounds(0,0,500,700);
+		panel.add(backgroundImglabel);
 		
 		this.add(panel);
 	}
