@@ -1222,9 +1222,9 @@ public void actionPerformed(ActionEvent ae){
             s1.setVisible(true);
 			this.setVisible(false);
 		}
-        else if (ae.getSource()== buy0)
+        else if (ae.getSource()== buy1)
         {
-            menu m1 = nwe menu (name0)
+            menu m1 = nwe menu (name1,this)
         }
 		
 }
