@@ -12,7 +12,7 @@ public class library1 extends JFrame implements  MouseListener, ActionListener
     JButton userLabel,store,library, left, right;
  
  
-    public library1 (JLabel s1, menu m1s)
+    public library1 (JLabel s1, menu m1)
     {
         super("LIBRARY");
         this.setSize(1024, 768);
