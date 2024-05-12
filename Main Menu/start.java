@@ -5,8 +5,8 @@ import javax.swing.*;
 public class start{
 public static void main (String[] args){
 	
-	RegisterFrame R1 = new RegisterFrame();
-	R1.setVisible(true);
+	logIn l1 = new logIn();
+	l1.setVisible(true);
 	
 	
 	

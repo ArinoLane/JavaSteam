@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class RegisterFrame extends JFrame implements MouseListener, ActionListener
+public class logIn extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel,panelContributors;
 	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel, backgroundImglabel;
@@ -13,10 +13,9 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 	JButton signupbtn, backbtn;
 	ImageIcon img,imgContributors,imgbackground;
 	JScrollPane scrollPane;
-
 	
 
-	public RegisterFrame()
+	public logIn()
 	{
 		super("LOG IN");
 		
@@ -31,11 +30,13 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 		panel.setBounds(0,0,500,500);
 
 
+
 		JLabel signIntext = new JLabel("SIGN IN");
 		signIntext.setBounds(180,50,150,100);
 		signIntext.setForeground(new Color(250,250,250));
 		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
 		panel.add(signIntext);
+
 
 
 		JLabel creatNew = new JLabel("New to Steam?");
@@ -134,15 +135,42 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 	public void mouseExited(MouseEvent me){}
 	
 	public void actionPerformed(ActionEvent ae){
-		String s1 = namefield.getText();
-		String s2 = password.getText();
-
-
-
-		if(ae.getSource()==CreatAccnount)
+		
+		String n=namefield.getText();
+		String p=passfield.getText();
+		String d=passfield.getText();
+		
+		useracc ac=new useracc();
+		
+		if(ae.getSource()==signBut)
+		 
+		{
+			if(n.isEmpty()||p.isEmpty())
+			{
+				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
+			}
+			else if(ac.check(n,p)==true)
+			{
+				
+			JOptionPane.showMessageDialog(this,"HAPPY GAMING");
+			
+			menu h1=new menu();
+			h1.setVisible(true);
+			this.setVisible(false);
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(this,"Incorrect");
+			}
+		
+		}
+		
+		
+		 else if(ae.getSource()==CreatAccnount )
 		{
 			create c1 = new create ();
 			c1.setVisible(true);
+			this.setVisible(false);
 		}
 		else if (ae.getSource()==adminbtn){
 			
@@ -154,12 +182,11 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 			ContributorsFrame Con1 = new ContributorsFrame();
 			Con1.setVisible(true);
 		}
-		else if (ae.getSource()==signBut){
+		// else if (ae.getSource()==signBut){
 			
-		menu m1 = new menu ();
-		m1.setVisible(true);
-		this.setVisible(false);
-		}
+		// menu m1 = new menu ();
+		// m1.setVisible(true);
+		// }
 	}
 	
 }

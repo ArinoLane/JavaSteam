@@ -152,7 +152,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 			else if(ac.check(n,p)==true)
 			{
 				
-			JOptionPane.showMessageDialog(this,"EID Mubarak");
+			JOptionPane.showMessageDialog(this,"HAPPY GAMING");
 			
 			menu h1=new menu();
 			h1.setVisible(true);
