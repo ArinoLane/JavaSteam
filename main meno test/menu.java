@@ -135,7 +135,7 @@ JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
 name1.setBounds(0,10,300,20);
 name1.setFont(new Font("Arial", Font.BOLD, 5));
 game1.add(name1);
- 
+
 //----------------------------------------------------------------------------------------------------
  
 buy2 = new JButton();
