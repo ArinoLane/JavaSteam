@@ -9,7 +9,7 @@ public class accoun{
 	private String userpass;
 	File file;
 	fileWriter fwrite;
-	public accoun(){}
+	public account(){}
 
 	public account (String username, String userpass)
 	{
