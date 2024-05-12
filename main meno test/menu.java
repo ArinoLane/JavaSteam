@@ -1157,7 +1157,7 @@ imgLabel53.setBounds(-45,0, 340, 130);
 game53.add(imgLabel53);
  
 //----------------------------------------------------------------------------------------------------
- 
+/* 
 buy54 = new JButton();
 buy54.setBounds(20,7190,960,110);
 buy54.setBackground(null);
@@ -1171,7 +1171,7 @@ game54.setBackground(new Color(34,57,75));
 game54.setBounds(50,0,990,110);
 buy54.add(game54);
  
-/* img54 = new ImageIcon();
+ img54 = new ImageIcon();
 imgLabel54 = new JLabel(img54);
 imgLabel54.setBounds(-45,0, 340, 130);
 game54.add(imgLabel54); */
