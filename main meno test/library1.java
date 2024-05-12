@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
  
-public class library extends JFrame implements  MouseListener, ActionListener
+public class library1 extends JFrame implements  MouseListener, ActionListener
 {
     JPanel mainPanel, upperPanel;
     ImageIcon img;
@@ -12,7 +12,7 @@ public class library extends JFrame implements  MouseListener, ActionListener
     JButton userLabel,store,library, left, right;
  
  
-    public library ()
+    public library1 ()
     {
         super("LIBRARY");
         this.setSize(1024, 768);
@@ -76,7 +76,6 @@ public class library extends JFrame implements  MouseListener, ActionListener
         this.getContentPane().add(scrollPane);  
           
      }
-
     public void mouseClicked(MouseEvent me){}
     public void mousePressed(MouseEvent me){}
     public void mouseReleased(MouseEvent me){}

@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
  
-public class menu extends JFrame implements  MouseListener, ActionListener
+public class menu extends JFrame implements  MouseListener, ActionListener 
 {
     JPanel mainPanel, upperPanel, game0,game00,game1,game2,game3,game4,game5,game6,game7,game8,game9,game10,game11,game12,game13,game14,game15,game16,game17,game18,game19,game20,game21,game22,game23,game24,game25,game26,game27,game28,game29,game30,game30_1, game31,game32,game33,game34,game35,game36,game37,game38,game39,game40,game41,game42,game43,game44,game45,game46,game47,game48,game49,game50,game51,game52,game53,game54;
     ImageIcon img,img0,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54;
@@ -12,10 +12,8 @@ public class menu extends JFrame implements  MouseListener, ActionListener
     JButton userLabel,store,library, left, right;
     JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30,buy31,buy32,buy33,buy34,buy35,buy36,buy37,buy38,buy39,buy40,buy41,buy42,buy43,buy44,buy45,buy46,buy47,buy48,buy49,buy50,buy51,buy52,buy53,buy54;
  
-
- 
     public menu ()
-    {
+    {        
         super("STEAM");
         this.setSize(1024, 768);
         this.setLocation(250,40);
@@ -1180,13 +1178,18 @@ game54.add(imgLabel54);
  
 //----------------------------------------------------------------------------------------------------
 
-        
-
         this.getContentPane().add(scrollPane);  
           
      }
 
+     public JPanel getGamePanel() 
+     {
+        return game0;
+     }
+
     public void mouseClicked(MouseEvent me){}
+
+    
     public void mousePressed(MouseEvent me){}
     public void mouseReleased(MouseEvent me){}
     public void mouseEntered(MouseEvent me){}
