@@ -12,7 +12,10 @@ public class menu extends JFrame implements  MouseListener, ActionListener
     JScrollPane scrollPane;
     JButton userLabel,store,library, left, right,storebtn;
     JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30,buy31,buy32,buy33,buy34,buy35,buy36,buy37,buy38,buy39,buy40,buy41,buy42,buy43,buy44,buy45,buy46,buy47,buy48,buy49,buy50,buy51,buy52,buy53,buy54;
- 
+    
+
+
+
     public menu ()
     {        
         super("STEAM");
@@ -133,6 +136,7 @@ game1.add(imgLabel1);
 
 JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
 name1.setBounds(500,10,300,20);
+<<<<<<< HEAD
 
 name1.setFont(new Font("Arial", Font.BOLD, 15));
 
@@ -141,6 +145,9 @@ name1.setFont(new Font("Arial", Font.BOLD, 20));
 
 name1.setFont(new Font("Arial", Font.BOLD, 20));
 
+=======
+name1.setFont(new Font("Arial", Font.BOLD, 15));
+>>>>>>> 8c02787ecd58f9737c8c719188fdfcde86cbf1de
 game1.add(name1);
 
 //----------------------------------------------------------------------------------------------------
@@ -1226,6 +1233,10 @@ public void actionPerformed(ActionEvent ae){
             s1.setVisible(true);
 			this.setVisible(false);
 		}
+        else if (ae.getSource()== buy1)
+        {
+            menu m1 = new menu (name1,this);
+        }
 		
 }
 
