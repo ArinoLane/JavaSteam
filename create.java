@@ -130,17 +130,23 @@ public class create extends JFrame implements MouseListener, ActionListener
 	public void actionPerformed(ActionEvent ae)
 	{
 		String s1=namef.getText();
-		String s2=emailf.getText();
-		String s3=passf.getText();
+		String s3=emailf.getText();
+		String s2=passf.getText();
 		String s4=rpassf.getText();
 		
-		if(ae.getSource()==createupbtn)
+
+		 if(ae.getSource()==createupbtn)
+		 
 		{
 			if(s1.isEmpty()||s2.isEmpty()||s3.isEmpty()||s4.isEmpty())
 			{
 				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
 			}
 			else{
+				
+				useracc ac=new useracc(s1,s2,s3);
+				ac.adduseracc();
+				
 			JOptionPane.showMessageDialog(this,"SUCCESSFULLY CREATED AN ACCOUNT");
 			RegisterFrame p1=new RegisterFrame();
 			p1.setVisible(true);

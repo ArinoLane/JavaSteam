@@ -135,7 +135,38 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 	public void mouseExited(MouseEvent me){}
 	
 	public void actionPerformed(ActionEvent ae){
-		if(ae.getSource()==CreatAccnount )
+		
+		String n=namefield.getText();
+		String p=passfield.getText();
+		String d=passfield.getText();
+		
+		useracc ac=new useracc();
+		
+		if(ae.getSource()==signBut)
+		 
+		{
+			if(n.isEmpty()||p.isEmpty())
+			{
+				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
+			}
+			else if(ac.check(n,p)==true)
+			{
+				
+			JOptionPane.showMessageDialog(this,"EID Mubarak");
+			
+			menu h1=new menu();
+			h1.setVisible(true);
+			this.setVisible(false);
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(this,"Incorrect");
+			}
+		
+		}
+		
+		
+		 else if(ae.getSource()==CreatAccnount )
 		{
 			create c1 = new create ();
 			c1.setVisible(true);

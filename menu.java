@@ -136,18 +136,7 @@ game1.add(imgLabel1);
 
 JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
 name1.setBounds(500,10,300,20);
-<<<<<<< HEAD
-
 name1.setFont(new Font("Arial", Font.BOLD, 15));
-
-name1.setFont(new Font("Arial", Font.BOLD, 20));
-
-
-name1.setFont(new Font("Arial", Font.BOLD, 20));
-
-=======
-name1.setFont(new Font("Arial", Font.BOLD, 15));
->>>>>>> 8c02787ecd58f9737c8c719188fdfcde86cbf1de
 game1.add(name1);
 
 //----------------------------------------------------------------------------------------------------
@@ -1211,32 +1200,23 @@ game53.add(imgLabel53);
 
 
 public void actionPerformed(ActionEvent ae){
-    
-    if(ae.getSource()==library)
-        {
-            library1 l1=new library1();
-            l1.setVisible(true);
-            this.setVisible(false);
-        }
+        
 		
-		else if (ae.getSource()==store)
+	 /*if (ae.getSource()==store)
         {
-            /*MStore s1=new MStore();
+            MStore s1=new MStore();
             s1.setVisible(true);
-			/*EditProfile s1=new EditProfile();
+			EditProfile s1=new EditProfile();
             s1.setVisible(true);
-            this.setVisible(false);*/
-        }
-		else if(ae.getSource()==storebtn)
+            this.setVisible(false);
+        }*/
+		 if(ae.getSource()==storebtn)
 		{
 			MStore s1=new MStore();
             s1.setVisible(true);
 			this.setVisible(false);
 		}
-        else if (ae.getSource()== buy1)
-        {
-            menu m1 = new menu (name1,this);
-        }
+       
 		
 }
 

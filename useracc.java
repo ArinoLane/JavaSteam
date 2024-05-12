@@ -2,13 +2,14 @@ import java.lang.*;
 import java.util.*;
 import java.io.*;
 import java.nio.file.*;
-import Frames.*;
+//import Frames.*;
 
 
 public class useracc
 {
 	private String username;
 	private String userpass;
+	private String useremail;
 	
 	File file;
 	FileWriter fwrite;
@@ -18,12 +19,15 @@ public class useracc
 	public useracc()
 	{
 		this.username="";
+		this.userpass="";
+		this.useremail="";
 	}
 	
-	public Account(String username,String userpass)//username=s1,userpass=s2
+	public useracc(String username,String userpass,String useremail)//username=s1,userpass=s2
 	{
 		this.username=username;
 		this.userpass=userpass;
+		this.useremail=useremail;
 	}
 	
 	public void setUserName(String username)
@@ -36,17 +40,29 @@ public class useracc
 		this.userpass=userpass;
 	}
 	
+	public void setUserEmail(String useremail)
+	{
+		this.useremail=useremail;
+	}
+	
 	public String getUserName()
 	{
 		return username;
 	}
+	
+	public String getUserEmail()
+	{
+		return useremail;
+	}
+	
+	
 	
 	public String getUserpass()
 	{
 		return userpass;
 	}
 	
-	public void addAccount()
+	public void adduseracc()
 	{
 		
 		
@@ -58,7 +74,9 @@ public class useracc
 			fwrite=new FileWriter(file,true);
 			
 			fwrite.write(getUserName()+"\t");
-			fwrite.write(getUserpass()+"\n");
+			fwrite.write(getUserpass()+"\t");
+			fwrite.write(getUserEmail()+"\t");
+			
 			
 			fwrite.flush();
 			fwrite.close();
@@ -70,10 +88,10 @@ public class useracc
 		}
 	}
 	
-	public boolean checkAccount(String username,String userpass)
+	public boolean check(String username,String userpass)
 	{
 		boolean flag=false;
-		file=new File(".\Datas\Data.txt");
+		file=new File("./userdata.txt");
 		try
 		{
 			
