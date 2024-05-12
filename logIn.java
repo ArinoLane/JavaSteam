@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class RegisterFrame extends JFrame implements MouseListener, ActionListener
+public class logIn extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel,panelContributors;
 	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel, backgroundImglabel;
@@ -15,7 +15,7 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 	JScrollPane scrollPane;
 	
 
-	public RegisterFrame()
+	public logIn()
 	{
 		super("LOG IN");
 		
@@ -170,6 +170,7 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 		{
 			create c1 = new create ();
 			c1.setVisible(true);
+			this.setVisible(false);
 		}
 		else if (ae.getSource()==adminbtn){
 			
@@ -181,11 +182,11 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 			ContributorsFrame Con1 = new ContributorsFrame();
 			Con1.setVisible(true);
 		}
-		else if (ae.getSource()==signBut){
+		// else if (ae.getSource()==signBut){
 			
-		menu m1 = new menu ();
-		m1.setVisible(true);
-		}
+		// menu m1 = new menu ();
+		// m1.setVisible(true);
+		// }
 	}
 	
 }

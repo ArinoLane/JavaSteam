@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ContributorsFrame extends JFrame implements MouseListener, ActionListener
+public class ContributorsFrame extends JFrame
 {
 	JPanel panelContributors;
 	JLabel ContributorsImglabel;
@@ -41,20 +41,4 @@ public class ContributorsFrame extends JFrame implements MouseListener, ActionLi
 		this.add(panelContributors);
 
 	}
-	public void mouseClicked(MouseEvent me){}
-	public void mousePressed(MouseEvent me){}
-	public void mouseReleased(MouseEvent me){}
-	public void mouseEntered(MouseEvent me){}
-	public void mouseExited(MouseEvent me){}
-	
-	public void actionPerformed(ActionEvent ae)
-	{
-		if(ae.getSource()==backbtn)
-		{
-			RegisterFrame p1=new RegisterFrame();
-			p1.setVisible(true);
-			this.setVisible(false);
-		}
-	}
-	
 }

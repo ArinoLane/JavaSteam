@@ -148,15 +148,15 @@ public class create extends JFrame implements MouseListener, ActionListener
 				ac.adduseracc();
 				
 			JOptionPane.showMessageDialog(this,"SUCCESSFULLY CREATED AN ACCOUNT");
-			RegisterFrame p1=new RegisterFrame();
-			p1.setVisible(true);
+			logIn l1=new logIn();
+			l1.setVisible(true);
 			this.setVisible(false);
 			}
 		}
 		else if(ae.getSource()==backbtn)
 		{
-			RegisterFrame p1=new RegisterFrame();
-			p1.setVisible(true);
+			logIn l1=new logIn();
+			l1.setVisible(true);
 			this.setVisible(false);
 		}
 	}
