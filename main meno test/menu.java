@@ -47,6 +47,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
         store.setForeground(new Color(177,179,182));
+		store.setBackground(new Color(23,26,33));
         store.setBorderPainted(false);
         store.setContentAreaFilled(false);
         store.addActionListener(this);
@@ -111,7 +112,7 @@ game1.setBackground(new Color(34,57,75));
 game1.setBounds(50,0,990,110);
 buy1.add(game1);
  
-img1 = new ImageIcon();
+img1 = new ImageIcon("ac2.jpg");
 imgLabel1 = new JLabel(img1);
 imgLabel1.setBounds(-45,0, 340, 130);
 game1.add(imgLabel1);
@@ -131,7 +132,7 @@ game2.setBackground(new Color(34,57,75));
 game2.setBounds(50,0,990,110);
 buy2.add(game2);
  
-img2 = new ImageIcon();
+img2 = new ImageIcon("ac2b.jpg");
 imgLabel2 = new JLabel(img2);
 imgLabel2.setBounds(-45,0, 340, 130);
 game2.add(imgLabel2);
@@ -151,7 +152,7 @@ game3.setBackground(new Color(34,57,75));
 game3.setBounds(50,0,990,110);
 buy3.add(game3);
  
-img3 = new ImageIcon();
+img3 = new ImageIcon("ac2r.jpg");
 imgLabel3 = new JLabel(img3);
 imgLabel3.setBounds(-45,0, 340, 130);
 game3.add(imgLabel3);
@@ -171,7 +172,7 @@ game4.setBackground(new Color(34,57,75));
 game4.setBounds(50,0,990,110);
 buy4.add(game4);
  
-img4 = new ImageIcon();
+img4 = new ImageIcon("ac3.jpg");
 imgLabel4 = new JLabel(img4);
 imgLabel4.setBounds(-45,0, 340, 130);
 game4.add(imgLabel4);
@@ -191,7 +192,7 @@ game5.setBackground(new Color(34,57,75));
 game5.setBounds(50,0,990,110);
 buy5.add(game5);
  
-img5 = new ImageIcon();
+img5 = new ImageIcon("ac4.jpg");
 imgLabel5 = new JLabel(img5);
 imgLabel5.setBounds(-45,0, 340, 130);
 game5.add(imgLabel5);
@@ -211,7 +212,7 @@ game6.setBackground(new Color(34,57,75));
 game6.setBounds(50,0,990,110);
 buy6.add(game6);
  
-img6 = new ImageIcon();
+img6 = new ImageIcon("aco.jpg");
 imgLabel6 = new JLabel(img6);
 imgLabel6.setBounds(-45,0, 340, 130);
 game6.add(imgLabel6);
@@ -231,7 +232,7 @@ game7.setBackground(new Color(34,57,75));
 game7.setBounds(50,0,990,110);
 buy7.add(game7);
  
-img7 = new ImageIcon();
+img7 = new ImageIcon("acr.jpg");
 imgLabel7 = new JLabel(img7);
 imgLabel7.setBounds(-45,0, 340, 130);
 game7.add(imgLabel7);
@@ -251,7 +252,7 @@ game8.setBackground(new Color(34,57,75));
 game8.setBounds(50,0,990,110);
 buy8.add(game8);
  
-img8 = new ImageIcon();
+img8 = new ImageIcon("acu.jpg");
 imgLabel8 = new JLabel(img8);
 imgLabel8.setBounds(-45,0, 340, 130);
 game8.add(imgLabel8);
@@ -271,7 +272,7 @@ game9.setBackground(new Color(34,57,75));
 game9.setBounds(50,0,990,110);
 buy9.add(game9);
  
-img9 = new ImageIcon();
+img9 = new ImageIcon("Apex_Legends.jpg");
 imgLabel9 = new JLabel(img9);
 imgLabel9.setBounds(-45,0, 340, 130);
 game9.add(imgLabel9);
@@ -291,7 +292,7 @@ game10.setBackground(new Color(34,57,75));
 game10.setBounds(50,0,990,110);
 buy10.add(game10);
  
-img10 = new ImageIcon();
+img10 = new ImageIcon("batmna.jpg");
 imgLabel10 = new JLabel(img10);
 imgLabel10.setBounds(-45,0, 340, 130);
 game10.add(imgLabel10);
@@ -311,7 +312,7 @@ game11.setBackground(new Color(34,57,75));
 game11.setBounds(50,0,990,110);
 buy11.add(game11);
  
-img11 = new ImageIcon();
+img11 = new ImageIcon("black_squad.jpg");
 imgLabel11 = new JLabel(img11);
 imgLabel11.setBounds(-45,0, 340, 130);
 game11.add(imgLabel11);
@@ -331,7 +332,7 @@ game12.setBackground(new Color(34,57,75));
 game12.setBounds(50,0,990,110);
 buy12.add(game12);
  
-img12 = new ImageIcon();
+img12 = new ImageIcon("cs2.jpg");
 imgLabel12 = new JLabel(img12);
 imgLabel12.setBounds(-45,0, 340, 130);
 game12.add(imgLabel12);
@@ -351,7 +352,7 @@ game13.setBackground(new Color(34,57,75));
 game13.setBounds(50,0,990,110);
 buy13.add(game13);
  
-img13 = new ImageIcon();
+img13 = new ImageIcon("Cyberpunk.jpg");
 imgLabel13 = new JLabel(img13);
 imgLabel13.setBounds(-45,0, 340, 130);
 game13.add(imgLabel13);
@@ -371,7 +372,7 @@ game14.setBackground(new Color(34,57,75));
 game14.setBounds(50,0,990,110);
 buy14.add(game14);
  
-img14 = new ImageIcon();
+img14 = new ImageIcon("deadspace.jpg");
 imgLabel14 = new JLabel(img14);
 imgLabel14.setBounds(-45,0, 340, 130);
 game14.add(imgLabel14);
@@ -391,7 +392,7 @@ game15.setBackground(new Color(34,57,75));
 game15.setBounds(50,0,990,110);
 buy15.add(game15);
  
-img15 = new ImageIcon();
+img15 = new ImageIcon("dishonored.jpg");
 imgLabel15 = new JLabel(img15);
 imgLabel15.setBounds(-45,0, 340, 130);
 game15.add(imgLabel15);
@@ -411,7 +412,7 @@ game16.setBackground(new Color(34,57,75));
 game16.setBounds(50,0,990,110);
 buy16.add(game16);
  
-img16 = new ImageIcon();
+img16 = new ImageIcon("dishonored2.jpg");
 imgLabel16 = new JLabel(img16);
 imgLabel16.setBounds(-45,0, 340, 130);
 game16.add(imgLabel16);
@@ -431,7 +432,7 @@ game17.setBackground(new Color(34,57,75));
 game17.setBounds(50,0,990,110);
 buy17.add(game17);
  
-img17 = new ImageIcon();
+img17 = new ImageIcon("Dishonoreddot.jpg");
 imgLabel17 = new JLabel(img17);
 imgLabel17.setBounds(-45,0, 340, 130);
 game17.add(imgLabel17);
@@ -451,7 +452,7 @@ game18.setBackground(new Color(34,57,75));
 game18.setBounds(50,0,990,110);
 buy18.add(game18);
  
-img18 = new ImageIcon();
+img18 = new ImageIcon("dota.jpg");
 imgLabel18 = new JLabel(img18);
 imgLabel18.setBounds(-45,0, 340, 130);
 game18.add(imgLabel18);
@@ -471,7 +472,7 @@ game19.setBackground(new Color(34,57,75));
 game19.setBounds(50,0,990,110);
 buy19.add(game19);
  
-img19 = new ImageIcon();
+img19 = new ImageIcon("dyinglight.jpg");
 imgLabel19 = new JLabel(img19);
 imgLabel19.setBounds(-45,0, 340, 130);
 game19.add(imgLabel19);
@@ -491,7 +492,7 @@ game20.setBackground(new Color(34,57,75));
 game20.setBounds(50,0,990,110);
 buy20.add(game20);
  
-img20 = new ImageIcon();
+img20 = new ImageIcon("fallout3.jpg");
 imgLabel20 = new JLabel(img20);
 imgLabel20.setBounds(-45,0, 340, 130);
 game20.add(imgLabel20);
@@ -511,7 +512,7 @@ game21.setBackground(new Color(34,57,75));
 game21.setBounds(50,0,990,110);
 buy21.add(game21);
  
-img21 = new ImageIcon();
+img21 = new ImageIcon("fallout4.jpg");
 imgLabel21 = new JLabel(img21);
 imgLabel21.setBounds(-45,0, 340, 130);
 game21.add(imgLabel21);
@@ -531,7 +532,7 @@ game22.setBackground(new Color(34,57,75));
 game22.setBounds(50,0,990,110);
 buy22.add(game22);
  
-img22 = new ImageIcon();
+img22 = new ImageIcon("falloutnv.jpg");
 imgLabel22 = new JLabel(img22);
 imgLabel22.setBounds(-45,0, 340, 130);
 game22.add(imgLabel22);
@@ -551,7 +552,7 @@ game23.setBackground(new Color(34,57,75));
 game23.setBounds(50,0,990,110);
 buy23.add(game23);
  
-img23 = new ImageIcon();
+img23 = new ImageIcon("fc.jpg");
 imgLabel23 = new JLabel(img23);
 imgLabel23.setBounds(-45,0, 340, 130);
 game23.add(imgLabel23);
@@ -571,7 +572,7 @@ game24.setBackground(new Color(34,57,75));
 game24.setBounds(50,0,990,110);
 buy24.add(game24);
  
-img24 = new ImageIcon();
+img24 = new ImageIcon("fc2.jpg");
 imgLabel24 = new JLabel(img24);
 imgLabel24.setBounds(-45,0, 340, 130);
 game24.add(imgLabel24);
@@ -591,7 +592,7 @@ game25.setBackground(new Color(34,57,75));
 game25.setBounds(50,0,990,110);
 buy25.add(game25);
  
-img25 = new ImageIcon();
+img25 = new ImageIcon("fc3.jpg");
 imgLabel25 = new JLabel(img25);
 imgLabel25.setBounds(-45,0, 340, 130);
 game25.add(imgLabel25);
@@ -611,7 +612,7 @@ game26.setBackground(new Color(34,57,75));
 game26.setBounds(50,0,990,110);
 buy26.add(game26);
  
-img26 = new ImageIcon();
+img26 = new ImageIcon("fc4.jpg");
 imgLabel26 = new JLabel(img26);
 imgLabel26.setBounds(-45,0, 340, 130);
 game26.add(imgLabel26);
@@ -631,7 +632,7 @@ game27.setBackground(new Color(34,57,75));
 game27.setBounds(50,0,990,110);
 buy27.add(game27);
  
-img27 = new ImageIcon();
+img27 = new ImageIcon("fc5.jpg");
 imgLabel27 = new JLabel(img27);
 imgLabel27.setBounds(-45,0, 340, 130);
 game27.add(imgLabel27);
@@ -651,7 +652,7 @@ game28.setBackground(new Color(34,57,75));
 game28.setBounds(50,0,990,110);
 buy28.add(game28);
  
-img28 = new ImageIcon();
+img28 = new ImageIcon("fc6.jpg");
 imgLabel28 = new JLabel(img28);
 imgLabel28.setBounds(-45,0, 340, 130);
 game28.add(imgLabel28);
@@ -671,7 +672,7 @@ game29.setBackground(new Color(34,57,75));
 game29.setBounds(50,0,990,110);
 buy29.add(game29);
  
-img29 = new ImageIcon();
+img29 = new ImageIcon("fc24.jpg");
 imgLabel29 = new JLabel(img29);
 imgLabel29.setBounds(-45,0, 340, 130);
 game29.add(imgLabel29);
@@ -691,7 +692,7 @@ game30.setBackground(new Color(34,57,75));
 game30.setBounds(50,0,990,110);
 buy30.add(game30);
  
-img30 = new ImageIcon();
+img30 = new ImageIcon("Hades2.jpg");
 imgLabel30 = new JLabel(img30);
 imgLabel30.setBounds(-45,0, 340, 130);
 game30.add(imgLabel30);
@@ -711,7 +712,7 @@ game31.setBackground(new Color(34,57,75));
 game31.setBounds(50,0,990,110);
 buy31.add(game31);
  
-img31 = new ImageIcon();
+img31 = new ImageIcon("halflife.jpg");
 imgLabel31 = new JLabel(img31);
 imgLabel31.setBounds(-45,0, 340, 130);
 game31.add(imgLabel31);
@@ -731,7 +732,7 @@ game32.setBackground(new Color(34,57,75));
 game32.setBounds(50,0,990,110);
 buy32.add(game32);
  
-img32 = new ImageIcon();
+img32 = new ImageIcon("hitman.jpg");
 imgLabel32 = new JLabel(img32);
 imgLabel32.setBounds(-45,0, 340, 130);
 game32.add(imgLabel32);
@@ -751,7 +752,7 @@ game33.setBackground(new Color(34,57,75));
 game33.setBounds(50,0,990,110);
 buy33.add(game33);
  
-img33 = new ImageIcon();
+img33 = new ImageIcon("hitman2.jpg");
 imgLabel33 = new JLabel(img33);
 imgLabel33.setBounds(-45,0, 340, 130);
 game33.add(imgLabel33);
@@ -771,7 +772,7 @@ game34.setBackground(new Color(34,57,75));
 game34.setBounds(50,0,990,110);
 buy34.add(game34);
  
-img34 = new ImageIcon();
+img34 = new ImageIcon("kindom.jpg");
 imgLabel34 = new JLabel(img34);
 imgLabel34.setBounds(-45,0, 340, 130);
 game34.add(imgLabel34);
@@ -791,7 +792,7 @@ game35.setBackground(new Color(34,57,75));
 game35.setBounds(50,0,990,110);
 buy35.add(game35);
  
-img35 = new ImageIcon();
+img35 = new ImageIcon("lifeisstrange.jpg");
 imgLabel35 = new JLabel(img35);
 imgLabel35.setBounds(-45,0, 340, 130);
 game35.add(imgLabel35);
@@ -811,7 +812,7 @@ game36.setBackground(new Color(34,57,75));
 game36.setBounds(50,0,990,110);
 buy36.add(game36);
  
-img36 = new ImageIcon();
+img36 = new ImageIcon("metro3.jpg");
 imgLabel36 = new JLabel(img36);
 imgLabel36.setBounds(-45,0, 340, 130);
 game36.add(imgLabel36);
@@ -831,7 +832,7 @@ game37.setBackground(new Color(34,57,75));
 game37.setBounds(50,0,990,110);
 buy37.add(game37);
  
-img37 = new ImageIcon();
+img37 = new ImageIcon("metro2033.jpg");
 imgLabel37 = new JLabel(img37);
 imgLabel37.setBounds(-45,0, 340, 130);
 game37.add(imgLabel37);
@@ -858,7 +859,7 @@ game38.add(imgLabel38);
  
 //----------------------------------------------------------------------------------------------------
  
-buy39 = new JButton();
+buy39 = new JButton("metro2033r.jpg");
 buy39.setBounds(20,5240,960,110);
 buy39.setBackground(null);
 buy39.setBorderPainted(false);
@@ -871,7 +872,7 @@ game39.setBackground(new Color(34,57,75));
 game39.setBounds(50,0,990,110);
 buy39.add(game39);
  
-img39 = new ImageIcon();
+img39 = new ImageIcon("metrolastlight.jpg");
 imgLabel39 = new JLabel(img39);
 imgLabel39.setBounds(-45,0, 340, 130);
 game39.add(imgLabel39);
@@ -891,7 +892,7 @@ game40.setBackground(new Color(34,57,75));
 game40.setBounds(50,0,990,110);
 buy40.add(game40);
  
-img40 = new ImageIcon();
+img40 = new ImageIcon("portal.jpg");
 imgLabel40 = new JLabel(img40);
 imgLabel40.setBounds(-45,0, 340, 130);
 game40.add(imgLabel40);
@@ -911,7 +912,7 @@ game41.setBackground(new Color(34,57,75));
 game41.setBounds(50,0,990,110);
 buy41.add(game41);
  
-img41 = new ImageIcon();
+img41 = new ImageIcon("pubg.jpg");
 imgLabel41 = new JLabel(img41);
 imgLabel41.setBounds(-45,0, 340, 130);
 game41.add(imgLabel41);
@@ -931,7 +932,7 @@ game42.setBackground(new Color(34,57,75));
 game42.setBounds(50,0,990,110);
 buy42.add(game42);
  
-img42 = new ImageIcon();
+img42 = new ImageIcon("R6.jpg");
 imgLabel42 = new JLabel(img42);
 imgLabel42.setBounds(-45,0, 340, 130);
 game42.add(imgLabel42);
@@ -951,7 +952,7 @@ game43.setBackground(new Color(34,57,75));
 game43.setBounds(50,0,990,110);
 buy43.add(game43);
  
-img43 = new ImageIcon();
+img43 = new ImageIcon("re2.jpg");
 imgLabel43 = new JLabel(img43);
 imgLabel43.setBounds(-45,0, 340, 130);
 game43.add(imgLabel43);
@@ -971,7 +972,7 @@ game44.setBackground(new Color(34,57,75));
 game44.setBounds(50,0,990,110);
 buy44.add(game44);
  
-img44 = new ImageIcon();
+img44 = new ImageIcon("re3.jpg");
 imgLabel44 = new JLabel(img44);
 imgLabel44.setBounds(-45,0, 340, 130);
 game44.add(imgLabel44);
@@ -991,7 +992,7 @@ game45.setBackground(new Color(34,57,75));
 game45.setBounds(50,0,990,110);
 buy45.add(game45);
  
-img45 = new ImageIcon();
+img45 = new ImageIcon("re4.jpg");
 imgLabel45 = new JLabel(img45);
 imgLabel45.setBounds(-45,0, 340, 130);
 game45.add(imgLabel45);
@@ -1011,7 +1012,7 @@ game46.setBackground(new Color(34,57,75));
 game46.setBounds(50,0,990,110);
 buy46.add(game46);
  
-img46 = new ImageIcon();
+img46 = new ImageIcon("RE7.jpg");
 imgLabel46 = new JLabel(img46);
 imgLabel46.setBounds(-45,0, 340, 130);
 game46.add(imgLabel46);
@@ -1031,7 +1032,7 @@ game47.setBackground(new Color(34,57,75));
 game47.setBounds(50,0,990,110);
 buy47.add(game47);
  
-img47 = new ImageIcon();
+img47 = new ImageIcon("re8.jpg");
 imgLabel47 = new JLabel(img47);
 imgLabel47.setBounds(-45,0, 340, 130);
 game47.add(imgLabel47);
@@ -1051,7 +1052,7 @@ game48.setBackground(new Color(34,57,75));
 game48.setBounds(50,0,990,110);
 buy48.add(game48);
  
-img48 = new ImageIcon();
+img48 = new ImageIcon("readdead2.jpg");
 imgLabel48 = new JLabel(img48);
 imgLabel48.setBounds(-45,0, 340, 130);
 game48.add(imgLabel48);
@@ -1071,7 +1072,7 @@ game49.setBackground(new Color(34,57,75));
 game49.setBounds(50,0,990,110);
 buy49.add(game49);
  
-img49 = new ImageIcon();
+img49 = new ImageIcon("rust.jpg");
 imgLabel49 = new JLabel(img49);
 imgLabel49.setBounds(-45,0, 340, 130);
 game49.add(imgLabel49);
@@ -1091,7 +1092,7 @@ game50.setBackground(new Color(34,57,75));
 game50.setBounds(50,0,990,110);
 buy50.add(game50);
  
-img50 = new ImageIcon();
+img50 = new ImageIcon("warface.jpg");
 imgLabel50 = new JLabel(img50);
 imgLabel50.setBounds(-45,0, 340, 130);
 game50.add(imgLabel50);
@@ -1111,7 +1112,7 @@ game51.setBackground(new Color(34,57,75));
 game51.setBounds(50,0,990,110);
 buy51.add(game51);
  
-img51 = new ImageIcon();
+img51 = new ImageIcon("witcher2.jpg");
 imgLabel51 = new JLabel(img51);
 imgLabel51.setBounds(-45,0, 340, 130);
 game51.add(imgLabel51);
@@ -1131,7 +1132,7 @@ game52.setBackground(new Color(34,57,75));
 game52.setBounds(50,0,990,110);
 buy52.add(game52);
  
-img52 = new ImageIcon();
+img52 = new ImageIcon("withcer.jpg");
 imgLabel52 = new JLabel(img52);
 imgLabel52.setBounds(-45,0, 340, 130);
 game52.add(imgLabel52);
@@ -1151,13 +1152,13 @@ game53.setBackground(new Color(34,57,75));
 game53.setBounds(50,0,990,110);
 buy53.add(game53);
  
-img53 = new ImageIcon();
+img53 = new ImageIcon("wither3.jpg");
 imgLabel53 = new JLabel(img53);
 imgLabel53.setBounds(-45,0, 340, 130);
 game53.add(imgLabel53);
  
 //----------------------------------------------------------------------------------------------------
- 
+/* 
 buy54 = new JButton();
 buy54.setBounds(20,7190,960,110);
 buy54.setBackground(null);
@@ -1171,10 +1172,10 @@ game54.setBackground(new Color(34,57,75));
 game54.setBounds(50,0,990,110);
 buy54.add(game54);
  
-img54 = new ImageIcon();
+ img54 = new ImageIcon();
 imgLabel54 = new JLabel(img54);
 imgLabel54.setBounds(-45,0, 340, 130);
-game54.add(imgLabel54);
+game54.add(imgLabel54); */
  
 //----------------------------------------------------------------------------------------------------
 
@@ -1200,8 +1201,17 @@ public void actionPerformed(ActionEvent ae){
     
     if(ae.getSource()==library)
         {
-            library l1=new library();
+            library1 l1=new library1();
             l1.setVisible(true);
+            this.setVisible(false);
+        }
+		
+		else if (ae.getSource()==store)
+        {
+            MStore s1=new MStore();
+            s1.setVisible(true);
+			/*EditProfile s1=new EditProfile();
+            s1.setVisible(true);*/
             this.setVisible(false);
         }
 }
