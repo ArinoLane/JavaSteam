@@ -3,11 +3,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ContributorsFrame extends JFrame
+public class ContributorsFrame extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panelContributors;
 	JLabel ContributorsImglabel;
 	ImageIcon imgContributors;
+	
+	JButton backbtn;
 	
 
 	public ContributorsFrame()
@@ -26,9 +28,33 @@ public class ContributorsFrame extends JFrame
 		ContributorsImglabel = new JLabel(imgContributors);
 		ContributorsImglabel.setBounds(0,-30,500,700);
 		panelContributors.add(ContributorsImglabel);
+		
+		backbtn=new JButton("Back");
+		backbtn.setBounds(160, 490, 80, 30);
+		backbtn.setForeground(new Color(250,250,250));
+		backbtn.setBackground(new Color(7, 187, 255));
+		backbtn.addMouseListener(this);
+		backbtn.addActionListener(this);
+		panelContributors.add(backbtn);
+
 
 		this.add(panelContributors);
 
+	}
+	public void mouseClicked(MouseEvent me){}
+	public void mousePressed(MouseEvent me){}
+	public void mouseReleased(MouseEvent me){}
+	public void mouseEntered(MouseEvent me){}
+	public void mouseExited(MouseEvent me){}
+	
+	public void actionPerformed(ActionEvent ae)
+	{
+		if(ae.getSource()==backbtn)
+		{
+			RegisterFrame p1=new RegisterFrame();
+			p1.setVisible(true);
+			this.setVisible(false);
+		}
 	}
 	
 }

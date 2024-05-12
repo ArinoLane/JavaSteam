@@ -150,11 +150,11 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 			ContributorsFrame Con1 = new ContributorsFrame();
 			Con1.setVisible(true);
 		}
-		// else if (ae.getSource()==signBut){
+		else if (ae.getSource()==signBut){
 			
-		// menu m1 = new menu ();
-		// m1.setVisible(true);
-		// }
+		menu m1 = new menu ();
+		m1.setVisible(true);
+		}
 	}
 	
 }
