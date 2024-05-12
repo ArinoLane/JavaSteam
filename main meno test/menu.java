@@ -1158,26 +1158,6 @@ imgLabel53.setBounds(-45,0, 340, 100);
 game53.add(imgLabel53);
  
 //----------------------------------------------------------------------------------------------------
-/* 
-buy54 = new JButton();
-buy54.setBounds(20,7190,960,110);
-buy54.setBackground(null);
-buy54.setBorderPainted(false);
-buy54.addActionListener(this);
-mainPanel.add(buy54);
- 
-game54 = new JPanel();
-game54.setLayout(null);
-game54.setBackground(new Color(34,57,75));
-game54.setBounds(50,0,990,110);
-buy54.add(game54);
- 
- img54 = new ImageIcon();
-imgLabel54 = new JLabel(img54);
-imgLabel54.setBounds(-45,0, 340, 100);
-game54.add(imgLabel54); */
- 
-//----------------------------------------------------------------------------------------------------
 
         this.getContentPane().add(scrollPane);  
           
