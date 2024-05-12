@@ -26,7 +26,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         mainPanel.setBackground(new Color(53,97,140));
         scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setBounds(0, 0, 1010, 750); //it controls the scroll
-        mainPanel.setPreferredSize(new Dimension(1024,4250)); ///it controls the JPanel that is attached with scrollPane
+        mainPanel.setPreferredSize(new Dimension(1024,7200)); ///it controls the JPanel that is attached with scrollPane
 
  
         upperPanel=new JPanel();
