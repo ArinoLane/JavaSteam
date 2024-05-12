@@ -10,7 +10,9 @@ public class menu extends JFrame implements ActionListener
     JLabel imglabel,imgLabel0,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
     JScrollPane scrollPane;
     JButton userLabel,store,library, left, right;
+    JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30;
  
+
  
     public menu ()
     {
@@ -26,7 +28,7 @@ public class menu extends JFrame implements ActionListener
         mainPanel.setBackground(new Color(53,97,140));
         scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setBounds(0, 0, 1010, 750); //it controls the scroll
-        mainPanel.setPreferredSize(new Dimension(1024, 7500)); ///it controls the JPanel that is attached with scrollPane
+        mainPanel.setPreferredSize(new Dimension(1024,4250)); ///it controls the JPanel that is attached with scrollPane
 
  
         upperPanel=new JPanel();
@@ -34,10 +36,12 @@ public class menu extends JFrame implements ActionListener
         upperPanel.setBackground(new Color(23,26,33));
         upperPanel.setBounds(0,0,1024,100);
 
+
         img=new ImageIcon("logo_steam.png");
         imglabel=new JLabel(img);
         imglabel.setBounds(200,25,200,50);
         upperPanel.add(imglabel);
+
 
         store = new JButton("STORE");
         store.setBounds(400,40,100,30);
@@ -46,8 +50,10 @@ public class menu extends JFrame implements ActionListener
         store.setOpaque(false);
         store.setForeground(new Color(177,179,182));
         store.setBorderPainted(false);
+        store.setContentAreaFilled(false);
         store.addActionListener(this);
         upperPanel.add(store);
+
 
         userLabel = new JButton("USERNAME");
         userLabel.setBounds(480,40,150,30);
@@ -55,8 +61,10 @@ public class menu extends JFrame implements ActionListener
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);
         userLabel.setForeground(new Color(177,179,182));
+        userLabel.setContentAreaFilled(false);
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
+
 
         library = new JButton("LIBRARY");
         library.setBounds(605,40,150,30);
@@ -64,594 +72,633 @@ public class menu extends JFrame implements ActionListener
         library.setBackground(Color.GREEN);
         library.setOpaque(false);
         library.setForeground(new Color(177,179,182));
+        library.setContentAreaFilled(false);
         library.setBorderPainted(false);
         library.addActionListener(this);
         upperPanel.add(library);
 
 
-
-
         mainPanel.add(upperPanel); //this.add jemon sobar last e add korte hoy temni ei panel er mdode jehetu sob dukbe, tai sob kisu dukanor por .add korbo {()}. anekta, ekta bag er modde sob jinis dukanor por cain off kora. Oi jinis gulo nijera add/chain off hobe than amar bag er chain off hobe sobar last e .
 
-
-
+buy0 = new JButton();
+buy0.setBounds(20,170,960,110);
+buy0.setBackground(null);
+buy0.setBorderPainted(false);
+buy0.addActionListener(this);
+mainPanel.add(buy0);
+ 
 game0 = new JPanel();
 game0.setLayout(null);
 game0.setBackground(new Color(34,57,75));
-game0.setBounds(20,170,960,110);
-mainPanel.add(game0);
+game0.setBounds(50,0,990,110);
+buy0.add(game0);
  
-img0 = new ImageIcon("Apex_Legends.jpg");
+img0 = new ImageIcon();
 imgLabel0 = new JLabel(img0);
 imgLabel0.setBounds(-32,0, 346, 130);
 game0.add(imgLabel0);
-
-
-
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy1 = new JButton();
+buy1.setBounds(20,300,960,110);
+buy1.setBackground(null);
+buy1.setBorderPainted(false);
+buy1.addActionListener(this);
+mainPanel.add(buy1);
+ 
 game1 = new JPanel();
 game1.setLayout(null);
 game1.setBackground(new Color(34,57,75));
-game1.setBounds(20,300,960,110);
-mainPanel.add(game1);
+game1.setBounds(50,0,990,110);
+buy1.add(game1);
  
-img1 = new ImageIcon("cs2.jpg");
+img1 = new ImageIcon();
 imgLabel1 = new JLabel(img1);
 imgLabel1.setBounds(-32,0, 346, 130);
 game1.add(imgLabel1);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy2 = new JButton();
+buy2.setBounds(20,430,960,110);
+buy2.setBackground(null);
+buy2.setBorderPainted(false);
+buy2.addActionListener(this);
+mainPanel.add(buy2);
+ 
 game2 = new JPanel();
 game2.setLayout(null);
 game2.setBackground(new Color(34,57,75));
-game2.setBounds(20,430,960,110);
-mainPanel.add(game2);
+game2.setBounds(50,0,990,110);
+buy2.add(game2);
  
-img2 = new ImageIcon("batmna.jpg");
+img2 = new ImageIcon();
 imgLabel2 = new JLabel(img2);
 imgLabel2.setBounds(-32,0, 346, 130);
 game2.add(imgLabel2);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy3 = new JButton();
+buy3.setBounds(20,560,960,110);
+buy3.setBackground(null);
+buy3.setBorderPainted(false);
+buy3.addActionListener(this);
+mainPanel.add(buy3);
+ 
 game3 = new JPanel();
 game3.setLayout(null);
 game3.setBackground(new Color(34,57,75));
-game3.setBounds(20,560,960,110);
-mainPanel.add(game3);
+game3.setBounds(50,0,990,110);
+buy3.add(game3);
  
-img3 = new ImageIcon("black_squad.jpg");
+img3 = new ImageIcon();
 imgLabel3 = new JLabel(img3);
 imgLabel3.setBounds(-32,0, 346, 130);
 game3.add(imgLabel3);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy4 = new JButton();
+buy4.setBounds(20,690,960,110);
+buy4.setBackground(null);
+buy4.setBorderPainted(false);
+buy4.addActionListener(this);
+mainPanel.add(buy4);
+ 
 game4 = new JPanel();
 game4.setLayout(null);
 game4.setBackground(new Color(34,57,75));
-game4.setBounds(20,690,960,110);
-mainPanel.add(game4);
+game4.setBounds(50,0,990,110);
+buy4.add(game4);
  
-img4 = new ImageIcon("CODMW2.jpg");
+img4 = new ImageIcon();
 imgLabel4 = new JLabel(img4);
 imgLabel4.setBounds(-32,0, 346, 130);
 game4.add(imgLabel4);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy5 = new JButton();
+buy5.setBounds(20,820,960,110);
+buy5.setBackground(null);
+buy5.setBorderPainted(false);
+buy5.addActionListener(this);
+mainPanel.add(buy5);
+ 
 game5 = new JPanel();
 game5.setLayout(null);
 game5.setBackground(new Color(34,57,75));
-game5.setBounds(20,820,960,110);
-mainPanel.add(game5);
+game5.setBounds(50,0,990,110);
+buy5.add(game5);
  
-img5 = new ImageIcon("cs2.jpg");
+img5 = new ImageIcon();
 imgLabel5 = new JLabel(img5);
 imgLabel5.setBounds(-32,0, 346, 130);
 game5.add(imgLabel5);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy6 = new JButton();
+buy6.setBounds(20,950,960,110);
+buy6.setBackground(null);
+buy6.setBorderPainted(false);
+buy6.addActionListener(this);
+mainPanel.add(buy6);
+ 
 game6 = new JPanel();
 game6.setLayout(null);
 game6.setBackground(new Color(34,57,75));
-game6.setBounds(20,950,960,110);
-mainPanel.add(game6);
+game6.setBounds(50,0,990,110);
+buy6.add(game6);
  
-img6 = new ImageIcon("Cyberpunk.jpg");
+img6 = new ImageIcon();
 imgLabel6 = new JLabel(img6);
 imgLabel6.setBounds(-32,0, 346, 130);
 game6.add(imgLabel6);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy7 = new JButton();
+buy7.setBounds(20,1080,960,110);
+buy7.setBackground(null);
+buy7.setBorderPainted(false);
+buy7.addActionListener(this);
+mainPanel.add(buy7);
+ 
 game7 = new JPanel();
 game7.setLayout(null);
 game7.setBackground(new Color(34,57,75));
-game7.setBounds(20,1080,960,110);
-mainPanel.add(game7);
+game7.setBounds(50,0,990,110);
+buy7.add(game7);
  
-img7 = new ImageIcon("deadisland.jpg");
+img7 = new ImageIcon();
 imgLabel7 = new JLabel(img7);
 imgLabel7.setBounds(-32,0, 346, 130);
 game7.add(imgLabel7);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy8 = new JButton();
+buy8.setBounds(20,1210,960,110);
+buy8.setBackground(null);
+buy8.setBorderPainted(false);
+buy8.addActionListener(this);
+mainPanel.add(buy8);
+ 
 game8 = new JPanel();
 game8.setLayout(null);
 game8.setBackground(new Color(34,57,75));
-game8.setBounds(20,1210,960,110);
-mainPanel.add(game8);
+game8.setBounds(50,0,990,110);
+buy8.add(game8);
  
-img8 = new ImageIcon("deadspace.jpg");
+img8 = new ImageIcon();
 imgLabel8 = new JLabel(img8);
 imgLabel8.setBounds(-32,0, 346, 130);
 game8.add(imgLabel8);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy9 = new JButton();
+buy9.setBounds(20,1340,960,110);
+buy9.setBackground(null);
+buy9.setBorderPainted(false);
+buy9.addActionListener(this);
+mainPanel.add(buy9);
+ 
 game9 = new JPanel();
 game9.setLayout(null);
 game9.setBackground(new Color(34,57,75));
-game9.setBounds(20,1340,960,110);
-mainPanel.add(game9);
+game9.setBounds(50,0,990,110);
+buy9.add(game9);
  
-img9 = new ImageIcon("ac.jpg");
+img9 = new ImageIcon();
 imgLabel9 = new JLabel(img9);
 imgLabel9.setBounds(-32,0, 346, 130);
 game9.add(imgLabel9);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy10 = new JButton();
+buy10.setBounds(20,1470,960,110);
+buy10.setBackground(null);
+buy10.setBorderPainted(false);
+buy10.addActionListener(this);
+mainPanel.add(buy10);
+ 
 game10 = new JPanel();
 game10.setLayout(null);
 game10.setBackground(new Color(34,57,75));
-game10.setBounds(20,1470,960,110);
-mainPanel.add(game10);
+game10.setBounds(50,0,990,110);
+buy10.add(game10);
  
-img10 = new ImageIcon("ac2.jpg");
+img10 = new ImageIcon();
 imgLabel10 = new JLabel(img10);
 imgLabel10.setBounds(-32,0, 346, 130);
 game10.add(imgLabel10);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy11 = new JButton();
+buy11.setBounds(20,1600,960,110);
+buy11.setBackground(null);
+buy11.setBorderPainted(false);
+buy11.addActionListener(this);
+mainPanel.add(buy11);
+ 
 game11 = new JPanel();
 game11.setLayout(null);
 game11.setBackground(new Color(34,57,75));
-game11.setBounds(20,1600,960,110);
-mainPanel.add(game11);
+game11.setBounds(50,0,990,110);
+buy11.add(game11);
  
-img11 = new ImageIcon("ac2b.jpg");
+img11 = new ImageIcon();
 imgLabel11 = new JLabel(img11);
 imgLabel11.setBounds(-32,0, 346, 130);
 game11.add(imgLabel11);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy12 = new JButton();
+buy12.setBounds(20,1730,960,110);
+buy12.setBackground(null);
+buy12.setBorderPainted(false);
+buy12.addActionListener(this);
+mainPanel.add(buy12);
+ 
 game12 = new JPanel();
 game12.setLayout(null);
 game12.setBackground(new Color(34,57,75));
-game12.setBounds(20,1730,960,110);
-mainPanel.add(game12);
+game12.setBounds(50,0,990,110);
+buy12.add(game12);
  
-img12 = new ImageIcon("ac2r.jpg");
+img12 = new ImageIcon();
 imgLabel12 = new JLabel(img12);
 imgLabel12.setBounds(-32,0, 346, 130);
 game12.add(imgLabel12);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy13 = new JButton();
+buy13.setBounds(20,1860,960,110);
+buy13.setBackground(null);
+buy13.setBorderPainted(false);
+buy13.addActionListener(this);
+mainPanel.add(buy13);
+ 
 game13 = new JPanel();
 game13.setLayout(null);
 game13.setBackground(new Color(34,57,75));
-game13.setBounds(20,1860,960,110);
-mainPanel.add(game13);
+game13.setBounds(50,0,990,110);
+buy13.add(game13);
  
-img13 = new ImageIcon("ac3.jpg");
+img13 = new ImageIcon();
 imgLabel13 = new JLabel(img13);
 imgLabel13.setBounds(-32,0, 346, 130);
 game13.add(imgLabel13);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy14 = new JButton();
+buy14.setBounds(20,1990,960,110);
+buy14.setBackground(null);
+buy14.setBorderPainted(false);
+buy14.addActionListener(this);
+mainPanel.add(buy14);
+ 
 game14 = new JPanel();
 game14.setLayout(null);
 game14.setBackground(new Color(34,57,75));
-game14.setBounds(20,1990,960,110);
-mainPanel.add(game14);
+game14.setBounds(50,0,990,110);
+buy14.add(game14);
  
-img14 = new ImageIcon("ac4.jpg");
+img14 = new ImageIcon();
 imgLabel14 = new JLabel(img14);
 imgLabel14.setBounds(-32,0, 346, 130);
 game14.add(imgLabel14);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy15 = new JButton();
+buy15.setBounds(20,2120,960,110);
+buy15.setBackground(null);
+buy15.setBorderPainted(false);
+buy15.addActionListener(this);
+mainPanel.add(buy15);
+ 
 game15 = new JPanel();
 game15.setLayout(null);
 game15.setBackground(new Color(34,57,75));
-game15.setBounds(20,2120,960,110);
-mainPanel.add(game15);
+game15.setBounds(50,0,990,110);
+buy15.add(game15);
  
-img15 = new ImageIcon("aco.jpg");
+img15 = new ImageIcon();
 imgLabel15 = new JLabel(img15);
 imgLabel15.setBounds(-32,0, 346, 130);
 game15.add(imgLabel15);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy16 = new JButton();
+buy16.setBounds(20,2250,960,110);
+buy16.setBackground(null);
+buy16.setBorderPainted(false);
+buy16.addActionListener(this);
+mainPanel.add(buy16);
+ 
 game16 = new JPanel();
 game16.setLayout(null);
 game16.setBackground(new Color(34,57,75));
-game16.setBounds(20,2250,960,110);
-mainPanel.add(game16);
+game16.setBounds(50,0,990,110);
+buy16.add(game16);
  
-img16 = new ImageIcon("acr.jpg");
+img16 = new ImageIcon();
 imgLabel16 = new JLabel(img16);
 imgLabel16.setBounds(-32,0, 346, 130);
 game16.add(imgLabel16);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy17 = new JButton();
+buy17.setBounds(20,2380,960,110);
+buy17.setBackground(null);
+buy17.setBorderPainted(false);
+buy17.addActionListener(this);
+mainPanel.add(buy17);
+ 
 game17 = new JPanel();
 game17.setLayout(null);
 game17.setBackground(new Color(34,57,75));
-game17.setBounds(20,2380,960,110);
-mainPanel.add(game17);
+game17.setBounds(50,0,990,110);
+buy17.add(game17);
  
-img17 = new ImageIcon("acu.jpg");
+img17 = new ImageIcon();
 imgLabel17 = new JLabel(img17);
 imgLabel17.setBounds(-32,0, 346, 130);
 game17.add(imgLabel17);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy18 = new JButton();
+buy18.setBounds(20,2510,960,110);
+buy18.setBackground(null);
+buy18.setBorderPainted(false);
+buy18.addActionListener(this);
+mainPanel.add(buy18);
+ 
 game18 = new JPanel();
 game18.setLayout(null);
 game18.setBackground(new Color(34,57,75));
-game18.setBounds(20,2510,960,110);
-mainPanel.add(game18);
+game18.setBounds(50,0,990,110);
+buy18.add(game18);
  
-img18 = new ImageIcon("dishonored.jpg");
+img18 = new ImageIcon();
 imgLabel18 = new JLabel(img18);
 imgLabel18.setBounds(-32,0, 346, 130);
 game18.add(imgLabel18);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy19 = new JButton();
+buy19.setBounds(20,2640,960,110);
+buy19.setBackground(null);
+buy19.setBorderPainted(false);
+buy19.addActionListener(this);
+mainPanel.add(buy19);
+ 
 game19 = new JPanel();
 game19.setLayout(null);
 game19.setBackground(new Color(34,57,75));
-game19.setBounds(20,2640,960,110);
-mainPanel.add(game19);
+game19.setBounds(50,0,990,110);
+buy19.add(game19);
  
-img19 = new ImageIcon("dishonored2.jpg");
+img19 = new ImageIcon();
 imgLabel19 = new JLabel(img19);
 imgLabel19.setBounds(-32,0, 346, 130);
 game19.add(imgLabel19);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy20 = new JButton();
+buy20.setBounds(20,2770,960,110);
+buy20.setBackground(null);
+buy20.setBorderPainted(false);
+buy20.addActionListener(this);
+mainPanel.add(buy20);
+ 
 game20 = new JPanel();
 game20.setLayout(null);
 game20.setBackground(new Color(34,57,75));
-game20.setBounds(20,2770,960,110);
-mainPanel.add(game20);
+game20.setBounds(50,0,990,110);
+buy20.add(game20);
  
-img20 = new ImageIcon("Dishonoreddot.jpg");
+img20 = new ImageIcon();
 imgLabel20 = new JLabel(img20);
 imgLabel20.setBounds(-32,0, 346, 130);
 game20.add(imgLabel20);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy21 = new JButton();
+buy21.setBounds(20,2900,960,110);
+buy21.setBackground(null);
+buy21.setBorderPainted(false);
+buy21.addActionListener(this);
+mainPanel.add(buy21);
+ 
 game21 = new JPanel();
 game21.setLayout(null);
 game21.setBackground(new Color(34,57,75));
-game21.setBounds(20,2900,960,110);
-mainPanel.add(game21);
+game21.setBounds(50,0,990,110);
+buy21.add(game21);
  
-img21 = new ImageIcon("dota.jpg");
+img21 = new ImageIcon();
 imgLabel21 = new JLabel(img21);
 imgLabel21.setBounds(-32,0, 346, 130);
 game21.add(imgLabel21);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy22 = new JButton();
+buy22.setBounds(20,3030,960,110);
+buy22.setBackground(null);
+buy22.setBorderPainted(false);
+buy22.addActionListener(this);
+mainPanel.add(buy22);
+ 
 game22 = new JPanel();
 game22.setLayout(null);
 game22.setBackground(new Color(34,57,75));
-game22.setBounds(20,3030,960,110);
-mainPanel.add(game22);
+game22.setBounds(50,0,990,110);
+buy22.add(game22);
  
-img22 = new ImageIcon("dyinglight.jpg");
+img22 = new ImageIcon();
 imgLabel22 = new JLabel(img22);
 imgLabel22.setBounds(-32,0, 346, 130);
 game22.add(imgLabel22);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy23 = new JButton();
+buy23.setBounds(20,3160,960,110);
+buy23.setBackground(null);
+buy23.setBorderPainted(false);
+buy23.addActionListener(this);
+mainPanel.add(buy23);
+ 
 game23 = new JPanel();
 game23.setLayout(null);
 game23.setBackground(new Color(34,57,75));
-game23.setBounds(20,3160,960,110);
-mainPanel.add(game23);
+game23.setBounds(50,0,990,110);
+buy23.add(game23);
  
-img23 = new ImageIcon("fallout3.jpg");
+img23 = new ImageIcon();
 imgLabel23 = new JLabel(img23);
 imgLabel23.setBounds(-32,0, 346, 130);
 game23.add(imgLabel23);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy24 = new JButton();
+buy24.setBounds(20,3290,960,110);
+buy24.setBackground(null);
+buy24.setBorderPainted(false);
+buy24.addActionListener(this);
+mainPanel.add(buy24);
+ 
 game24 = new JPanel();
 game24.setLayout(null);
 game24.setBackground(new Color(34,57,75));
-game24.setBounds(20,3290,960,110);
-mainPanel.add(game24);
+game24.setBounds(50,0,990,110);
+buy24.add(game24);
  
-img24 = new ImageIcon("fallout4.jpg");
+img24 = new ImageIcon();
 imgLabel24 = new JLabel(img24);
 imgLabel24.setBounds(-32,0, 346, 130);
 game24.add(imgLabel24);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy25 = new JButton();
+buy25.setBounds(20,3420,960,110);
+buy25.setBackground(null);
+buy25.setBorderPainted(false);
+buy25.addActionListener(this);
+mainPanel.add(buy25);
+ 
 game25 = new JPanel();
 game25.setLayout(null);
 game25.setBackground(new Color(34,57,75));
-game25.setBounds(20,3420,960,110);
-mainPanel.add(game25);
+game25.setBounds(50,0,990,110);
+buy25.add(game25);
  
-img25 = new ImageIcon("falloutnv.jpg");
+img25 = new ImageIcon();
 imgLabel25 = new JLabel(img25);
 imgLabel25.setBounds(-32,0, 346, 130);
 game25.add(imgLabel25);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy26 = new JButton();
+buy26.setBounds(20,3550,960,110);
+buy26.setBackground(null);
+buy26.setBorderPainted(false);
+buy26.addActionListener(this);
+mainPanel.add(buy26);
+ 
 game26 = new JPanel();
 game26.setLayout(null);
 game26.setBackground(new Color(34,57,75));
-game26.setBounds(20,3550,960,110);
-mainPanel.add(game26);
+game26.setBounds(50,0,990,110);
+buy26.add(game26);
  
-img26 = new ImageIcon("fc.jpg");
+img26 = new ImageIcon();
 imgLabel26 = new JLabel(img26);
 imgLabel26.setBounds(-32,0, 346, 130);
 game26.add(imgLabel26);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy27 = new JButton();
+buy27.setBounds(20,3680,960,110);
+buy27.setBackground(null);
+buy27.setBorderPainted(false);
+buy27.addActionListener(this);
+mainPanel.add(buy27);
+ 
 game27 = new JPanel();
 game27.setLayout(null);
 game27.setBackground(new Color(34,57,75));
-game27.setBounds(20,3680,960,110);
-mainPanel.add(game27);
+game27.setBounds(50,0,990,110);
+buy27.add(game27);
  
-img27 = new ImageIcon("fc2.jpg");
+img27 = new ImageIcon();
 imgLabel27 = new JLabel(img27);
 imgLabel27.setBounds(-32,0, 346, 130);
 game27.add(imgLabel27);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy28 = new JButton();
+buy28.setBounds(20,3810,960,110);
+buy28.setBackground(null);
+buy28.setBorderPainted(false);
+buy28.addActionListener(this);
+mainPanel.add(buy28);
+ 
 game28 = new JPanel();
 game28.setLayout(null);
 game28.setBackground(new Color(34,57,75));
-game28.setBounds(20,3810,960,110);
-mainPanel.add(game28);
+game28.setBounds(50,0,990,110);
+buy28.add(game28);
  
-img28 = new ImageIcon("fc3.jpg");
+img28 = new ImageIcon();
 imgLabel28 = new JLabel(img28);
 imgLabel28.setBounds(-32,0, 346, 130);
 game28.add(imgLabel28);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy29 = new JButton();
+buy29.setBounds(20,3940,960,110);
+buy29.setBackground(null);
+buy29.setBorderPainted(false);
+buy29.addActionListener(this);
+mainPanel.add(buy29);
+ 
 game29 = new JPanel();
 game29.setLayout(null);
 game29.setBackground(new Color(34,57,75));
-game29.setBounds(20,3940,960,110);
-mainPanel.add(game29);
+game29.setBounds(50,0,990,110);
+buy29.add(game29);
  
-img29 = new ImageIcon("fc4.jpg");
+img29 = new ImageIcon();
 imgLabel29 = new JLabel(img29);
 imgLabel29.setBounds(-32,0, 346, 130);
 game29.add(imgLabel29);
+ 
+//----------------------------------------------------------------------------------------------------
+ 
+buy30 = new JButton();
+buy30.setBounds(20,4070,960,110);
+buy30.setBackground(null);
+buy30.setBorderPainted(false);
+buy30.addActionListener(this);
+mainPanel.add(buy30);
+ 
 game30 = new JPanel();
 game30.setLayout(null);
 game30.setBackground(new Color(34,57,75));
-game30.setBounds(20,4070,960,110);
-mainPanel.add(game30);
-
-
-
+game30.setBounds(50,0,990,110);
+buy30.add(game30);
  
-img30 = new ImageIcon("fc5.jpg");
+img30 = new ImageIcon();
 imgLabel30 = new JLabel(img30);
 imgLabel30.setBounds(-32,0, 346, 130);
 game30.add(imgLabel30);
-game31 = new JPanel();
-game31.setLayout(null);
-game31.setBackground(new Color(34,57,75));
-game31.setBounds(20,4330,960,110);
-mainPanel.add(game31);
-
-
-game30_1 = new JPanel();
-game30_1.setLayout(null);
-game30_1.setBackground(new Color(34,57,75));
-game30_1.setBounds(20,4200,960,110);
-mainPanel.add(game30_1);
  
-img30_1 = new ImageIcon("lifeisstrange.jpg");
-imgLabel30_1 = new JLabel(img30_1);
-imgLabel30_1.setBounds(-32,0, 346, 130);
-game30_1.add(imgLabel30_1);
-
-
-
- 
-img31 = new ImageIcon("fc24.jpg");
-imgLabel31 = new JLabel(img31);
-imgLabel31.setBounds(-32,0, 346, 130);
-game31.add(imgLabel31);
-game32 = new JPanel();
-game32.setLayout(null);
-game32.setBackground(new Color(34,57,75));
-game32.setBounds(20,4460,960,110);
-mainPanel.add(game32);
- 
-img32 = new ImageIcon("forest.jpg");
-imgLabel32 = new JLabel(img32);
-imgLabel32.setBounds(-32,0, 346, 130);
-game32.add(imgLabel32);
-game33 = new JPanel();
-game33.setLayout(null);
-game33.setBackground(new Color(34,57,75));
-game33.setBounds(20,4590,960,110);
-mainPanel.add(game33);
- 
-img33 = new ImageIcon("withcer.jpg");
-imgLabel33 = new JLabel(img33);
-imgLabel33.setBounds(-32,0, 346, 130);
-game33.add(imgLabel33);
-game34 = new JPanel();
-game34.setLayout(null);
-game34.setBackground(new Color(34,57,75));
-game34.setBounds(20,4720,960,110);
-mainPanel.add(game34);
- 
-img34 = new ImageIcon("halflife.jpg");
-imgLabel34 = new JLabel(img34);
-imgLabel34.setBounds(-32,0, 346, 130);
-game34.add(imgLabel34);
-game35 = new JPanel();
-game35.setLayout(null);
-game35.setBackground(new Color(34,57,75));
-game35.setBounds(20,4850,960,110);
-mainPanel.add(game35);
- 
-img35 = new ImageIcon("HELLDIVERS.jpg");
-imgLabel35 = new JLabel(img35);
-imgLabel35.setBounds(-32,0, 346, 130);
-game35.add(imgLabel35);
-game36 = new JPanel();
-game36.setLayout(null);
-game36.setBackground(new Color(34,57,75));
-game36.setBounds(20,4980,960,110);
-mainPanel.add(game36);
- 
-img36 = new ImageIcon("hitman.jpg");
-imgLabel36 = new JLabel(img36);
-imgLabel36.setBounds(-32,0, 346, 130);
-game36.add(imgLabel36);
-game37 = new JPanel();
-game37.setLayout(null);
-game37.setBackground(new Color(34,57,75));
-game37.setBounds(20,5110,960,110);
-mainPanel.add(game37);
- 
-img37 = new ImageIcon("rust.jpg");
-imgLabel37 = new JLabel(img37);
-imgLabel37.setBounds(-32,0, 346, 130);
-game37.add(imgLabel37);
-game38 = new JPanel();
-game38.setLayout(null);
-game38.setBackground(new Color(34,57,75));
-game38.setBounds(20,5240,960,110);
-mainPanel.add(game38);
- 
-img38 = new ImageIcon("skyrim.jpg");
-imgLabel38 = new JLabel(img38);
-imgLabel38.setBounds(-32,0, 346, 130);
-game38.add(imgLabel38);
-game39 = new JPanel();
-game39.setLayout(null);
-game39.setBackground(new Color(34,57,75));
-game39.setBounds(20,5370,960,110);
-mainPanel.add(game39);
- 
-img39 = new ImageIcon("warface.jpg");
-imgLabel39 = new JLabel(img39);
-imgLabel39.setBounds(-32,0, 346, 130);
-game39.add(imgLabel39);
-game40 = new JPanel();
-game40.setLayout(null);
-game40.setBackground(new Color(34,57,75));
-game40.setBounds(20,5500,960,110);
-mainPanel.add(game40);
- 
-img40 = new ImageIcon("metro3.jpg");
-imgLabel40 = new JLabel(img40);
-imgLabel40.setBounds(-32,0, 346, 130);
-game40.add(imgLabel40);
-game41 = new JPanel();
-game41.setLayout(null);
-game41.setBackground(new Color(34,57,75));
-game41.setBounds(20,5630,960,110);
-mainPanel.add(game41);
- 
-img41 = new ImageIcon("metro2033.jpg");
-imgLabel41 = new JLabel(img41);
-imgLabel41.setBounds(-32,0, 346, 130);
-game41.add(imgLabel41);
-game42 = new JPanel();
-game42.setLayout(null);
-game42.setBackground(new Color(34,57,75));
-game42.setBounds(20,5760,960,110);
-mainPanel.add(game42);
- 
-img42 = new ImageIcon("metro2033r.jpg");
-imgLabel42 = new JLabel(img42);
-imgLabel42.setBounds(-32,0, 346, 130);
-game42.add(imgLabel42);
-game43 = new JPanel();
-game43.setLayout(null);
-game43.setBackground(new Color(34,57,75));
-game43.setBounds(20,5890,960,110);
-mainPanel.add(game43);
- 
-img43 = new ImageIcon("metrolastlight.jpg");
-imgLabel43 = new JLabel(img43);
-imgLabel43.setBounds(-32,0, 346, 130);
-game43.add(imgLabel43);
-game44 = new JPanel();
-game44.setLayout(null);
-game44.setBackground(new Color(34,57,75));
-game44.setBounds(20,6020,960,110);
-mainPanel.add(game44);
- 
-img44 = new ImageIcon("paladin.jpg");
-imgLabel44 = new JLabel(img44);
-imgLabel44.setBounds(-32,0, 346, 130);
-game44.add(imgLabel44);
-game45 = new JPanel();
-game45.setLayout(null);
-game45.setBackground(new Color(34,57,75));
-game45.setBounds(20,6150,960,110);
-mainPanel.add(game45);
- 
-img45 = new ImageIcon("payday.jpg");
-imgLabel45 = new JLabel(img45);
-imgLabel45.setBounds(-32,0, 346, 130);
-game45.add(imgLabel45);
-game46 = new JPanel();
-game46.setLayout(null);
-game46.setBackground(new Color(34,57,75));
-game46.setBounds(20,6280,960,110);
-mainPanel.add(game46);
- 
-img46 = new ImageIcon("portal.jpg");
-imgLabel46 = new JLabel(img46);
-imgLabel46.setBounds(-32,0, 346, 130);
-game46.add(imgLabel46);
-game47 = new JPanel();
-game47.setLayout(null);
-game47.setBackground(new Color(34,57,75));
-game47.setBounds(20,6410,960,110);
-mainPanel.add(game47);
- 
-img47 = new ImageIcon("pubg.jpg");
-imgLabel47 = new JLabel(img47);
-imgLabel47.setBounds(-32,0, 346, 130);
-game47.add(imgLabel47);
-game48 = new JPanel();
-game48.setLayout(null);
-game48.setBackground(new Color(34,57,75));
-game48.setBounds(20,6540,960,110);
-mainPanel.add(game48);
- 
-img48 = new ImageIcon("R6.jpg");
-imgLabel48 = new JLabel(img48);
-imgLabel48.setBounds(-32,0, 346, 130);
-game48.add(imgLabel48);
-game49 = new JPanel();
-game49.setLayout(null);
-game49.setBackground(new Color(34,57,75));
-game49.setBounds(20,6670,960,110);
-mainPanel.add(game49);
- 
-img49 = new ImageIcon("re2.jpg");
-imgLabel49 = new JLabel(img49);
-imgLabel49.setBounds(-32,0, 346, 130);
-game49.add(imgLabel49);
-game50 = new JPanel();
-game50.setLayout(null);
-game50.setBackground(new Color(34,57,75));
-game50.setBounds(20,6800,960,110);
-mainPanel.add(game50);
- 
-img50 = new ImageIcon("re3.jpg");
-imgLabel50 = new JLabel(img50);
-imgLabel50.setBounds(-32,0, 346, 130);
-game50.add(imgLabel50);
-game51 = new JPanel();
-game51.setLayout(null);
-game51.setBackground(new Color(34,57,75));
-game51.setBounds(20,6930,960,110);
-mainPanel.add(game51);
- 
-img51 = new ImageIcon("re4.jpg");
-imgLabel51 = new JLabel(img51);
-imgLabel51.setBounds(-32,0, 346, 130);
-game51.add(imgLabel51);
-game52 = new JPanel();
-game52.setLayout(null);
-game52.setBackground(new Color(34,57,75));
-game52.setBounds(20,7060,960,110);
-mainPanel.add(game52);
- 
-img52 = new ImageIcon("RE7.jpg");
-imgLabel52 = new JLabel(img52);
-imgLabel52.setBounds(-32,0, 346, 130);
-game52.add(imgLabel52);
-game53 = new JPanel();
-game53.setLayout(null);
-game53.setBackground(new Color(34,57,75));
-game53.setBounds(20,7190,960,110);
-mainPanel.add(game53);
- 
-img53 = new ImageIcon("re8.jpg");
-imgLabel53 = new JLabel(img53);
-imgLabel53.setBounds(-32,0, 346, 130);
-game53.add(imgLabel53);
-game54 = new JPanel();
-game54.setLayout(null);
-game54.setBackground(new Color(34,57,75));
-game54.setBounds(20,7320,960,110);
-mainPanel.add(game54);
- 
-img54 = new ImageIcon("wither3.jpg");
-imgLabel54 = new JLabel(img54);
-imgLabel54.setBounds(-32,0, 346, 130);
-game54.add(imgLabel54);
-
-
-
-// left = new JButton("<");
-// left.setBounds(605,40,150,30);
-
+//----------------------------------------------------------------------------------------------------
 
 
         this.getContentPane().add(scrollPane);  
@@ -660,10 +707,6 @@ game54.add(imgLabel54);
 
      /* public void mouseClicked(MouseEvent me)
       {
-         if(me.getSource() == left)
-     {
-         imgLabel.setBounds(350, 150, 200, 112);
-      }
     
     }
 
@@ -675,13 +718,13 @@ game54.add(imgLabel54);
 */
 
 public void actionPerformed(ActionEvent ae){
-	
-	if(ae.getSource()==library)
-		{
-			library l1=new library();
-			l1.setVisible(true);
-			this.setVisible(false);
-		}
+    
+    if(ae.getSource()==library)
+        {
+            library l1=new library();
+            l1.setVisible(true);
+            this.setVisible(false);
+        }
 }
 
 }
