@@ -109,6 +109,12 @@ img0 = new ImageIcon("ac.jpg");
 imgLabel0 = new JLabel(img0);
 imgLabel0.setBounds(-45,0, 340, 100);
 game0.add(imgLabel0);
+
+JLabel name0 = new JLabel ("ASSASSINS CREED");
+name0.setBounds(500,10,300,20);
+name0.setForeground(new Color(224,224,224));
+name0.setFont(new Font("Arial", Font.BOLD, 25));
+game0.add(name0);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -131,9 +137,10 @@ imgLabel1 = new JLabel(img1);
 imgLabel1.setBounds(-45,0, 340, 100);
 game1.add(imgLabel1);
 
-JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
+JLabel name1 = new JLabel ("ASSASSINS CREED 2");
 name1.setBounds(500,10,300,20);
-name1.setFont(new Font("Arial", Font.BOLD, 20));
+name1.setForeground(new Color(224,224,224));
+name1.setFont(new Font("Arial", Font.BOLD, 25));
 game1.add(name1);
 
 //----------------------------------------------------------------------------------------------------
