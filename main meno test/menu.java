@@ -47,6 +47,8 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 		storebtn = new JButton(imgs);
 		storebtn.setBounds(870,25,50,50);
 		storebtn.setBackground(new Color(23,26,33));
+		storebtn.setBorderPainted(false);
+		storebtn.setContentAreaFilled(false);
 		storebtn.addMouseListener(this);
 		storebtn.addActionListener(this);
 		upperPanel.add(storebtn);
