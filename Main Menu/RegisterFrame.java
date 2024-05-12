@@ -141,7 +141,7 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 
 
 
-		if(ae.getSource()==CreatAccnount )
+		if(ae.getSource()==CreatAccnount)
 		{
 			create c1 = new create ();
 			c1.setVisible(true);
@@ -160,6 +160,7 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 			
 		menu m1 = new menu ();
 		m1.setVisible(true);
+		this.setVisible(false);
 		}
 	}
 	
