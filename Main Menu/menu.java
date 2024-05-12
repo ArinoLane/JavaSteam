@@ -245,9 +245,9 @@ JLabel name4 = new JLabel ("4");
 name4.setBounds(400,40,300,20);
 name4.setForeground(new Color(250,250,250));
 name4.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name3);
+game4.add(name4);
 
-JLabe4 namep1 = new JLabel ("$4");
+JLabel namep4 = new JLabel ("$4");
 namep4.setBounds(870,40,300,20);
 namep4.setForeground(new Color(250,250,250));
 namep4.setFont(new Font("Arial", Font.BOLD, 25));
@@ -754,17 +754,17 @@ imgLabel20 = new JLabel(img20);
 imgLabel20.setBounds(-45,0, 340, 100);
 game20.add(imgLabel20);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name20 = new JLabel ("20");
+name20.setBounds(400,40,300,20);
+name20.setForeground(new Color(250,250,250));
+name20.setFont(new Font("Arial", Font.BOLD, 25));
+game20.add(name20);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep20 = new JLabel ("$20");
+namep20.setBounds(870,40,300,20);
+namep20.setForeground(new Color(250,250,250));
+namep20.setFont(new Font("Arial", Font.BOLD, 25));
+game20.add(namep20);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -786,17 +786,17 @@ imgLabel21 = new JLabel(img21);
 imgLabel21.setBounds(-45,0, 340, 100);
 game21.add(imgLabel21);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name21 = new JLabel ("21");
+name21.setBounds(400,40,300,20);
+name21.setForeground(new Color(250,250,250));
+name21.setFont(new Font("Arial", Font.BOLD, 25));
+game21.add(name1);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep21 = new JLabel ("$21");
+namep21.setBounds(870,40,300,20);
+namep21.setForeground(new Color(250,250,250));
+namep21.setFont(new Font("Arial", Font.BOLD, 25));
+game21.add(namep21);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -818,17 +818,17 @@ imgLabel22 = new JLabel(img22);
 imgLabel22.setBounds(-45,0, 340, 100);
 game22.add(imgLabel22);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name22 = new JLabel ("22");
+name22.setBounds(400,40,300,20);
+name22.setForeground(new Color(250,250,250));
+name22.setFont(new Font("Arial", Font.BOLD, 25));
+game22.add(name22);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep22 = new JLabel ("$22");
+namep22.setBounds(870,40,300,20);
+namep22.setForeground(new Color(250,250,250));
+namep22.setFont(new Font("Arial", Font.BOLD, 25));
+game22.add(namep22);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -850,17 +850,17 @@ imgLabel23 = new JLabel(img23);
 imgLabel23.setBounds(-45,0, 340, 100);
 game23.add(imgLabel23);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name23 = new JLabel ("23");
+name23.setBounds(400,40,300,20);
+name23.setForeground(new Color(250,250,250));
+name23.setFont(new Font("Arial", Font.BOLD, 25));
+game23.add(name23);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep23 = new JLabel ("$23");
+namep23.setBounds(870,40,300,20);
+namep23.setForeground(new Color(250,250,250));
+namep23.setFont(new Font("Arial", Font.BOLD, 25));
+game23.add(namep23);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -882,17 +882,17 @@ imgLabel24 = new JLabel(img24);
 imgLabel24.setBounds(-45,0, 340, 100);
 game24.add(imgLabel24);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name24 = new JLabel ("24");
+name24.setBounds(400,40,300,20);
+name24.setForeground(new Color(250,250,250));
+name24.setFont(new Font("Arial", Font.BOLD, 25));
+game24.add(name24);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep24 = new JLabel ("$24");
+namep24.setBounds(870,40,300,20);
+namep24.setForeground(new Color(250,250,250));
+namep24.setFont(new Font("Arial", Font.BOLD, 25));
+game24.add(namep24);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -914,17 +914,17 @@ imgLabel25 = new JLabel(img25);
 imgLabel25.setBounds(-45,0, 340, 100);
 game25.add(imgLabel25);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name25 = new JLabel ("25");
+name25.setBounds(400,40,300,20);
+name25.setForeground(new Color(250,250,250));
+name25.setFont(new Font("Arial", Font.BOLD, 25));
+game25.add(name25);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep25 = new JLabel ("$25");
+namep25.setBounds(870,40,300,20);
+namep25.setForeground(new Color(250,250,250));
+namep25.setFont(new Font("Arial", Font.BOLD, 25));
+game25.add(namep25);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -946,17 +946,17 @@ imgLabel26 = new JLabel(img26);
 imgLabel26.setBounds(-45,0, 340, 100);
 game26.add(imgLabel26);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name26 = new JLabel ("26");
+name26.setBounds(400,40,300,20);
+name26.setForeground(new Color(250,250,250));
+name26.setFont(new Font("Arial", Font.BOLD, 25));
+game26.add(name26);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep26 = new JLabel ("$26");
+namep26.setBounds(870,40,300,20);
+namep26.setForeground(new Color(250,250,250));
+namep26.setFont(new Font("Arial", Font.BOLD, 25));
+game26.add(namep26);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -978,17 +978,17 @@ imgLabel27 = new JLabel(img27);
 imgLabel27.setBounds(-45,0, 340, 100);
 game27.add(imgLabel27);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name27 = new JLabel ("27");
+name27.setBounds(400,40,300,20);
+name27.setForeground(new Color(250,250,250));
+name27.setFont(new Font("Arial", Font.BOLD, 25));
+game27.add(name27);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep27 = new JLabel ("$27");
+namep27.setBounds(870,40,300,20);
+namep27.setForeground(new Color(250,250,250));
+namep27.setFont(new Font("Arial", Font.BOLD, 25));
+game27.add(namep27);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -1010,17 +1010,17 @@ imgLabel28 = new JLabel(img28);
 imgLabel28.setBounds(-45,0, 340, 100);
 game28.add(imgLabel28);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name28 = new JLabel ("28");
+name28.setBounds(400,40,300,20);
+name28.setForeground(new Color(250,250,250));
+name28.setFont(new Font("Arial", Font.BOLD, 25));
+game28.add(name28);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep28 = new JLabel ("$28");
+namep28.setBounds(870,40,300,20);
+namep28.setForeground(new Color(250,250,250));
+namep28.setFont(new Font("Arial", Font.BOLD, 25));
+game28.add(namep28);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -1042,17 +1042,17 @@ imgLabel29 = new JLabel(img29);
 imgLabel29.setBounds(-45,0, 340, 100);
 game29.add(imgLabel29);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name29 = new JLabel ("29");
+name29.setBounds(400,40,300,20);
+name29.setForeground(new Color(250,250,250));
+name29.setFont(new Font("Arial", Font.BOLD, 25));
+game29.add(name29);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep29 = new JLabel ("$29");
+namep29.setBounds(870,40,300,20);
+namep29.setForeground(new Color(250,250,250));
+namep29.setFont(new Font("Arial", Font.BOLD, 25));
+game29.add(namep29);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -1074,17 +1074,17 @@ imgLabel30 = new JLabel(img30);
 imgLabel30.setBounds(-45,0, 340, 100);
 game30.add(imgLabel30);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name30 = new JLabel ("30");
+name30.setBounds(400,40,300,20);
+name30.setForeground(new Color(250,250,250));
+name30.setFont(new Font("Arial", Font.BOLD, 25));
+game30.add(name30);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep30 = new JLabel ("$30");
+namep30.setBounds(870,40,300,20);
+namep30.setForeground(new Color(250,250,250));
+namep30.setFont(new Font("Arial", Font.BOLD, 25));
+game30.add(namep30);
  
 //----------------------------------------------------------------------------------------------------
  
@@ -1106,17 +1106,17 @@ imgLabel31 = new JLabel(img31);
 imgLabel31.setBounds(-45,0, 340, 100);
 game31.add(imgLabel31);
 
-JLabel name1 = new JLabel ("ASSASSINS CREED 2");
-name1.setBounds(400,40,300,20);
-name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(name1);
+JLabel name31 = new JLabel ("31");
+name31.setBounds(400,40,300,20);
+name31.setForeground(new Color(250,250,250));
+name31.setFont(new Font("Arial", Font.BOLD, 25));
+game31.add(name31);
 
-JLabel namep1 = new JLabel ("$10");
-namep1.setBounds(870,40,300,20);
-namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
-game1.add(namep1);
+JLabel namep31 = new JLabel ("$10");
+namep31.setBounds(870,40,300,20);
+namep31.setForeground(new Color(250,250,250));
+namep31.setFont(new Font("Arial", Font.BOLD, 25));
+game31.add(namep31);
  
 //----------------------------------------------------------------------------------------------------
  
