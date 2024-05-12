@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
  
-public class library extends JFrame implements ActionListener
+public class library extends JFrame implements  MouseListener, ActionListener
 {
     JPanel mainPanel, upperPanel;
     ImageIcon img;
