@@ -41,8 +41,13 @@ public class accoun{
 			file.createNewFile();	
 			fwrite = new fileWriter(file,true);
 
-			fwrite.write();
-			
+			fwrite.write(getUserName()+"\t");
+			fwrite.write(getUserpass()+"\n");
+
+			fwrite.flush();
+			fwrite.close();
+
+
 
 
 

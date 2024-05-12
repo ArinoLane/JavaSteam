@@ -31,13 +31,11 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 		panel.setBounds(0,0,500,500);
 
 
-
 		JLabel signIntext = new JLabel("SIGN IN");
 		signIntext.setBounds(180,50,150,100);
 		signIntext.setForeground(new Color(250,250,250));
 		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
 		panel.add(signIntext);
-
 
 
 		JLabel creatNew = new JLabel("New to Steam?");
