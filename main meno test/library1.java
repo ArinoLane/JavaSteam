@@ -71,7 +71,7 @@ public class library1 extends JFrame implements  MouseListener, ActionListener
 
         mainPanel.add(upperPanel); //this.add jemon sobar last e add korte hoy temni ei panel er mdode jehetu sob dukbe, tai sob kisu dukanor por .add korbo {()}. anekta, ekta bag er modde sob jinis dukanor por cain off kora. Oi jinis gulo nijera add/chain off hobe than amar bag er chain off hobe sobar last e .
 
-
+        
 
         this.getContentPane().add(scrollPane);  
           
