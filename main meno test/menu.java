@@ -1224,7 +1224,7 @@ public void actionPerformed(ActionEvent ae){
 		}
         else if (ae.getSource()== buy1)
         {
-            menu m1 = m1 menu (name1,this);
+            menu m1 = new menu (name1,this);
         }
 		
 }
