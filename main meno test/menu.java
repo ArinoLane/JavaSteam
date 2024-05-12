@@ -111,11 +111,17 @@ game1.setLayout(null);
 game1.setBackground(new Color(34,57,75));
 game1.setBounds(50,0,990,110);
 buy1.add(game1);
+
  
 img1 = new ImageIcon("ac2.jpg");
 imgLabel1 = new JLabel(img1);
 imgLabel1.setBounds(-45,0, 340, 100);
 game1.add(imgLabel1);
+
+JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
+name1.setBounds(0,10,300,20)
+name1.setFont(new Font("Arial", Font.BOLD, 5));
+game1.add(name1)
  
 //----------------------------------------------------------------------------------------------------
  
