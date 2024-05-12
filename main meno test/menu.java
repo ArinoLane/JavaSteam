@@ -15,7 +15,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
     
 
 
-    
+
     public menu ()
     {        
         super("STEAM");
@@ -136,14 +136,7 @@ game1.add(imgLabel1);
 
 JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
 name1.setBounds(500,10,300,20);
-<<<<<<< HEAD
 name1.setFont(new Font("Arial", Font.BOLD, 15));
-
-name1.setFont(new Font("Arial", Font.BOLD, 20));
-
-=======
-name1.setFont(new Font("Arial", Font.BOLD, 20));
->>>>>>> 4f7475fae7a778c0dff9bf008eef98776e16d0d2
 game1.add(name1);
 
 //----------------------------------------------------------------------------------------------------
@@ -1231,7 +1224,7 @@ public void actionPerformed(ActionEvent ae){
 		}
         else if (ae.getSource()== buy0)
         {
-            menu m1 = nwe menu ()
+            menu m1 = nwe menu (name0)
         }
 		
 }
