@@ -114,7 +114,7 @@ buy1.add(game1);
  
 img1 = new ImageIcon("ac2.jpg");
 imgLabel1 = new JLabel(img1);
-imgLabel1.setBounds(-45,0, 340, 130);
+imgLabel1.setBounds(-45,0, 340, 100);
 game1.add(imgLabel1);
  
 //----------------------------------------------------------------------------------------------------
@@ -134,7 +134,7 @@ buy2.add(game2);
  
 img2 = new ImageIcon("ac2b.jpg");
 imgLabel2 = new JLabel(img2);
-imgLabel2.setBounds(-45,0, 340, 130);
+imgLabel2.setBounds(-45,0, 340, 100);
 game2.add(imgLabel2);
  
 //----------------------------------------------------------------------------------------------------
@@ -154,7 +154,7 @@ buy3.add(game3);
  
 img3 = new ImageIcon("ac2r.jpg");
 imgLabel3 = new JLabel(img3);
-imgLabel3.setBounds(-45,0, 340, 130);
+imgLabel3.setBounds(-45,0, 340, 100);
 game3.add(imgLabel3);
  
 //----------------------------------------------------------------------------------------------------
@@ -174,7 +174,7 @@ buy4.add(game4);
  
 img4 = new ImageIcon("ac3.jpg");
 imgLabel4 = new JLabel(img4);
-imgLabel4.setBounds(-45,0, 340, 130);
+imgLabel4.setBounds(-45,0, 340, 100);
 game4.add(imgLabel4);
  
 //----------------------------------------------------------------------------------------------------
@@ -194,7 +194,7 @@ buy5.add(game5);
  
 img5 = new ImageIcon("ac4.jpg");
 imgLabel5 = new JLabel(img5);
-imgLabel5.setBounds(-45,0, 340, 130);
+imgLabel5.setBounds(-45,0, 340, 100);
 game5.add(imgLabel5);
  
 //----------------------------------------------------------------------------------------------------
@@ -214,7 +214,7 @@ buy6.add(game6);
  
 img6 = new ImageIcon("aco.jpg");
 imgLabel6 = new JLabel(img6);
-imgLabel6.setBounds(-45,0, 340, 130);
+imgLabel6.setBounds(-45,0, 340, 100);
 game6.add(imgLabel6);
  
 //----------------------------------------------------------------------------------------------------
@@ -234,7 +234,7 @@ buy7.add(game7);
  
 img7 = new ImageIcon("acr.jpg");
 imgLabel7 = new JLabel(img7);
-imgLabel7.setBounds(-45,0, 340, 130);
+imgLabel7.setBounds(-45,0, 340, 100);
 game7.add(imgLabel7);
  
 //----------------------------------------------------------------------------------------------------
@@ -254,7 +254,7 @@ buy8.add(game8);
  
 img8 = new ImageIcon("acu.jpg");
 imgLabel8 = new JLabel(img8);
-imgLabel8.setBounds(-45,0, 340, 130);
+imgLabel8.setBounds(-45,0, 340, 100);
 game8.add(imgLabel8);
  
 //----------------------------------------------------------------------------------------------------
@@ -274,7 +274,7 @@ buy9.add(game9);
  
 img9 = new ImageIcon("Apex_Legends.jpg");
 imgLabel9 = new JLabel(img9);
-imgLabel9.setBounds(-45,0, 340, 130);
+imgLabel9.setBounds(-45,0, 340, 100);
 game9.add(imgLabel9);
  
 //----------------------------------------------------------------------------------------------------
@@ -294,7 +294,7 @@ buy10.add(game10);
  
 img10 = new ImageIcon("batmna.jpg");
 imgLabel10 = new JLabel(img10);
-imgLabel10.setBounds(-45,0, 340, 130);
+imgLabel10.setBounds(-45,0, 340, 100);
 game10.add(imgLabel10);
  
 //----------------------------------------------------------------------------------------------------
@@ -314,7 +314,7 @@ buy11.add(game11);
  
 img11 = new ImageIcon("black_squad.jpg");
 imgLabel11 = new JLabel(img11);
-imgLabel11.setBounds(-45,0, 340, 130);
+imgLabel11.setBounds(-45,0, 340, 100);
 game11.add(imgLabel11);
  
 //----------------------------------------------------------------------------------------------------
@@ -334,7 +334,7 @@ buy12.add(game12);
  
 img12 = new ImageIcon("cs2.jpg");
 imgLabel12 = new JLabel(img12);
-imgLabel12.setBounds(-45,0, 340, 130);
+imgLabel12.setBounds(-45,0, 340, 100);
 game12.add(imgLabel12);
  
 //----------------------------------------------------------------------------------------------------
@@ -354,7 +354,7 @@ buy13.add(game13);
  
 img13 = new ImageIcon("Cyberpunk.jpg");
 imgLabel13 = new JLabel(img13);
-imgLabel13.setBounds(-45,0, 340, 130);
+imgLabel13.setBounds(-45,0, 340, 100);
 game13.add(imgLabel13);
  
 //----------------------------------------------------------------------------------------------------
@@ -374,7 +374,7 @@ buy14.add(game14);
  
 img14 = new ImageIcon("deadspace.jpg");
 imgLabel14 = new JLabel(img14);
-imgLabel14.setBounds(-45,0, 340, 130);
+imgLabel14.setBounds(-45,0, 340, 100);
 game14.add(imgLabel14);
  
 //----------------------------------------------------------------------------------------------------
@@ -394,7 +394,7 @@ buy15.add(game15);
  
 img15 = new ImageIcon("dishonored.jpg");
 imgLabel15 = new JLabel(img15);
-imgLabel15.setBounds(-45,0, 340, 130);
+imgLabel15.setBounds(-45,0, 340, 100);
 game15.add(imgLabel15);
  
 //----------------------------------------------------------------------------------------------------
@@ -414,7 +414,7 @@ buy16.add(game16);
  
 img16 = new ImageIcon("dishonored2.jpg");
 imgLabel16 = new JLabel(img16);
-imgLabel16.setBounds(-45,0, 340, 130);
+imgLabel16.setBounds(-45,0, 340, 100);
 game16.add(imgLabel16);
  
 //----------------------------------------------------------------------------------------------------
@@ -434,7 +434,7 @@ buy17.add(game17);
  
 img17 = new ImageIcon("Dishonoreddot.jpg");
 imgLabel17 = new JLabel(img17);
-imgLabel17.setBounds(-45,0, 340, 130);
+imgLabel17.setBounds(-45,0, 340, 100);
 game17.add(imgLabel17);
  
 //----------------------------------------------------------------------------------------------------
@@ -454,7 +454,7 @@ buy18.add(game18);
  
 img18 = new ImageIcon("dota.jpg");
 imgLabel18 = new JLabel(img18);
-imgLabel18.setBounds(-45,0, 340, 130);
+imgLabel18.setBounds(-45,0, 340, 100);
 game18.add(imgLabel18);
  
 //----------------------------------------------------------------------------------------------------
@@ -474,7 +474,7 @@ buy19.add(game19);
  
 img19 = new ImageIcon("dyinglight.jpg");
 imgLabel19 = new JLabel(img19);
-imgLabel19.setBounds(-45,0, 340, 130);
+imgLabel19.setBounds(-45,0, 340, 100);
 game19.add(imgLabel19);
  
 //----------------------------------------------------------------------------------------------------
@@ -494,7 +494,7 @@ buy20.add(game20);
  
 img20 = new ImageIcon("fallout3.jpg");
 imgLabel20 = new JLabel(img20);
-imgLabel20.setBounds(-45,0, 340, 130);
+imgLabel20.setBounds(-45,0, 340, 100);
 game20.add(imgLabel20);
  
 //----------------------------------------------------------------------------------------------------
@@ -514,7 +514,7 @@ buy21.add(game21);
  
 img21 = new ImageIcon("fallout4.jpg");
 imgLabel21 = new JLabel(img21);
-imgLabel21.setBounds(-45,0, 340, 130);
+imgLabel21.setBounds(-45,0, 340, 100);
 game21.add(imgLabel21);
  
 //----------------------------------------------------------------------------------------------------
@@ -534,7 +534,7 @@ buy22.add(game22);
  
 img22 = new ImageIcon("falloutnv.jpg");
 imgLabel22 = new JLabel(img22);
-imgLabel22.setBounds(-45,0, 340, 130);
+imgLabel22.setBounds(-45,0, 340, 100);
 game22.add(imgLabel22);
  
 //----------------------------------------------------------------------------------------------------
@@ -554,7 +554,7 @@ buy23.add(game23);
  
 img23 = new ImageIcon("fc.jpg");
 imgLabel23 = new JLabel(img23);
-imgLabel23.setBounds(-45,0, 340, 130);
+imgLabel23.setBounds(-45,0, 340, 100);
 game23.add(imgLabel23);
  
 //----------------------------------------------------------------------------------------------------
@@ -574,7 +574,7 @@ buy24.add(game24);
  
 img24 = new ImageIcon("fc2.jpg");
 imgLabel24 = new JLabel(img24);
-imgLabel24.setBounds(-45,0, 340, 130);
+imgLabel24.setBounds(-45,0, 340, 100);
 game24.add(imgLabel24);
  
 //----------------------------------------------------------------------------------------------------
@@ -594,7 +594,7 @@ buy25.add(game25);
  
 img25 = new ImageIcon("fc3.jpg");
 imgLabel25 = new JLabel(img25);
-imgLabel25.setBounds(-45,0, 340, 130);
+imgLabel25.setBounds(-45,0, 340, 100);
 game25.add(imgLabel25);
  
 //----------------------------------------------------------------------------------------------------
@@ -614,7 +614,7 @@ buy26.add(game26);
  
 img26 = new ImageIcon("fc4.jpg");
 imgLabel26 = new JLabel(img26);
-imgLabel26.setBounds(-45,0, 340, 130);
+imgLabel26.setBounds(-45,0, 340, 100);
 game26.add(imgLabel26);
  
 //----------------------------------------------------------------------------------------------------
@@ -634,7 +634,7 @@ buy27.add(game27);
  
 img27 = new ImageIcon("fc5.jpg");
 imgLabel27 = new JLabel(img27);
-imgLabel27.setBounds(-45,0, 340, 130);
+imgLabel27.setBounds(-45,0, 340, 100);
 game27.add(imgLabel27);
  
 //----------------------------------------------------------------------------------------------------
@@ -654,7 +654,7 @@ buy28.add(game28);
  
 img28 = new ImageIcon("fc6.jpg");
 imgLabel28 = new JLabel(img28);
-imgLabel28.setBounds(-45,0, 340, 130);
+imgLabel28.setBounds(-45,0, 340, 100);
 game28.add(imgLabel28);
  
 //----------------------------------------------------------------------------------------------------
@@ -674,7 +674,7 @@ buy29.add(game29);
  
 img29 = new ImageIcon("fc24.jpg");
 imgLabel29 = new JLabel(img29);
-imgLabel29.setBounds(-45,0, 340, 130);
+imgLabel29.setBounds(-45,0, 340, 100);
 game29.add(imgLabel29);
  
 //----------------------------------------------------------------------------------------------------
@@ -694,7 +694,7 @@ buy30.add(game30);
  
 img30 = new ImageIcon("Hades2.jpg");
 imgLabel30 = new JLabel(img30);
-imgLabel30.setBounds(-45,0, 340, 130);
+imgLabel30.setBounds(-45,0, 340, 100);
 game30.add(imgLabel30);
  
 //----------------------------------------------------------------------------------------------------
@@ -714,7 +714,7 @@ buy31.add(game31);
  
 img31 = new ImageIcon("halflife.jpg");
 imgLabel31 = new JLabel(img31);
-imgLabel31.setBounds(-45,0, 340, 130);
+imgLabel31.setBounds(-45,0, 340, 100);
 game31.add(imgLabel31);
  
 //----------------------------------------------------------------------------------------------------
@@ -734,7 +734,7 @@ buy32.add(game32);
  
 img32 = new ImageIcon("hitman.jpg");
 imgLabel32 = new JLabel(img32);
-imgLabel32.setBounds(-45,0, 340, 130);
+imgLabel32.setBounds(-45,0, 340, 100);
 game32.add(imgLabel32);
  
 //----------------------------------------------------------------------------------------------------
@@ -754,7 +754,7 @@ buy33.add(game33);
  
 img33 = new ImageIcon("hitman2.jpg");
 imgLabel33 = new JLabel(img33);
-imgLabel33.setBounds(-45,0, 340, 130);
+imgLabel33.setBounds(-45,0, 340, 100);
 game33.add(imgLabel33);
  
 //----------------------------------------------------------------------------------------------------
@@ -774,7 +774,7 @@ buy34.add(game34);
  
 img34 = new ImageIcon("kindom.jpg");
 imgLabel34 = new JLabel(img34);
-imgLabel34.setBounds(-45,0, 340, 130);
+imgLabel34.setBounds(-45,0, 340, 100);
 game34.add(imgLabel34);
  
 //----------------------------------------------------------------------------------------------------
@@ -794,7 +794,7 @@ buy35.add(game35);
  
 img35 = new ImageIcon("lifeisstrange.jpg");
 imgLabel35 = new JLabel(img35);
-imgLabel35.setBounds(-45,0, 340, 130);
+imgLabel35.setBounds(-45,0, 340, 100);
 game35.add(imgLabel35);
  
 //----------------------------------------------------------------------------------------------------
@@ -814,7 +814,7 @@ buy36.add(game36);
  
 img36 = new ImageIcon("metro3.jpg");
 imgLabel36 = new JLabel(img36);
-imgLabel36.setBounds(-45,0, 340, 130);
+imgLabel36.setBounds(-45,0, 340, 100);
 game36.add(imgLabel36);
  
 //----------------------------------------------------------------------------------------------------
@@ -834,7 +834,7 @@ buy37.add(game37);
  
 img37 = new ImageIcon("metro2033.jpg");
 imgLabel37 = new JLabel(img37);
-imgLabel37.setBounds(-45,0, 340, 130);
+imgLabel37.setBounds(-45,0, 340, 100);
 game37.add(imgLabel37);
  
 //----------------------------------------------------------------------------------------------------
@@ -854,7 +854,7 @@ buy38.add(game38);
  
 img38 = new ImageIcon();
 imgLabel38 = new JLabel(img38);
-imgLabel38.setBounds(-45,0, 340, 130);
+imgLabel38.setBounds(-45,0, 340, 100);
 game38.add(imgLabel38);
  
 //----------------------------------------------------------------------------------------------------
@@ -874,7 +874,7 @@ buy39.add(game39);
  
 img39 = new ImageIcon("metrolastlight.jpg");
 imgLabel39 = new JLabel(img39);
-imgLabel39.setBounds(-45,0, 340, 130);
+imgLabel39.setBounds(-45,0, 340, 100);
 game39.add(imgLabel39);
  
 //----------------------------------------------------------------------------------------------------
@@ -894,7 +894,7 @@ buy40.add(game40);
  
 img40 = new ImageIcon("portal.jpg");
 imgLabel40 = new JLabel(img40);
-imgLabel40.setBounds(-45,0, 340, 130);
+imgLabel40.setBounds(-45,0, 340, 100);
 game40.add(imgLabel40);
  
 //----------------------------------------------------------------------------------------------------
@@ -914,7 +914,7 @@ buy41.add(game41);
  
 img41 = new ImageIcon("pubg.jpg");
 imgLabel41 = new JLabel(img41);
-imgLabel41.setBounds(-45,0, 340, 130);
+imgLabel41.setBounds(-45,0, 340, 100);
 game41.add(imgLabel41);
  
 //----------------------------------------------------------------------------------------------------
@@ -934,7 +934,7 @@ buy42.add(game42);
  
 img42 = new ImageIcon("R6.jpg");
 imgLabel42 = new JLabel(img42);
-imgLabel42.setBounds(-45,0, 340, 130);
+imgLabel42.setBounds(-45,0, 340, 100);
 game42.add(imgLabel42);
  
 //----------------------------------------------------------------------------------------------------
@@ -954,7 +954,7 @@ buy43.add(game43);
  
 img43 = new ImageIcon("re2.jpg");
 imgLabel43 = new JLabel(img43);
-imgLabel43.setBounds(-45,0, 340, 130);
+imgLabel43.setBounds(-45,0, 340, 100);
 game43.add(imgLabel43);
  
 //----------------------------------------------------------------------------------------------------
@@ -974,7 +974,7 @@ buy44.add(game44);
  
 img44 = new ImageIcon("re3.jpg");
 imgLabel44 = new JLabel(img44);
-imgLabel44.setBounds(-45,0, 340, 130);
+imgLabel44.setBounds(-45,0, 340, 100);
 game44.add(imgLabel44);
  
 //----------------------------------------------------------------------------------------------------
@@ -994,7 +994,7 @@ buy45.add(game45);
  
 img45 = new ImageIcon("re4.jpg");
 imgLabel45 = new JLabel(img45);
-imgLabel45.setBounds(-45,0, 340, 130);
+imgLabel45.setBounds(-45,0, 340, 100);
 game45.add(imgLabel45);
  
 //----------------------------------------------------------------------------------------------------
@@ -1014,7 +1014,7 @@ buy46.add(game46);
  
 img46 = new ImageIcon("RE7.jpg");
 imgLabel46 = new JLabel(img46);
-imgLabel46.setBounds(-45,0, 340, 130);
+imgLabel46.setBounds(-45,0, 340, 100);
 game46.add(imgLabel46);
  
 //----------------------------------------------------------------------------------------------------
@@ -1034,7 +1034,7 @@ buy47.add(game47);
  
 img47 = new ImageIcon("re8.jpg");
 imgLabel47 = new JLabel(img47);
-imgLabel47.setBounds(-45,0, 340, 130);
+imgLabel47.setBounds(-45,0, 340, 100);
 game47.add(imgLabel47);
  
 //----------------------------------------------------------------------------------------------------
@@ -1054,7 +1054,7 @@ buy48.add(game48);
  
 img48 = new ImageIcon("readdead2.jpg");
 imgLabel48 = new JLabel(img48);
-imgLabel48.setBounds(-45,0, 340, 130);
+imgLabel48.setBounds(-45,0, 340, 100);
 game48.add(imgLabel48);
  
 //----------------------------------------------------------------------------------------------------
@@ -1074,7 +1074,7 @@ buy49.add(game49);
  
 img49 = new ImageIcon("rust.jpg");
 imgLabel49 = new JLabel(img49);
-imgLabel49.setBounds(-45,0, 340, 130);
+imgLabel49.setBounds(-45,0, 340, 100);
 game49.add(imgLabel49);
  
 //----------------------------------------------------------------------------------------------------
@@ -1094,7 +1094,7 @@ buy50.add(game50);
  
 img50 = new ImageIcon("warface.jpg");
 imgLabel50 = new JLabel(img50);
-imgLabel50.setBounds(-45,0, 340, 130);
+imgLabel50.setBounds(-45,0, 340, 100);
 game50.add(imgLabel50);
  
 //----------------------------------------------------------------------------------------------------
@@ -1114,7 +1114,7 @@ buy51.add(game51);
  
 img51 = new ImageIcon("witcher2.jpg");
 imgLabel51 = new JLabel(img51);
-imgLabel51.setBounds(-45,0, 340, 130);
+imgLabel51.setBounds(-45,0, 340, 100);
 game51.add(imgLabel51);
  
 //----------------------------------------------------------------------------------------------------
@@ -1134,7 +1134,7 @@ buy52.add(game52);
  
 img52 = new ImageIcon("withcer.jpg");
 imgLabel52 = new JLabel(img52);
-imgLabel52.setBounds(-45,0, 340, 130);
+imgLabel52.setBounds(-45,0, 340, 100);
 game52.add(imgLabel52);
  
 //----------------------------------------------------------------------------------------------------
@@ -1154,7 +1154,7 @@ buy53.add(game53);
  
 img53 = new ImageIcon("wither3.jpg");
 imgLabel53 = new JLabel(img53);
-imgLabel53.setBounds(-45,0, 340, 130);
+imgLabel53.setBounds(-45,0, 340, 100);
 game53.add(imgLabel53);
  
 //----------------------------------------------------------------------------------------------------
@@ -1174,7 +1174,7 @@ buy54.add(game54);
  
  img54 = new ImageIcon();
 imgLabel54 = new JLabel(img54);
-imgLabel54.setBounds(-45,0, 340, 130);
+imgLabel54.setBounds(-45,0, 340, 100);
 game54.add(imgLabel54); */
  
 //----------------------------------------------------------------------------------------------------
