@@ -47,6 +47,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
         store.setForeground(new Color(177,179,182));
+		store.setBackground(new Color(23,26,33));
         store.setBorderPainted(false);
         store.setContentAreaFilled(false);
         store.addActionListener(this);
@@ -1205,10 +1206,12 @@ public void actionPerformed(ActionEvent ae){
             this.setVisible(false);
         }
 		
-		else if(ae.getSource()==store)
+		else if (ae.getSource()==store)
         {
             MStore s1=new MStore();
             s1.setVisible(true);
+			/*EditProfile s1=new EditProfile();
+            s1.setVisible(true);*/
             this.setVisible(false);
         }
 }
