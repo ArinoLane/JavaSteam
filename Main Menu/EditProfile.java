@@ -153,4 +153,3 @@ public class EditProfile extends JFrame implements  MouseListener, ActionListene
 	}
 	
 }
-

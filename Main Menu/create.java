@@ -13,6 +13,8 @@ public class create extends JFrame implements MouseListener, ActionListener
 	JPasswordField passf,rpassf;
 	JButton createupbtn,backbtn;
 	JCheckBox s1;
+
+	
 	public create()
 	{
 		super("Create Account");

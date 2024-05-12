@@ -13,6 +13,7 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 	JButton signupbtn, backbtn;
 	ImageIcon img,imgContributors,imgbackground;
 	JScrollPane scrollPane;
+
 	
 
 	public RegisterFrame()
@@ -135,6 +136,11 @@ public class RegisterFrame extends JFrame implements MouseListener, ActionListen
 	public void mouseExited(MouseEvent me){}
 	
 	public void actionPerformed(ActionEvent ae){
+		String s1 = namefield.getText();
+		String s2 = password.getText();
+
+
+
 		if(ae.getSource()==CreatAccnount )
 		{
 			create c1 = new create ();

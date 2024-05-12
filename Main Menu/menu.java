@@ -136,18 +136,7 @@ game1.add(imgLabel1);
 
 JLabel name1 = new JLabel ("assassins creed 2"+"\n"+"$10");
 name1.setBounds(500,10,300,20);
-<<<<<<< HEAD
-
 name1.setFont(new Font("Arial", Font.BOLD, 15));
-
-name1.setFont(new Font("Arial", Font.BOLD, 20));
-
-
-name1.setFont(new Font("Arial", Font.BOLD, 20));
-
-=======
-name1.setFont(new Font("Arial", Font.BOLD, 15));
->>>>>>> 8c02787ecd58f9737c8c719188fdfcde86cbf1de
 game1.add(name1);
 
 //----------------------------------------------------------------------------------------------------
