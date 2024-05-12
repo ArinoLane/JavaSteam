@@ -1201,7 +1201,7 @@ public void actionPerformed(ActionEvent ae){
     
     if(ae.getSource()==library)
         {
-            library l1=new library();
+            library1 l1=new library1();
             l1.setVisible(true);
             this.setVisible(false);
         }
