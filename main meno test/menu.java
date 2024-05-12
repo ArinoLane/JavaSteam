@@ -1204,6 +1204,13 @@ public void actionPerformed(ActionEvent ae){
             l1.setVisible(true);
             this.setVisible(false);
         }
+		
+		else if(ae.getSource()==store)
+        {
+            MStore s1=new MStore();
+            s1.setVisible(true);
+            this.setVisible(false);
+        }
 }
 
 }
