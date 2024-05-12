@@ -6,10 +6,10 @@ import java.awt.event.*;
 public class menu extends JFrame implements  MouseListener, ActionListener 
 {
     JPanel mainPanel, upperPanel, game0,game00,game1,game2,game3,game4,game5,game6,game7,game8,game9,game10,game11,game12,game13,game14,game15,game16,game17,game18,game19,game20,game21,game22,game23,game24,game25,game26,game27,game28,game29,game30,game30_1, game31,game32,game33,game34,game35,game36,game37,game38,game39,game40,game41,game42,game43,game44,game45,game46,game47,game48,game49,game50,game51,game52,game53,game54;
-    ImageIcon img,img0,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54;
-    JLabel imglabel,imgLabel0,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
+    ImageIcon img,img0,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54,imgs;
+    JLabel imglabels,imglabel,imgLabel0,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
     JScrollPane scrollPane;
-    JButton userLabel,store,library, left, right;
+    JButton userLabel,store,library, left, right,storebtn;
     JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30,buy31,buy32,buy33,buy34,buy35,buy36,buy37,buy38,buy39,buy40,buy41,buy42,buy43,buy44,buy45,buy46,buy47,buy48,buy49,buy50,buy51,buy52,buy53,buy54;
  
     public menu ()
@@ -39,6 +39,16 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         imglabel=new JLabel(img);
         imglabel.setBounds(200,25,200,50);
         upperPanel.add(imglabel);
+		
+		
+		imgs=new ImageIcon("storebag.png");
+ 
+		storebtn = new JButton(imgs);
+		storebtn.setBounds(870,25,50,50);
+		storebtn.setBackground(new Color(23,26,33));
+		storebtn.addMouseListener(this);
+		storebtn.addActionListener(this);
+		upperPanel.add(storebtn);
 
 
         store = new JButton("STORE");
@@ -1188,12 +1198,19 @@ public void actionPerformed(ActionEvent ae){
 		
 		else if (ae.getSource()==store)
         {
-            MStore s1=new MStore();
+            /*MStore s1=new MStore();
             s1.setVisible(true);
 			/*EditProfile s1=new EditProfile();
-            s1.setVisible(true);*/
-            this.setVisible(false);
+            s1.setVisible(true);
+            this.setVisible(false);*/
         }
+		else if(ae.getSource()==storebtn)
+		{
+			MStore s1=new MStore();
+            s1.setVisible(true);
+			this.setVisible(false);
+		}
+		
 }
 
 }
