@@ -23,7 +23,7 @@ public class useracc
 		this.useremail="";
 	}
 	
-	public useracc(String username,String userpass,String useremail)//username=s1,userpass=s2
+	public useracc(String username,String userpass,String useremail)
 	{
 		this.username=username;
 		this.userpass=userpass;
@@ -45,9 +45,29 @@ public class useracc
 		this.useremail=useremail;
 	}
 	
+	public void setUserName1(String username)
+	{
+		this.username=username;
+	}
+	
+	public void setUserpass1(String userpass)
+	{
+		this.userpass=userpass;
+	}
+	
+	public void setUserEmail1(String useremail)
+	{
+		this.useremail=useremail;
+	}
+	
 	public String getUserName()
 	{
 		return username;
+	}
+	
+	public String getUserpass()
+	{
+		return userpass;
 	}
 	
 	public String getUserEmail()
@@ -55,12 +75,26 @@ public class useracc
 		return useremail;
 	}
 	
-	
-	
-	public String getUserpass()
+	public String getUserName1()
 	{
+		username="";
+		return username;
+	}
+	
+	public String getUserpass1()
+	{
+		userpass="";
 		return userpass;
 	}
+	
+	public String getUserEmail1()
+	{
+		useremail="";
+		return useremail;
+	}
+	
+	
+
 	
 	public void adduseracc()
 	{
@@ -92,6 +126,8 @@ public class useracc
 	{
 		boolean flag=false;
 		file=new File("./userdata.txt");
+		
+
 		try
 		{
 			
@@ -104,6 +140,7 @@ public class useracc
 				String[] value=line.split("\t");
 				if(value[0].equals(username)&&value[1].equals(userpass))
 				{
+			
 					flag=true;
 				}
 			}
@@ -116,5 +153,14 @@ public class useracc
 		
 		return flag;
 	}
+	
+	
+		public void del(String s1,String s2,String s3)
+	{
+		al=new Scanner(file);
+		
+	}
+	
+
 	
 }

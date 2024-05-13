@@ -1841,6 +1841,12 @@ public void actionPerformed(ActionEvent ae){
 			this.setVisible(false);
 		}
 		
+		else if(ae.getSource()==store){
+			
+			useracc ac=new useracc();
+				ac.del();
+			
+		}
         
 		
 }

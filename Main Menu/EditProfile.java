@@ -130,6 +130,8 @@ public class EditProfile extends JFrame implements  MouseListener, ActionListene
 		String s2=passPF.getText();
 		String s3=emailTF.getText();
 		
+		//useracc ad=new useracc();
+		
 		if(ae.getSource()==InsertBtn)
 		{
 			if(s1.isEmpty()&&s2.isEmpty()&&s3.isEmpty())
@@ -137,19 +139,41 @@ public class EditProfile extends JFrame implements  MouseListener, ActionListene
 				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
 			}
 			else if(!s1.isEmpty()||!s2.isEmpty()||!s3.isEmpty()){
-			JOptionPane.showMessageDialog(this,"DETAILS CHANGED");
+				
+				JOptionPane.showMessageDialog(this,"DETAILS CHANGED");
+			    logIn p1=new logIn();
+			p1.setVisible(true);
+			this.setVisible(false);
+			
+			
+				 }
+				
+
+			//
 			/*RegisterFrame p1=new RegisterFrame();
 			p1.setVisible(true);
 			this.setVisible(false);
 			}*/
-		}
-	}
+		
+	
 		else if(ae.getSource()==backbtn)
 		{
 			menu m1=new menu();
 			m1.setVisible(true);
 			this.setVisible(false);
 		}
+		
+		else if(ae.getSource()==DELETEBtn){
+			
+			useracc ad=new useracc(s1,s2,s3);
+					ad.del();
+					JOptionPane.showMessageDialog(this,"DETAILS CHANGED");
+		}
+					
+				
+			
+		}
 	}
 	
-}
+		}
+	
