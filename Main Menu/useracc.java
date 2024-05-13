@@ -75,7 +75,7 @@ public class useracc
 			
 			fwrite.write(getUserName()+"\t");
 			fwrite.write(getUserpass()+"\t");
-			fwrite.write(getUserEmail()+"\t");
+			fwrite.write(getUserEmail()+"\n");
 			
 			
 			fwrite.flush();
