@@ -40,25 +40,14 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
         img=new ImageIcon("logo_steam.png");
         imglabel=new JLabel(img);
-        imglabel.setBounds(200,25,200,50);
+        imglabel.setBounds(200,23,200,50);
         upperPanel.add(imglabel);
 		
-		
-		imgs=new ImageIcon("storebag.png");
- 
-		storebtn = new JButton(imgs);
-		storebtn.setBounds(860,25,50,50);
-		storebtn.setBackground(new Color(23,26,33));
-		storebtn.setBorderPainted(false);
-		storebtn.setContentAreaFilled(false);
-		storebtn.addMouseListener(this);
-		storebtn.addActionListener(this);
-		upperPanel.add(storebtn);
 
 
         store = new JButton("STORE");
         store.setBounds(400,40,100,30);
-        store.setFont(new Font("Arial", Font.BOLD, 15));
+        store.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
         store.setForeground(new Color(177,179,182));
@@ -71,7 +60,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
         userLabel = new JButton("USERNAME");
         userLabel.setBounds(480,40,150,30);
-        userLabel.setFont(new Font("Arial", Font.BOLD, 15));
+        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);
         userLabel.setForeground(new Color(177,179,182));
@@ -82,7 +71,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
         library = new JButton("LIBRARY");
         library.setBounds(605,40,150,30);
-        library.setFont(new Font("Arial", Font.BOLD, 15));
+        library.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         library.setBackground(Color.GREEN);
         library.setOpaque(false);
         library.setForeground(new Color(177,179,182));
@@ -115,13 +104,13 @@ game0.add(imgLabel0);
 JLabel name0 = new JLabel ("ASSASSINS CREED ");
 name0.setBounds(400,40,300,20);
 name0.setForeground(new Color(250,250,250));
-name0.setFont(new Font("Arial", Font.BOLD, 25));
+name0.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game0.add(name0);
 
 JLabel namep0 = new JLabel ("$8.99");
 namep0.setBounds(860,40,300,20);
 namep0.setForeground(new Color(250,250,250));
-namep0.setFont(new Font("Arial", Font.BOLD, 25));
+namep0.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game0.add(namep0);
  
 //----------------------------------------------------------------------------------------------------
@@ -148,13 +137,13 @@ game1.add(imgLabel1);
 JLabel name1 = new JLabel ("ASSASSINS CREED 2");
 name1.setBounds(400,40,300,20);
 name1.setForeground(new Color(250,250,250));
-name1.setFont(new Font("Arial", Font.BOLD, 25));
+name1.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game1.add(name1);
 
 JLabel namep1 = new JLabel ("$8.99");
 namep1.setBounds(860,40,300,20);
 namep1.setForeground(new Color(250,250,250));
-namep1.setFont(new Font("Arial", Font.BOLD, 25));
+namep1.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game1.add(namep1);
 
 //----------------------------------------------------------------------------------------------------
@@ -180,13 +169,13 @@ game2.add(imgLabel2);
 JLabel name2 = new JLabel ("2");
 name2.setBounds(400,40,300,20);
 name2.setForeground(new Color(250,250,250));
-name2.setFont(new Font("Arial", Font.BOLD, 25));
+name2.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game2.add(name2);
 
 JLabel namep2 = new JLabel ("$2");
 namep2.setBounds(860,40,300,20);
 namep2.setForeground(new Color(250,250,250));
-namep2.setFont(new Font("Arial", Font.BOLD, 25));
+namep2.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game2.add(namep2);
  
 //----------------------------------------------------------------------------------------------------
@@ -212,13 +201,13 @@ game3.add(imgLabel3);
 JLabel name3 = new JLabel ("3");
 name3.setBounds(400,40,300,20);
 name3.setForeground(new Color(250,250,250));
-name3.setFont(new Font("Arial", Font.BOLD, 25));
+name3.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game3.add(name3);
 
 JLabel namep3 = new JLabel ("$3");
 namep3.setBounds(860,40,300,20);
 namep3.setForeground(new Color(250,250,250));
-namep3.setFont(new Font("Arial", Font.BOLD, 25));
+namep3.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game3.add(namep3);
 
 //----------------------------------------------------------------------------------------------------
@@ -244,13 +233,13 @@ game4.add(imgLabel4);
 JLabel name4 = new JLabel ("4");
 name4.setBounds(400,40,300,20);
 name4.setForeground(new Color(250,250,250));
-name4.setFont(new Font("Arial", Font.BOLD, 25));
+name4.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game4.add(name4);
 
 JLabel namep4 = new JLabel ("$4");
 namep4.setBounds(860,40,300,20);
 namep4.setForeground(new Color(250,250,250));
-namep4.setFont(new Font("Arial", Font.BOLD, 25));
+namep4.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game4.add(namep4);
  
 //----------------------------------------------------------------------------------------------------
@@ -276,13 +265,13 @@ game5.add(imgLabel5);
 JLabel name5 = new JLabel ("5");
 name5.setBounds(400,40,300,20);
 name5.setForeground(new Color(250,250,250));
-name5.setFont(new Font("Arial", Font.BOLD, 25));
+name5.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game5.add(name5);
 
 JLabel namep5 = new JLabel ("$5");
 namep5.setBounds(860,40,300,20);
 namep5.setForeground(new Color(250,250,250));
-namep5.setFont(new Font("Arial", Font.BOLD, 25));
+namep5.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game5.add(namep5);
  
 //----------------------------------------------------------------------------------------------------
@@ -308,13 +297,13 @@ game6.add(imgLabel6);
 JLabel name6 = new JLabel ("6");
 name6.setBounds(400,40,300,20);
 name6.setForeground(new Color(250,250,250));
-name6.setFont(new Font("Arial", Font.BOLD, 25));
+name6.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game6.add(name6);
 
 JLabel namep6 = new JLabel ("$6");
 namep6.setBounds(860,40,300,20);
 namep6.setForeground(new Color(250,250,250));
-namep6.setFont(new Font("Arial", Font.BOLD, 25));
+namep6.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game6.add(namep6);
  
 //----------------------------------------------------------------------------------------------------
@@ -340,13 +329,13 @@ game7.add(imgLabel7);
 JLabel name7 = new JLabel ("7");
 name7.setBounds(400,40,300,20);
 name7.setForeground(new Color(250,250,250));
-name7.setFont(new Font("Arial", Font.BOLD, 25));
+name7.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game7.add(name7);
 
 JLabel namep7 = new JLabel ("$7");
 namep7.setBounds(860,40,300,20);
 namep7.setForeground(new Color(250,250,250));
-namep7.setFont(new Font("Arial", Font.BOLD, 25));
+namep7.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game7.add(namep7);
  
 //----------------------------------------------------------------------------------------------------
@@ -372,13 +361,13 @@ game8.add(imgLabel8);
 JLabel name8 = new JLabel ("8");
 name8.setBounds(400,40,300,20);
 name8.setForeground(new Color(250,250,250));
-name8.setFont(new Font("Arial", Font.BOLD, 25));
+name8.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game8.add(name8);
 
 JLabel namep8 = new JLabel ("$8");
 namep8.setBounds(860,40,300,20);
 namep8.setForeground(new Color(250,250,250));
-namep8.setFont(new Font("Arial", Font.BOLD, 25));
+namep8.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game8.add(namep8);
  
 //----------------------------------------------------------------------------------------------------
@@ -404,13 +393,13 @@ game9.add(imgLabel9);
 JLabel name9 = new JLabel ("9");
 name9.setBounds(400,40,300,20);
 name9.setForeground(new Color(250,250,250));
-name9.setFont(new Font("Arial", Font.BOLD, 25));
+name9.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game9.add(name9);
 
 JLabel namep9 = new JLabel ("$9");
 namep9.setBounds(860,40,300,20);
 namep9.setForeground(new Color(250,250,250));
-namep9.setFont(new Font("Arial", Font.BOLD, 25));
+namep9.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game9.add(namep9);
  
 //----------------------------------------------------------------------------------------------------
@@ -436,13 +425,13 @@ game10.add(imgLabel10);
 JLabel name10 = new JLabel ("10");
 name10.setBounds(400,40,300,20);
 name10.setForeground(new Color(250,250,250));
-name10.setFont(new Font("Arial", Font.BOLD, 25));
+name10.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game10.add(name10);
 
 JLabel namep10 = new JLabel ("$10");
 namep10.setBounds(860,40,300,20);
 namep10.setForeground(new Color(250,250,250));
-namep10.setFont(new Font("Arial", Font.BOLD, 25));
+namep10.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game10.add(namep10);
  
 //----------------------------------------------------------------------------------------------------
@@ -468,13 +457,13 @@ game11.add(imgLabel11);
 JLabel name11 = new JLabel ("11");
 name11.setBounds(400,40,300,20);
 name11.setForeground(new Color(250,250,250));
-name11.setFont(new Font("Arial", Font.BOLD, 25));
+name11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game11.add(name11);
 
 JLabel namep11 = new JLabel ("$11");
 namep11.setBounds(860,40,300,20);
 namep11.setForeground(new Color(250,250,250));
-namep11.setFont(new Font("Arial", Font.BOLD, 25));
+namep11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game11.add(namep11);
  
 //----------------------------------------------------------------------------------------------------
@@ -500,13 +489,13 @@ game12.add(imgLabel12);
 JLabel name12 = new JLabel ("12");
 name12.setBounds(400,40,300,20);
 name12.setForeground(new Color(250,250,250));
-name12.setFont(new Font("Arial", Font.BOLD, 25));
+name12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game12.add(name12);
 
 JLabel namep12 = new JLabel ("$12");
 namep12.setBounds(860,40,300,20);
 namep12.setForeground(new Color(250,250,250));
-namep12.setFont(new Font("Arial", Font.BOLD, 25));
+namep12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game12.add(namep12);
  
 //----------------------------------------------------------------------------------------------------
@@ -532,13 +521,13 @@ game13.add(imgLabel13);
  JLabel name13 = new JLabel ("13");
 name13.setBounds(400,40,300,20);
 name13.setForeground(new Color(250,250,250));
-name13.setFont(new Font("Arial", Font.BOLD, 25));
+name13.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game13.add(name13);
 
 JLabel namep13 = new JLabel ("$13");
 namep13.setBounds(860,40,300,20);
 namep13.setForeground(new Color(250,250,250));
-namep13.setFont(new Font("Arial", Font.BOLD, 25));
+namep13.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game13.add(namep13);
 
  
@@ -565,13 +554,13 @@ game14.add(imgLabel14);
 JLabel name14 = new JLabel ("14");
 name14.setBounds(400,40,300,20);
 name14.setForeground(new Color(250,250,250));
-name14.setFont(new Font("Arial", Font.BOLD, 25));
+name14.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game14.add(name14);
 
 JLabel namep14 = new JLabel ("$14");
 namep14.setBounds(860,40,300,20);
 namep14.setForeground(new Color(250,250,250));
-namep14.setFont(new Font("Arial", Font.BOLD, 25));
+namep14.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game14.add(namep14);
  
 //----------------------------------------------------------------------------------------------------
@@ -597,13 +586,13 @@ game15.add(imgLabel15);
  JLabel name15 = new JLabel ("15");
 name15.setBounds(400,40,300,20);
 name15.setForeground(new Color(250,250,250));
-name15.setFont(new Font("Arial", Font.BOLD, 25));
+name15.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game15.add(name15);
 
 JLabel namep15 = new JLabel ("$15");
 namep15.setBounds(860,40,300,20);
 namep15.setForeground(new Color(250,250,250));
-namep15.setFont(new Font("Arial", Font.BOLD, 25));
+namep15.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game15.add(namep15);
  
 //----------------------------------------------------------------------------------------------------
@@ -629,13 +618,13 @@ game16.add(imgLabel16);
 JLabel name16 = new JLabel ("16");
 name16.setBounds(400,40,300,20);
 name16.setForeground(new Color(250,250,250));
-name16.setFont(new Font("Arial", Font.BOLD, 25));
+name16.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game16.add(name16);
 
 JLabel namep16 = new JLabel ("$16");
 namep16.setBounds(860,40,300,20);
 namep16.setForeground(new Color(250,250,250));
-namep16.setFont(new Font("Arial", Font.BOLD, 25));
+namep16.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game16.add(namep16);
  
 //----------------------------------------------------------------------------------------------------
@@ -661,13 +650,13 @@ game17.add(imgLabel17);
 JLabel name17 = new JLabel ("17");
 name17.setBounds(400,40,300,20);
 name17.setForeground(new Color(250,250,250));
-name17.setFont(new Font("Arial", Font.BOLD, 25));
+name17.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game17.add(name17);
 
 JLabel namep17 = new JLabel ("$17");
 namep17.setBounds(860,40,300,20);
 namep17.setForeground(new Color(250,250,250));
-namep17.setFont(new Font("Arial", Font.BOLD, 25));
+namep17.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game17.add(namep17);
  
 //----------------------------------------------------------------------------------------------------
@@ -693,13 +682,13 @@ game18.add(imgLabel18);
 JLabel name18 = new JLabel ("18");
 name18.setBounds(400,40,300,20);
 name18.setForeground(new Color(250,250,250));
-name18.setFont(new Font("Arial", Font.BOLD, 25));
+name18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game18.add(name18);
 
 JLabel namep18 = new JLabel ("$18");
 namep18.setBounds(860,40,300,20);
 namep18.setForeground(new Color(250,250,250));
-namep18.setFont(new Font("Arial", Font.BOLD, 25));
+namep18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game18.add(namep18);
  
 //----------------------------------------------------------------------------------------------------
@@ -725,13 +714,13 @@ game19.add(imgLabel19);
 JLabel name19 = new JLabel ("19");
 name19.setBounds(400,40,300,20);
 name19.setForeground(new Color(250,250,250));
-name19.setFont(new Font("Arial", Font.BOLD, 25));
+name19.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game19.add(name19);
 
 JLabel namep19 = new JLabel ("$19");
 namep19.setBounds(860,40,300,20);
 namep19.setForeground(new Color(250,250,250));
-namep19.setFont(new Font("Arial", Font.BOLD, 25));
+namep19.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game19.add(namep19);
  
 //----------------------------------------------------------------------------------------------------
@@ -757,13 +746,13 @@ game20.add(imgLabel20);
 JLabel name20 = new JLabel ("20");
 name20.setBounds(400,40,300,20);
 name20.setForeground(new Color(250,250,250));
-name20.setFont(new Font("Arial", Font.BOLD, 25));
+name20.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game20.add(name20);
 
 JLabel namep20 = new JLabel ("$20");
 namep20.setBounds(860,40,300,20);
 namep20.setForeground(new Color(250,250,250));
-namep20.setFont(new Font("Arial", Font.BOLD, 25));
+namep20.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game20.add(namep20);
  
 //----------------------------------------------------------------------------------------------------
@@ -789,13 +778,13 @@ game21.add(imgLabel21);
 JLabel name21 = new JLabel ("21");
 name21.setBounds(400,40,300,20);
 name21.setForeground(new Color(250,250,250));
-name21.setFont(new Font("Arial", Font.BOLD, 25));
+name21.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game21.add(name21);
 
 JLabel namep21 = new JLabel ("$21");
 namep21.setBounds(860,40,300,20);
 namep21.setForeground(new Color(250,250,250));
-namep21.setFont(new Font("Arial", Font.BOLD, 25));
+namep21.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game21.add(namep21);
  
 //----------------------------------------------------------------------------------------------------
@@ -821,13 +810,13 @@ game22.add(imgLabel22);
 JLabel name22 = new JLabel ("22");
 name22.setBounds(400,40,300,20);
 name22.setForeground(new Color(250,250,250));
-name22.setFont(new Font("Arial", Font.BOLD, 25));
+name22.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game22.add(name22);
 
 JLabel namep22 = new JLabel ("$22");
 namep22.setBounds(860,40,300,20);
 namep22.setForeground(new Color(250,250,250));
-namep22.setFont(new Font("Arial", Font.BOLD, 25));
+namep22.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game22.add(namep22);
  
 //----------------------------------------------------------------------------------------------------
@@ -853,13 +842,13 @@ game23.add(imgLabel23);
 JLabel name23 = new JLabel ("23");
 name23.setBounds(400,40,300,20);
 name23.setForeground(new Color(250,250,250));
-name23.setFont(new Font("Arial", Font.BOLD, 25));
+name23.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game23.add(name23);
 
 JLabel namep23 = new JLabel ("$23");
 namep23.setBounds(860,40,300,20);
 namep23.setForeground(new Color(250,250,250));
-namep23.setFont(new Font("Arial", Font.BOLD, 25));
+namep23.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game23.add(namep23);
  
 //----------------------------------------------------------------------------------------------------
@@ -885,13 +874,13 @@ game24.add(imgLabel24);
 JLabel name24 = new JLabel ("24");
 name24.setBounds(400,40,300,20);
 name24.setForeground(new Color(250,250,250));
-name24.setFont(new Font("Arial", Font.BOLD, 25));
+name24.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game24.add(name24);
 
 JLabel namep24 = new JLabel ("$24");
 namep24.setBounds(860,40,300,20);
 namep24.setForeground(new Color(250,250,250));
-namep24.setFont(new Font("Arial", Font.BOLD, 25));
+namep24.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game24.add(namep24);
  
 //----------------------------------------------------------------------------------------------------
@@ -914,16 +903,16 @@ imgLabel25 = new JLabel(img25);
 imgLabel25.setBounds(-45,0, 340, 100);
 game25.add(imgLabel25);
 
-JLabel name25 = new JLabel ("25");
+JLabel name25 = new JLabel ("23");
 name25.setBounds(400,40,300,20);
 name25.setForeground(new Color(250,250,250));
-name25.setFont(new Font("Arial", Font.BOLD, 25));
+name25.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game25.add(name25);
 
-JLabel namep25 = new JLabel ("$25");
+JLabel namep25 = new JLabel ("$23");
 namep25.setBounds(860,40,300,20);
 namep25.setForeground(new Color(250,250,250));
-namep25.setFont(new Font("Arial", Font.BOLD, 25));
+namep25.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game25.add(namep25);
  
 //----------------------------------------------------------------------------------------------------
@@ -949,13 +938,13 @@ game26.add(imgLabel26);
 JLabel name26 = new JLabel ("26");
 name26.setBounds(400,40,300,20);
 name26.setForeground(new Color(250,250,250));
-name26.setFont(new Font("Arial", Font.BOLD, 25));
+name26.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game26.add(name26);
 
 JLabel namep26 = new JLabel ("$26");
 namep26.setBounds(860,40,300,20);
 namep26.setForeground(new Color(250,250,250));
-namep26.setFont(new Font("Arial", Font.BOLD, 25));
+namep26.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game26.add(namep26);
  
 //----------------------------------------------------------------------------------------------------
@@ -981,13 +970,13 @@ game27.add(imgLabel27);
 JLabel name27 = new JLabel ("27");
 name27.setBounds(400,40,300,20);
 name27.setForeground(new Color(250,250,250));
-name27.setFont(new Font("Arial", Font.BOLD, 25));
+name27.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game27.add(name27);
 
 JLabel namep27 = new JLabel ("$27");
 namep27.setBounds(860,40,300,20);
 namep27.setForeground(new Color(250,250,250));
-namep27.setFont(new Font("Arial", Font.BOLD, 25));
+namep27.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game27.add(namep27);
  
 //----------------------------------------------------------------------------------------------------
@@ -1013,13 +1002,13 @@ game28.add(imgLabel28);
 JLabel name28 = new JLabel ("28");
 name28.setBounds(400,40,300,20);
 name28.setForeground(new Color(250,250,250));
-name28.setFont(new Font("Arial", Font.BOLD, 25));
+name28.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game28.add(name28);
 
 JLabel namep28 = new JLabel ("$28");
 namep28.setBounds(860,40,300,20);
 namep28.setForeground(new Color(250,250,250));
-namep28.setFont(new Font("Arial", Font.BOLD, 25));
+namep28.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game28.add(namep28);
  
 //----------------------------------------------------------------------------------------------------
@@ -1045,13 +1034,13 @@ game29.add(imgLabel29);
 JLabel name29 = new JLabel ("29");
 name29.setBounds(400,40,300,20);
 name29.setForeground(new Color(250,250,250));
-name29.setFont(new Font("Arial", Font.BOLD, 25));
+name29.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game29.add(name29);
 
 JLabel namep29 = new JLabel ("$29");
 namep29.setBounds(860,40,300,20);
 namep29.setForeground(new Color(250,250,250));
-namep29.setFont(new Font("Arial", Font.BOLD, 25));
+namep29.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game29.add(namep29);
  
 //----------------------------------------------------------------------------------------------------
@@ -1077,13 +1066,13 @@ game30.add(imgLabel30);
 JLabel name30 = new JLabel ("30");
 name30.setBounds(400,40,300,20);
 name30.setForeground(new Color(250,250,250));
-name30.setFont(new Font("Arial", Font.BOLD, 25));
+name30.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game30.add(name30);
 
 JLabel namep30 = new JLabel ("$30");
 namep30.setBounds(860,40,300,20);
 namep30.setForeground(new Color(250,250,250));
-namep30.setFont(new Font("Arial", Font.BOLD, 25));
+namep30.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game30.add(namep30);
  
 //----------------------------------------------------------------------------------------------------
@@ -1109,13 +1098,13 @@ game31.add(imgLabel31);
 JLabel name31 = new JLabel ("31");
 name31.setBounds(400,40,300,20);
 name31.setForeground(new Color(250,250,250));
-name31.setFont(new Font("Arial", Font.BOLD, 25));
+name31.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game31.add(name31);
 
 JLabel namep31 = new JLabel ("$10");
 namep31.setBounds(860,40,300,20);
 namep31.setForeground(new Color(250,250,250));
-namep31.setFont(new Font("Arial", Font.BOLD, 25));
+namep31.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game31.add(namep31);
  
 //----------------------------------------------------------------------------------------------------
@@ -1141,13 +1130,13 @@ game32.add(imgLabel32);
 JLabel name32 = new JLabel ("32");
 name32.setBounds(400,40,300,20);
 name32.setForeground(new Color(250,250,250));
-name32.setFont(new Font("Arial", Font.BOLD, 25));
+name32.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game32.add(name32);
 
 JLabel namep32= new JLabel ("$32");
 namep32.setBounds(860,40,300,20);
 namep32.setForeground(new Color(250,250,250));
-namep32.setFont(new Font("Arial", Font.BOLD, 25));
+namep32.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game32.add(namep32);
  
 //----------------------------------------------------------------------------------------------------
@@ -1173,13 +1162,13 @@ game33.add(imgLabel33);
 JLabel name33 = new JLabel ("33");
 name33.setBounds(400,40,300,20);
 name33.setForeground(new Color(250,250,250));
-name33.setFont(new Font("Arial", Font.BOLD, 25));
+name33.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game33.add(name33);
 
 JLabel namep33 = new JLabel ("$33");
 namep33.setBounds(860,40,300,20);
 namep33.setForeground(new Color(250,250,250));
-namep33.setFont(new Font("Arial", Font.BOLD, 25));
+namep33.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game33.add(namep33);
  
 //----------------------------------------------------------------------------------------------------
@@ -1205,13 +1194,13 @@ game34.add(imgLabel34);
 JLabel name34 = new JLabel ("34");
 name34.setBounds(400,40,300,20);
 name34.setForeground(new Color(250,250,250));
-name34.setFont(new Font("Arial", Font.BOLD, 25));
+name34.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game34.add(name34);
 
 JLabel namep34 = new JLabel ("$34");
 namep34.setBounds(860,40,300,20);
 namep34.setForeground(new Color(250,250,250));
-namep34.setFont(new Font("Arial", Font.BOLD, 25));
+namep34.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game34.add(namep34);
  
 //----------------------------------------------------------------------------------------------------
@@ -1237,13 +1226,13 @@ game35.add(imgLabel35);
 JLabel name35 = new JLabel ("35");
 name35.setBounds(400,40,300,20);
 name35.setForeground(new Color(250,250,250));
-name35.setFont(new Font("Arial", Font.BOLD, 25));
+name35.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game35.add(name35);
 
 JLabel namep35 = new JLabel ("$35");
 namep35.setBounds(860,40,300,20);
 namep35.setForeground(new Color(250,250,250));
-namep35.setFont(new Font("Arial", Font.BOLD, 25));
+namep35.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game35.add(namep35);
  
 //----------------------------------------------------------------------------------------------------
@@ -1269,13 +1258,13 @@ game36.add(imgLabel36);
 JLabel name36 = new JLabel ("36");
 name36.setBounds(400,40,300,20);
 name36.setForeground(new Color(250,250,250));
-name36.setFont(new Font("Arial", Font.BOLD, 25));
+name36.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game36.add(name36);
 
 JLabel namep36 = new JLabel ("$36");
 namep36.setBounds(860,40,300,20);
 namep36.setForeground(new Color(250,250,250));
-namep36.setFont(new Font("Arial", Font.BOLD, 25));
+namep36.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game36.add(namep36);
  
 //----------------------------------------------------------------------------------------------------
@@ -1301,13 +1290,13 @@ game37.add(imgLabel37);
 JLabel name37 = new JLabel ("37");
 name37.setBounds(400,40,300,20);
 name37.setForeground(new Color(250,250,250));
-name37.setFont(new Font("Arial", Font.BOLD, 25));
+name37.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game37.add(name37);
 
 JLabel namep37 = new JLabel ("$37");
 namep37.setBounds(860,40,300,20);
 namep37.setForeground(new Color(250,250,250));
-namep37.setFont(new Font("Arial", Font.BOLD, 25));
+namep37.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game37.add(namep37);
  
 //----------------------------------------------------------------------------------------------------
@@ -1333,13 +1322,13 @@ game38.add(imgLabel38);
 JLabel name38 = new JLabel ("38");
 name38.setBounds(400,40,300,20);
 name38.setForeground(new Color(250,250,250));
-name38.setFont(new Font("Arial", Font.BOLD, 25));
+name38.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game38.add(name38);
 
 JLabel namep38 = new JLabel ("$38");
 namep38.setBounds(860,40,300,20);
 namep38.setForeground(new Color(250,250,250));
-namep38.setFont(new Font("Arial", Font.BOLD, 25));
+namep38.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game38.add(namep38);
  
 //----------------------------------------------------------------------------------------------------
@@ -1365,13 +1354,13 @@ game39.add(imgLabel39);
 JLabel name39 = new JLabel ("39");
 name39.setBounds(400,40,300,20);
 name39.setForeground(new Color(250,250,250));
-name39.setFont(new Font("Arial", Font.BOLD, 25));
+name39.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game39.add(name39);
 
 JLabel namep39 = new JLabel ("$39");
 namep39.setBounds(860,40,300,20);
 namep39.setForeground(new Color(250,250,250));
-namep39.setFont(new Font("Arial", Font.BOLD, 25));
+namep39.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game39.add(namep39);
  
 //----------------------------------------------------------------------------------------------------
@@ -1397,13 +1386,13 @@ game40.add(imgLabel40);
 JLabel name40 = new JLabel ("40");
 name40.setBounds(400,40,300,20);
 name40.setForeground(new Color(250,250,250));
-name40.setFont(new Font("Arial", Font.BOLD, 25));
+name40.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game40.add(name40);
 
 JLabel namep40 = new JLabel ("$10");
 namep40.setBounds(860,40,300,20);
 namep40.setForeground(new Color(250,250,250));
-namep40.setFont(new Font("Arial", Font.BOLD, 25));
+namep40.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game40.add(namep40);
  
 //----------------------------------------------------------------------------------------------------
@@ -1429,13 +1418,13 @@ game41.add(imgLabel41);
 JLabel name41 = new JLabel ("41");
 name41.setBounds(400,40,300,20);
 name41.setForeground(new Color(250,250,250));
-name41.setFont(new Font("Arial", Font.BOLD, 25));
+name41.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game41.add(name41);
 
 JLabel namep41 = new JLabel ("$41");
 namep41.setBounds(860,40,300,20);
 namep41.setForeground(new Color(250,250,250));
-namep41.setFont(new Font("Arial", Font.BOLD, 25));
+namep41.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game41.add(namep41);
  
 //----------------------------------------------------------------------------------------------------
@@ -1461,13 +1450,13 @@ game42.add(imgLabel42);
 JLabel name42 = new JLabel ("42");
 name42.setBounds(400,40,300,20);
 name42.setForeground(new Color(250,250,250));
-name42.setFont(new Font("Arial", Font.BOLD, 25));
+name42.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game42.add(name42);
 
 JLabel namep42 = new JLabel ("$42");
 namep42.setBounds(860,40,300,20);
 namep42.setForeground(new Color(250,250,250));
-namep42.setFont(new Font("Arial", Font.BOLD, 25));
+namep42.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game42.add(namep42);
  
 //----------------------------------------------------------------------------------------------------
@@ -1493,13 +1482,13 @@ game43.add(imgLabel43);
 JLabel name43 = new JLabel ("43");
 name43.setBounds(400,40,300,20);
 name43.setForeground(new Color(250,250,250));
-name43.setFont(new Font("Arial", Font.BOLD, 25));
+name43.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game43.add(name43);
 
 JLabel namep43 = new JLabel ("$43");
 namep43.setBounds(860,40,300,20);
 namep43.setForeground(new Color(250,250,250));
-namep43.setFont(new Font("Arial", Font.BOLD, 25));
+namep43.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game43.add(namep43);
  
 //----------------------------------------------------------------------------------------------------
@@ -1525,13 +1514,13 @@ game44.add(imgLabel44);
 JLabel name44 = new JLabel ("44");
 name44.setBounds(400,40,300,20);
 name44.setForeground(new Color(250,250,250));
-name44.setFont(new Font("Arial", Font.BOLD, 25));
+name44.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game44.add(name44);
 
 JLabel namep44 = new JLabel ("$44");
 namep44.setBounds(860,40,300,20);
 namep44.setForeground(new Color(250,250,250));
-namep44.setFont(new Font("Arial", Font.BOLD, 25));
+namep44.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game44.add(namep44);
  
 //----------------------------------------------------------------------------------------------------
@@ -1557,13 +1546,13 @@ game45.add(imgLabel45);
 JLabel name45 = new JLabel ("45");
 name45.setBounds(400,40,300,20);
 name45.setForeground(new Color(250,250,250));
-name45.setFont(new Font("Arial", Font.BOLD, 25));
+name45.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game45.add(name45);
 
 JLabel namep45 = new JLabel ("$45");
 namep45.setBounds(860,40,300,20);
 namep45.setForeground(new Color(250,250,250));
-namep45.setFont(new Font("Arial", Font.BOLD, 25));
+namep45.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game45.add(namep45);
  
 //----------------------------------------------------------------------------------------------------
@@ -1589,13 +1578,13 @@ game46.add(imgLabel46);
 JLabel name46 = new JLabel ("46");
 name46.setBounds(400,40,300,20);
 name46.setForeground(new Color(250,250,250));
-name46.setFont(new Font("Arial", Font.BOLD, 25));
+name46.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game46.add(name46);
 
 JLabel namep46 = new JLabel ("$10");
 namep46.setBounds(860,40,300,20);
 namep46.setForeground(new Color(250,250,250));
-namep46.setFont(new Font("Arial", Font.BOLD, 25));
+namep46.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game46.add(namep46);
  
 //----------------------------------------------------------------------------------------------------
@@ -1621,13 +1610,13 @@ game47.add(imgLabel47);
 JLabel name47 = new JLabel ("47");
 name47.setBounds(400,40,300,20);
 name47.setForeground(new Color(250,250,250));
-name47.setFont(new Font("Arial", Font.BOLD, 25));
+name47.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game47.add(name47);
 
 JLabel namep47 = new JLabel ("$47");
 namep47.setBounds(860,40,300,20);
 namep47.setForeground(new Color(250,250,250));
-namep47.setFont(new Font("Arial", Font.BOLD, 25));
+namep47.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game47.add(namep47);
  
 //----------------------------------------------------------------------------------------------------
@@ -1653,13 +1642,13 @@ game48.add(imgLabel48);
 JLabel name48 = new JLabel ("48");
 name48.setBounds(400,40,300,20);
 name48.setForeground(new Color(250,250,250));
-name48.setFont(new Font("Arial", Font.BOLD, 25));
+name48.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game48.add(name48);
 
 JLabel namep48 = new JLabel ("$48");
 namep48.setBounds(860,40,300,20);
 namep48.setForeground(new Color(250,250,250));
-namep48.setFont(new Font("Arial", Font.BOLD, 25));
+namep48.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game48.add(namep48);
  
 //----------------------------------------------------------------------------------------------------
@@ -1685,13 +1674,13 @@ game49.add(imgLabel49);
 JLabel name49 = new JLabel ("49");
 name49.setBounds(400,40,300,20);
 name49.setForeground(new Color(250,250,250));
-name49.setFont(new Font("Arial", Font.BOLD, 25));
+name49.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game49.add(name49);
 
 JLabel namep49 = new JLabel ("$49");
 namep49.setBounds(860,40,300,20);
 namep49.setForeground(new Color(250,250,250));
-namep49.setFont(new Font("Arial", Font.BOLD, 25));
+namep49.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game49.add(namep49);
  
 //----------------------------------------------------------------------------------------------------
@@ -1717,13 +1706,13 @@ game50.add(imgLabel50);
 JLabel name50 = new JLabel ("50");
 name50.setBounds(400,40,300,20);
 name50.setForeground(new Color(250,250,250));
-name50.setFont(new Font("Arial", Font.BOLD, 25));
+name50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game50.add(name50);
 
 JLabel namep50 = new JLabel ("$50");
 namep50.setBounds(860,40,300,20);
 namep50.setForeground(new Color(250,250,250));
-namep50.setFont(new Font("Arial", Font.BOLD, 25));
+namep50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game50.add(namep50);
  
 //----------------------------------------------------------------------------------------------------
@@ -1749,13 +1738,13 @@ game51.add(imgLabel51);
 JLabel name51 = new JLabel ("51");
 name51.setBounds(400,40,300,20);
 name51.setForeground(new Color(250,250,250));
-name51.setFont(new Font("Arial", Font.BOLD, 25));
+name51.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game51.add(name51);
 
 JLabel namep51 = new JLabel ("$51");
 namep51.setBounds(860,40,300,20);
 namep51.setForeground(new Color(250,250,250));
-namep51.setFont(new Font("Arial", Font.BOLD, 25));
+namep51.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game51.add(namep51);
  
 //----------------------------------------------------------------------------------------------------
@@ -1781,13 +1770,13 @@ game52.add(imgLabel52);
 JLabel name52 = new JLabel ("52");
 name52.setBounds(400,40,300,20);
 name52.setForeground(new Color(250,250,250));
-name52.setFont(new Font("Arial", Font.BOLD, 25));
+name52.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game52.add(name52);
 
 JLabel namep52 = new JLabel ("$52");
 namep52.setBounds(860,40,300,20);
 namep52.setForeground(new Color(250,250,250));
-namep52.setFont(new Font("Arial", Font.BOLD, 25));
+namep52.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game52.add(namep52);
  
 //----------------------------------------------------------------------------------------------------
@@ -1813,13 +1802,13 @@ game53.add(imgLabel53);
 JLabel name53 = new JLabel ("53");
 name53.setBounds(400,40,300,20);
 name53.setForeground(new Color(250,250,250));
-name53.setFont(new Font("Arial", Font.BOLD, 25));
+name53.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game53.add(name53);
 
 JLabel namep53 = new JLabel ("$53");
 namep53.setBounds(860,40,300,20);
 namep53.setForeground(new Color(250,250,250));
-namep53.setFont(new Font("Arial", Font.BOLD, 25));
+namep53.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game53.add(namep53);
  
 //----------------------------------------------------------------------------------------------------
@@ -1845,12 +1834,13 @@ game53.add(namep53);
 public void actionPerformed(ActionEvent ae){
     
      
-		 if(ae.getSource()==storebtn)
+		 if(ae.getSource()==buy0||ae.getSource()==buy1||ae.getSource()==buy2||ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
 		{
 			MStore s1=new MStore();
             s1.setVisible(true);
 			this.setVisible(false);
 		}
+		
         
 		
 }
