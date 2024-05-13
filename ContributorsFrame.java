@@ -33,8 +33,6 @@ public class ContributorsFrame extends JFrame
 		backbtn.setBounds(160, 490, 80, 30);
 		backbtn.setForeground(new Color(250,250,250));
 		backbtn.setBackground(new Color(7, 187, 255));
-		//backbtn.addMouseListener(this);
-		//backbtn.addActionListener(this);
 		panelContributors.add(backbtn);
 
 
