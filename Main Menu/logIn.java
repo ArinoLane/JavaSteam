@@ -134,7 +134,8 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 	public void mouseEntered(MouseEvent me){}
 	public void mouseExited(MouseEvent me){}
 	
-	public void actionPerformed(ActionEvent ae){
+	public void actionPerformed(ActionEvent ae)
+	{
 		
 		String n=namefield.getText();
 		String p=passfield.getText();
@@ -164,29 +165,30 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 			}
 		
 		}
-		
-		
+			
+			
 		 else if(ae.getSource()==CreatAccnount )
-		{
-			create c1 = new create ();
-			c1.setVisible(true);
-			this.setVisible(false);
-		}
-		else if (ae.getSource()==adminbtn){
-			
-			admin a1 = new admin ();
-			a1.setVisible(true);
-		}
+			{
+				create c1 = new create ();
+				c1.setVisible(true);
+				this.setVisible(false);
+			}
+		else if (ae.getSource()==adminbtn)
+			{
+				
+				admin a1 = new admin ();
+				a1.setVisible(true);
+			}
 		else if (ae.getSource() == Contributors)
-		{
-			ContributorsFrame Con1 = new ContributorsFrame();
-			Con1.setVisible(true);
-		}
-		// else if (ae.getSource()==signBut){
-			
-		// menu m1 = new menu ();
-		// m1.setVisible(true);
-		// }
+			{
+				ContributorsFrame Con1 = new ContributorsFrame();
+				Con1.setVisible(true);
+			}
+			// else if (ae.getSource()==signBut){
+				
+			// menu m1 = new menu ();
+			// m1.setVisible(true);
+			// }
 	}
 	
 }
