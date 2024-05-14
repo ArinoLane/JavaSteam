@@ -107,15 +107,15 @@ public class admin extends JFrame implements MouseListener, ActionListener
 			}
 			else{
 			JOptionPane.showMessageDialog(this,"HELLO BOSS");
-			logIn l1=new logIn();
-			l1.setVisible(true);
+			RegisterFrame p1=new RegisterFrame();
+			p1.setVisible(true);
 			this.setVisible(false);
 			}
 		}
 		else if(ae.getSource()==backbtn)
 		{
-			logIn l1=new logIn();
-			l1.setVisible(true);
+			RegisterFrame p1=new RegisterFrame();
+			p1.setVisible(true);
 			this.setVisible(false);
 		}
 	}

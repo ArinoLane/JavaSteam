@@ -3,19 +3,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class RegisterFrame extends JFrame implements ActionListener
+public class logIn extends JFrame implements MouseListener, ActionListener
 {
-	JPanel panel;
-	JLabel namelabel, passlabel,imglabel,adminp;
+	JPanel panel,panelContributors;
+	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel, backgroundImglabel;
 	JTextField namefield;
 	JPasswordField passfield;
-	JButton signBut,CreatAccnount,adminbtn;
+	JButton signBut,CreatAccnount,adminbtn,Contributors;
 	JButton signupbtn, backbtn;
-	ImageIcon img;
+	ImageIcon img,imgContributors,imgbackground;
 	JScrollPane scrollPane;
 	
 
-	public RegisterFrame()
+	public logIn()
 	{
 		super("LOG IN");
 		
@@ -31,7 +31,7 @@ public class RegisterFrame extends JFrame implements ActionListener
 
 
 
-		JLabel signIntext = new JLabel("Sign in");
+		JLabel signIntext = new JLabel("SIGN IN");
 		signIntext.setBounds(180,50,150,100);
 		signIntext.setForeground(new Color(250,250,250));
 		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
@@ -92,27 +92,42 @@ public class RegisterFrame extends JFrame implements ActionListener
 		signBut.setFont(new Font("Arial", Font.PLAIN, 15));
 		signBut.setBackground(new Color(7, 187, 255));
 		signBut.setOpaque(true);
+		signBut.addActionListener(this);
 		panel.add(signBut);
+
+
+		Contributors = new JButton ("Contributors!");
+		Contributors.setBounds(140, 600, 195, 30);
+		Contributors.setForeground(new Color(37,51,118));
+		Contributors.setFont(new Font("Arial", Font.PLAIN, 15));
+		Contributors.setBackground(new Color(7, 187, 255));
+		Contributors.setOpaque(true);
+		Contributors.addActionListener(this);
+		panel.add(Contributors);
+
 		
 		CreatAccnount = new JButton ("Creat an account");
 		CreatAccnount.setBounds(140, 525, 195, 30);
 		CreatAccnount.setForeground(new Color(250,250,250));
 		CreatAccnount.setFont(new Font("Arial", Font.PLAIN, 15));
 		CreatAccnount.setBackground(new Color(7, 187, 255));
-		CreatAccnount.setOpaque(true);
 		CreatAccnount.addActionListener(this);
 		panel.add(CreatAccnount);
 		
-	
 		
 		
 		img=new ImageIcon("logo_steam.png");
 		imglabel=new JLabel(img);
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
+
+		imgbackground = new ImageIcon ("background.jpg");
+		backgroundImglabel = new JLabel (imgbackground);
+		backgroundImglabel.setBounds(0,0,500,700);
+		panel.add(backgroundImglabel);
 		
 		this.add(panel);
-        
+	}
 	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}
@@ -120,17 +135,58 @@ public class RegisterFrame extends JFrame implements ActionListener
 	public void mouseExited(MouseEvent me){}
 	
 	public void actionPerformed(ActionEvent ae){
-		if(ae.getSource()==CreatAccnount){
+		
+		String n=namefield.getText();
+		String p=passfield.getText();
+		String d=passfield.getText();
+		
+		useracc ac=new useracc();
+		
+		if(ae.getSource()==signBut)
+		 
+		{
+			if(n.isEmpty()||p.isEmpty())
+			{
+				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
+			}
+			else if(ac.check(n,p)==true)
+			{
+				
+			JOptionPane.showMessageDialog(this,"HAPPY GAMING");
+			
+			menu h1=new menu();
+			h1.setVisible(true);
+			this.setVisible(false);
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(this,"Incorrect");
+			}
+		
+		}
+		
+		
+		 else if(ae.getSource()==CreatAccnount )
+		{
 			create c1 = new create ();
 			c1.setVisible(true);
-		
-			
+			this.setVisible(false);
 		}
 		else if (ae.getSource()==adminbtn){
 			
 			admin a1 = new admin ();
 			a1.setVisible(true);
 		}
+		else if (ae.getSource() == Contributors)
+		{
+			ContributorsFrame Con1 = new ContributorsFrame();
+			Con1.setVisible(true);
+		}
+		// else if (ae.getSource()==signBut){
+			
+		// menu m1 = new menu ();
+		// m1.setVisible(true);
+		// }
 	}
 	
 }
