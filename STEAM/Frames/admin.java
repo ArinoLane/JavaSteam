@@ -1,9 +1,9 @@
-//package Frames;
+package Frames;
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-//import Classes.*;
+import Classes.*;
 
 public class admin extends JFrame implements MouseListener, ActionListener
 

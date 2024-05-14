@@ -5,7 +5,7 @@ public class start
 {
 	public static void main(String args[])
 	{
-		profile	p1 = new profile();
+		logIn	p1 = new logIn();
 		p1.setVisible(true);
 	}
 
