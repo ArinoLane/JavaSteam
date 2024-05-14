@@ -1,7 +1,9 @@
+//package Frames;
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+//import Classes.*;
 
 public class logIn extends JFrame implements MouseListener, ActionListener
 {
@@ -21,7 +23,6 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		
 		this.setSize(500,700);
 		this.setLocation(550,100);
-		//this.setLayout(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		panel = new JPanel ();
@@ -116,12 +117,12 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		
 		
 		
-		img=new ImageIcon("logo_steam.png");
+		img=new ImageIcon("Images/logo_steam.png");
 		imglabel=new JLabel(img);
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
 
-		imgbackground = new ImageIcon ("background.jpg");
+		imgbackground = new ImageIcon ("Images/background.jpg");
 		backgroundImglabel = new JLabel (imgbackground);
 		backgroundImglabel.setBounds(0,0,500,700);
 		panel.add(backgroundImglabel);
@@ -184,11 +185,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 				ContributorsFrame Con1 = new ContributorsFrame();
 				Con1.setVisible(true);
 			}
-			// else if (ae.getSource()==signBut){
-				
-			// menu m1 = new menu ();
-			// m1.setVisible(true);
-			// }
+			
 	}
 	
 }

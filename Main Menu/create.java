@@ -1,7 +1,9 @@
+//package Frames;
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+//import Classes.*;
 
 public class create extends JFrame implements MouseListener, ActionListener
 {
@@ -101,7 +103,7 @@ public class create extends JFrame implements MouseListener, ActionListener
 		backbtn.addActionListener(this);
 		panel.add(backbtn);
 		
-		img=new ImageIcon("logo_steam.png");
+		img=new ImageIcon("Images/logo_steam.png");
 		imglabel=new JLabel(img);
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
@@ -112,7 +114,7 @@ public class create extends JFrame implements MouseListener, ActionListener
 		s1.setBounds(100, 540, 500, 20);
 		panel.add(s1);
 
-		imgbackground = new ImageIcon ("background.jpg");
+		imgbackground = new ImageIcon ("Images/background.jpg");
 		backgroundImglabel = new JLabel (imgbackground);
 		backgroundImglabel.setBounds(0,0,500,700);
 		panel.add(backgroundImglabel);

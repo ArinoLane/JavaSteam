@@ -1,3 +1,4 @@
+package Frames;
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
@@ -35,12 +36,12 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 		card.setOpaque(true);
 		panel.add(card);
 		
-		img=new ImageIcon("visa.png");
+		img=new ImageIcon("Images/visa.png");
 		imglabel=new JLabel(img);
 		imglabel.setBounds(170,160,200,100);
 		panel.add(imglabel);
 		
-		img1=new ImageIcon("master card.png");
+		img1=new ImageIcon("Images/master card.png");
 		imglabel1=new JLabel(img1);
 		imglabel1.setBounds(280,160,200,100);
 		panel.add(imglabel1);

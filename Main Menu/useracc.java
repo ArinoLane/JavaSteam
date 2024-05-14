@@ -155,11 +155,7 @@ public class useracc
 	}
 	
 	
-		public void del(String s1,String s2,String s3)
-	{
-		al=new Scanner(file);
 		
-	}
 	
 
 	

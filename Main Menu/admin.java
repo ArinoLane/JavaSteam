@@ -1,7 +1,9 @@
+//package Frames;
 import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+//import Classes.*;
 
 public class admin extends JFrame implements MouseListener, ActionListener
 
@@ -74,12 +76,12 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		backbtn.addActionListener(this);
 		panel.add(backbtn);
 		
-		img=new ImageIcon("logo_steam.png");
+		img=new ImageIcon("Images/logo_steam.png");
 		imglabel=new JLabel(img);
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
 
-		imgbackground = new ImageIcon ("background.jpg");
+		imgbackground = new ImageIcon ("Images/background.jpg");
 		backgroundImglabel = new JLabel (imgbackground);
 		backgroundImglabel.setBounds(0,0,500,700);
 		panel.add(backgroundImglabel);
@@ -99,31 +101,26 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		String s1=namef.getText();
 		String s2=passf.getText();
 		
-		
+		adminacc ad=new adminacc(s1,s2);
 		if(ae.getSource()==loginbtn)
 		{
 			if(s1.isEmpty()||s2.isEmpty())
 			{
 				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
 			}
-			//else if(ad.checkad(s1,s2))
-			//{
+			
+			else if(ad.checkad(s1,s2))
+			{
 				
-			/*JOptionPane.showMessageDialog(this,"HELLO BOSS");
+			JOptionPane.showMessageDialog(this,"HELLO BOSS");
 			menu p1=new menu();
 			p1.setVisible(true);
-			this.setVisible(false);*/
-			//}
-			else
+			this.setVisible(false);
+			}
+			else 
 			{
 				JOptionPane.showMessageDialog(this,"Incorrect");
 			}
-		}
-		else if(ae.getSource()==backbtn)
-		{
-			EditProfile l1=new EditProfile();
-			l1.setVisible(true);
-			this.setVisible(false);
 		}
 	}
 	
