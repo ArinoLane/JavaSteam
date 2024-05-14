@@ -153,6 +153,7 @@ public class create extends JFrame implements MouseListener, ActionListener
 			logIn l1=new logIn();
 			l1.setVisible(true);
 			this.setVisible(false);
+			
 			}
 		}
 		else if(ae.getSource()==backbtn)

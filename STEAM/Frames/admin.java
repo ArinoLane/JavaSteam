@@ -113,8 +113,8 @@ public class admin extends JFrame implements MouseListener, ActionListener
 			{
 				
 			JOptionPane.showMessageDialog(this,"HELLO BOSS");
-			menu p1=new menu();
-			p1.setVisible(true);
+			menu h1=new menu();
+			h1.setVisible(true);
 			this.setVisible(false);
 			}
 			else 
