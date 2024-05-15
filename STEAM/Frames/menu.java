@@ -315,7 +315,7 @@ game6.setBackground(new Color(34,57,75));
 game6.setBounds(50,0,990,110);
 buy6.add(game6);
  
-img6 = new ImageIcon("Images/aco.jpg");
+img6 = new ImageIcon("/Images/aco.jpg");
 imgLabel6 = new JLabel(img6);
 imgLabel6.setBounds(-45,0, 340, 100);
 game6.add(imgLabel6);
