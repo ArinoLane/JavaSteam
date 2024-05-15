@@ -92,7 +92,7 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
             return;
         }
 
-        public void mouseClicked(MouseEvent me){}
+	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}
 	public void mouseEntered(MouseEvent me){}
@@ -192,7 +192,7 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
                 }
 
             }
-        
+	}  
 
 	}     
       
