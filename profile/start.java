@@ -5,7 +5,7 @@ public class start
 {
 	public static void main(String args[])
 	{
-		logIn	p1 = new logIn();
+		project	p1 = new project();
 		p1.setVisible(true);
 	}
 

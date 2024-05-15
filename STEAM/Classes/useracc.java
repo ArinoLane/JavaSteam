@@ -77,9 +77,9 @@ public class useracc
 			
 			fwrite=new FileWriter(file,true);
 			
-			fwrite.write(getUserName()+"\t");
-			fwrite.write(getUserpass()+"\t");
-			fwrite.write(getUserEmail()+"\n");
+			fwrite.write(getUserName()+"/t");
+			fwrite.write(getUserpass()+"/t");
+			fwrite.write(getUserEmail()+"/n");
 			
 			
 			fwrite.flush();
@@ -105,7 +105,7 @@ public class useracc
 			while(sc.hasNextLine())
 			{
 				String line=sc.nextLine();
-				String[] value=line.split("\t");
+				String[] value=line.split("/t");
 				if(value[0].equals(username)&&value[1].equals(userpass))
 				{
 					flag=true;
@@ -120,5 +120,42 @@ public class useracc
 		
 		return flag;
 	}
-	
+	/*public static void deleteAccount(String username) {
+        String filePath = ".\\Datas\\userdata.txt";
+        File inputFile = new File(filePath);
+        File tempFile = new File("temp.txt");
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
+
+            String line;
+            boolean userFound = false;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split("\\|\\|");
+                if (parts.length >= 7 && parts[0].trim().equals(username)) {
+                    userFound = true;
+                    continue; // Skip writing this line
+                }
+                writer.write(line + System.lineSeparator());
+            }
+
+            if (!userFound) {
+                System.out.println("User not found.");
+                return;
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading/writing file: " + e.getMessage());
+        }
+
+        // Rename the temporary file to the original file
+        if (inputFile.delete()) {
+            if (!tempFile.renameTo(inputFile)) {
+                System.err.println("Failed to rename the temporary file.");
+            }
+        } else {
+            System.err.println("Failed to delete the original file.");
+        }
+        JOptionPane.showMessageDialog(null, "Account Deleted. Thanks for using!", "Account Deleted", JOptionPane.PLAIN_MESSAGE);
+    }
+	*/
 }

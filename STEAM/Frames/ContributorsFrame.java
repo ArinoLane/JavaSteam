@@ -10,7 +10,7 @@ public class ContributorsFrame extends JFrame
 	JLabel ContributorsImglabel;
 	ImageIcon imgContributors;
 	
-	JButton backbtn;
+	
 	
 
 	public ContributorsFrame()
@@ -30,11 +30,6 @@ public class ContributorsFrame extends JFrame
 		ContributorsImglabel.setBounds(0,-30,500,700);
 		panelContributors.add(ContributorsImglabel);
 		
-		backbtn=new JButton("Back");
-		backbtn.setBounds(160, 490, 80, 30);
-		backbtn.setForeground(new Color(250,250,250));
-		backbtn.setBackground(new Color(7, 187, 255));
-		panelContributors.add(backbtn);
 
 
 		this.add(panelContributors);
