@@ -75,7 +75,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
         userLabel = new JButton(s1.toUpperCase());
-        userLabel.setBounds(480,35,150,30);
+        userLabel.setBounds(480,40,150,30);
         userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);

@@ -15,7 +15,7 @@ import Classes.*;
 public class adminf extends JFrame implements  ActionListener
 {   
     ImageIcon img;
-    JLabel insert;
+    JLabel insert,deletef,nameLabel;
     JLabel imglabel;
     Color myColor,myColor1;
     JPanel upperPanel,mainPanel;
@@ -23,17 +23,23 @@ public class adminf extends JFrame implements  ActionListener
     JScrollPane scroll;
     JTable table;
     DefaultTableModel model;
-    JButton Deletebtn,Insertbtn;
+    JButton Deletebtn,Insertbtn,logout;
     
     private String[] column = { "User Name", "Password", "Email" };
 private String[] rows = new String[7];
 
-public adminf()
+String s1;
+admin ad1;
+
+public adminf(String s1,admin ad1)
 {
     super("My First GUI");
     this.setSize(1024, 768);
     this.setLocation(250,40);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+	
+	this.s1 = s1;
+	this.ad1 = ad1;
     
     myColor1 = new Color(74,85,255);
     myColor = new Color(34,62,90);
@@ -56,32 +62,54 @@ public adminf()
     upperPanel.add(imglabel);
 	
 	Insertbtn=new JButton("Insert");
-	Insertbtn.setBounds(700,280, 150, 40);
+	Insertbtn.setBounds(700,230, 150, 40);
 	Insertbtn.setForeground(new Color(250,250,250));
 	Insertbtn.setBackground(new Color(23,26,33));
 	Insertbtn.setFont(new Font("Arial", Font.PLAIN, 20));
 	Insertbtn.setBorderPainted(false);
-    //Insertbtn.setContentAreaFilled(false);
-	//Deletebtn.addMouseListener(this);
 	Insertbtn.addActionListener(this);
 	mainPanel.add(Insertbtn);
 	
 	Deletebtn=new JButton("Delete");
-        Deletebtn.setBounds(700,480, 150, 40);
+        Deletebtn.setBounds(700,360, 150, 40);
         Deletebtn.setForeground(new Color(250,250,250));
         Deletebtn.setBackground(new Color(23,26,33));
         Deletebtn.setFont(new Font("Arial", Font.PLAIN, 20));
         Deletebtn.setBorderPainted(false);
-        Deletebtn.addActionListener(this); // Moved this line here
+        Deletebtn.addActionListener(this); 
         mainPanel.add(Deletebtn);
 		
+		
+		logout=new JButton("Log Out");
+	logout.setBounds(700,550, 150, 40);
+	logout.setForeground(new Color(250,250,250));
+	logout.setBackground(new Color(23,26,33));
+	logout.setFont(new Font("Arial", Font.PLAIN, 20));
+	logout.setBorderPainted(false);
+	logout.addActionListener(this);
+	mainPanel.add(logout);
+		
 		insert=new JLabel("INSERT A NEW ACCOUNT");
-		insert.setBounds(650, 200, 282, 30);
+		insert.setBounds(650, 150, 282, 30);
 		insert.setForeground(new Color(250,250,250));
 		insert.setBackground(new Color(53,97,140));
 		insert.setFont(new Font("Arial",Font.PLAIN, 21));
 		insert.setOpaque(true);
 		mainPanel.add(insert);
+		
+		deletef=new JLabel("DELETE AN ACCOUNT");
+		deletef.setBounds(665, 300, 282, 30);
+		deletef.setForeground(new Color(250,250,250));
+		deletef.setBackground(new Color(53,97,140));
+		deletef.setFont(new Font("Arial",Font.PLAIN, 21));
+		deletef.setOpaque(true);
+		mainPanel.add(deletef);
+		
+		nameLabel = new JLabel("Admin Name: "+s1);
+		nameLabel.setBounds(30, 550, 400, 100);
+        nameLabel.setFont(new Font("Cascadia Code", Font.PLAIN, 30));
+		nameLabel.setForeground(Color.WHITE);
+		mainPanel.add(nameLabel);
     
     
     
@@ -176,7 +204,14 @@ public void actionPerformed(ActionEvent ae) {
 	
 	else if(ae.getSource()==Insertbtn)
 		{
-			create l1=new create();
+			create c1=new create();
+			c1.setVisible(true);
+			this.setVisible(false);
+		}
+		
+		else if(ae.getSource()==logout)
+		{
+			logIn l1 =new logIn();
 			l1.setVisible(true);
 			this.setVisible(false);
 		}
