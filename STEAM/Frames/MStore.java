@@ -14,12 +14,23 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 	JTextField namef,money;
 	JPasswordField numberf;
 	JButton confirm,backbtn;
-	JCheckBox s1;
-	public MStore()
+
+
+	String s1;
+    String s3;
+    menu m1;
+
+
+	public MStore(String s1, String s3, menu m1)
 	{
 		super("Steam Store");
 		this.setSize(500,700);
 		this.setLocation(550,100);
+
+
+		this.s1 = s1;
+        this.s3 = s3;
+		this.m1=m1;
 		
 		mycolor=new Color(25,28,35);
 		
@@ -107,25 +118,25 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 	public void mouseExited(MouseEvent me){}
 	public void actionPerformed(ActionEvent ae)
 	{
-		String s1=namef.getText();
-		String s2=numberf.getText();
+		String s11=namef.getText();
+		String s21=numberf.getText();
 		
 		if(ae.getSource()==confirm)
 		{
-			if(s1.isEmpty()||s2.isEmpty())
+			if(s11.isEmpty()||s21.isEmpty())
 			{
 				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
 			}
 			else{
 			JOptionPane.showMessageDialog(this,"PAYMENT SUCCESSFULL");
-			menu m1=new menu(); 
+			menu m1=new menu(s1,s3,this); 
 			m1.setVisible(true);
 			this.setVisible(false);
 			}
 		}
 		else if(ae.getSource()==backbtn)
 		{
-			menu l1=new menu();
+			menu l1=new menu(s1,s3,this);
 			l1.setVisible(true);
 			this.setVisible(false);
 		}

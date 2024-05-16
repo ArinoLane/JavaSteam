@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class adminf extends JFrame implements  MouseListener, ActionListener 
+public class adminf extends JFrame implements MouseListener, ActionListener 
 {
 	ImageIcon img;
 	JLabel userLabel,namelabel, passLabel,imglabel,emailabel,populabel ;
@@ -88,9 +88,12 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
                 }
             }
 
-        } catch (Exception ex) {
+        } 
+        catch (Exception ex) 
+        {
             return;
         }
+    }
 
 	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
@@ -100,21 +103,25 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
 	
 	public void actionPerformed(ActionEvent ae)
 	{
-        if(ae.getSource()==btn1){
+        if(ae.getSource()==btn1)
+        {
 
                 setVisible(false);
                 UserData frame = new UserData();
                 frame.setVisible(true);
 
-            }
+         }
 
-       else if(ae.getSource()==btn2){
+       else if(ae.getSource()==btn2)
+       {
 
-                if (table.getSelectionModel().isSelectionEmpty()) {
+                if (table.getSelectionModel().isSelectionEmpty()) 
+                {
                     JOptionPane.showMessageDialog(null, "Please select a user to delete", "Warning!",
                             JOptionPane.WARNING_MESSAGE);
                 } 
-				else {
+				else 
+                {
                     String removeUser = table.getModel().getValueAt(table.getSelectedRow(), 0).toString();
 
                     File oldFile = new File(file);
@@ -122,7 +129,8 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
 
                     int q = 0;
 
-                    try {
+                    try 
+                    {
 
                         BufferedReader reader = new BufferedReader(new FileReader(file));
                         int totalLines = 0;
@@ -140,11 +148,14 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
                                 }
                             }
                         }
-                    } catch (Exception ex) {
+                    } 
+                    catch (Exception ex) 
+                    {
                         return;
                     }
 
-                    try {
+                    try 
+                    {
 
                         FileWriter fw = new FileWriter(temp, true);
                         BufferedWriter bw = new BufferedWriter(fw);
@@ -178,7 +189,9 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
                         bw.close();
                         fw.close();
 
-                    } catch (Exception ex) {
+                    } 
+                    catch (Exception ex) 
+                    {
                         System.out.print(ex);
                     }
 
@@ -194,6 +207,7 @@ public class adminf extends JFrame implements  MouseListener, ActionListener
             }
 	}  
 
-	}     
+}   
+
       
         

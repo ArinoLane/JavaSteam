@@ -12,13 +12,20 @@ public class project extends JFrame
     Color myColor,myColor1;
     JPanel panel,panel1,panel2;
 	Font myFont;
+    String UpperPanelUserName;
+    String pass;
+    menu m1;
 	
-		public project()
-		{
+public project(String UpperPanelUserName, String pass, menu m1)
+{
         super("My First GUI");
 		this.setSize(1024, 768);
 		this.setLocation(250,40);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.UpperPanelUserName = UpperPanelUserName;
+        this.pass = pass;
+        this.m1 = m1;
 		
 		myColor1 = new Color(74,85,255);
 		myColor = new Color(34,62,90);
@@ -71,13 +78,13 @@ public class project extends JFrame
 		//EditProfileBtn.addActionListener(this);
 		panel.add(EditProfileBtn);
 		
-		nameLabel = new JLabel("Name: ");
+		nameLabel = new JLabel("Name: "+ UpperPanelUserName);
 		nameLabel.setBounds(150, 160, 400, 100);
         nameLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
 		nameLabel.setForeground(Color.WHITE);
 		panel.add(nameLabel);
 		
-		emailLabel = new JLabel("Email: ");
+		emailLabel = new JLabel("Email: "+pass);
 		emailLabel.setBounds(150, 290, 400, 70);
 	    emailLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
 		emailLabel.setForeground(Color.WHITE);

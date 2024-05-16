@@ -145,7 +145,8 @@ public class create extends JFrame implements MouseListener, ActionListener
 				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
 			}
 			else{
-				
+				menu m1 = new menu(s1,s3,this); //name and mail passing
+
 				useracc ac=new useracc(s1,s2,s3);
 				ac.adduseracc();
 				
