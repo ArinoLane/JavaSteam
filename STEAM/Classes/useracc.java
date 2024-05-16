@@ -77,9 +77,10 @@ public class useracc
 			
 			fwrite=new FileWriter(file,true);
 			
-			fwrite.write(getUserName()+"/t");
-			fwrite.write(getUserpass()+"/t");
-			fwrite.write(getUserEmail()+"/n");
+			fwrite.write(getUserName()+"    ");
+			fwrite.write(getUserEmail()+"    ");
+			fwrite.write(getUserpass()+"\n");
+			
 			
 			
 			fwrite.flush();
@@ -105,7 +106,7 @@ public class useracc
 			while(sc.hasNextLine())
 			{
 				String line=sc.nextLine();
-				String[] value=line.split("/t");
+				String[] value=line.split("    ");
 				if(value[0].equals(username)&&value[1].equals(userpass))
 				{
 					flag=true;

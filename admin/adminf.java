@@ -1,0 +1,171 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.Font;
+import java.awt.event.*;
+import java.awt.Color;
+import java.util.*;
+import java.awt.Cursor;
+import javax.swing.table.*;
+import java.io.*;
+import java.nio.file.*;
+import static javax.swing.JOptionPane.showMessageDialog;
+
+public class adminf extends JFrame implements  ActionListener
+{   
+    ImageIcon img;
+    JLabel label1, label2, label3, label4, l1;
+    JLabel imglabel;
+    Color myColor,myColor1;
+    JPanel upperPanel,mainPanel;
+    Font myFont;
+    JScrollPane scroll;
+    JTable table;
+    DefaultTableModel model;
+    JButton Deletebtn,Insertbtn;
+    
+    private String[] column = { "User Name", "Password", "Email" };
+private String[] rows = new String[7];
+
+public adminf()
+{
+    super("My First GUI");
+    this.setSize(1024, 768);
+    this.setLocation(250,40);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+    
+    myColor1 = new Color(74,85,255);
+    myColor = new Color(34,62,90);
+    myFont = new Font("Cambria", Font.PLAIN, 28);
+    
+    mainPanel = new JPanel();
+    mainPanel.setLayout(null);
+    mainPanel.setBackground(new Color(53,97,140));
+    mainPanel.setPreferredSize(new Dimension(1024,7200));
+    
+    
+    upperPanel=new JPanel();
+    upperPanel.setLayout(null);
+    upperPanel.setBackground(new Color(23,26,33));
+    upperPanel.setBounds(0,0,1024,100);
+    
+    img=new ImageIcon("logo_steam.png");
+    imglabel=new JLabel(img);
+    imglabel.setBounds(425,35,200,50);
+    upperPanel.add(imglabel);
+	
+	Insertbtn=new JButton("Insert");
+	Insertbtn.setBounds(700,280, 150, 40);
+	Insertbtn.setForeground(new Color(250,250,250));
+	Insertbtn.setBackground(new Color(23,26,33));
+	Insertbtn.setFont(new Font("Arial", Font.PLAIN, 20));
+	Insertbtn.setBorderPainted(false);
+    //Insertbtn.setContentAreaFilled(false);
+	//Deletebtn.addMouseListener(this);
+	//Deletebtn.addActionListener(this);
+	mainPanel.add(Insertbtn);
+	
+	Deletebtn=new JButton("Delete");
+        Deletebtn.setBounds(700,480, 150, 40);
+        Deletebtn.setForeground(new Color(250,250,250));
+        Deletebtn.setBackground(new Color(23,26,33));
+        Deletebtn.setFont(new Font("Arial", Font.PLAIN, 20));
+        Deletebtn.setBorderPainted(false);
+        Deletebtn.addActionListener(this); // Moved this line here
+        mainPanel.add(Deletebtn);
+    
+    
+    
+    this.add(upperPanel);
+    this.add(mainPanel);
+    
+    // Table model with column names
+    model = new DefaultTableModel();
+    model.setColumnIdentifiers(column);
+
+    // Try to read data from the file
+    try (BufferedReader br = new BufferedReader(new FileReader("userdatas.txt"))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] data = line.split("    "); 
+            model.addRow(data);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+        // Handle exception (e.g., file not found, error while reading)
+        JOptionPane.showMessageDialog(this, "Error reading data file: " + e.getMessage());
+    }
+
+    // Table with the model
+    table = new JTable(model);
+    table.setPreferredScrollableViewportSize(new Dimension(512, this.getHeight() / 2));
+    table.setFillsViewportHeight(true);
+
+    // Scroll pane that contains the table
+    JScrollPane scrollPane = new JScrollPane(table);
+    scrollPane.setBounds(0, 100, 512, this.getHeight() / 2); // Set to half the width and height of the frame
+
+    // Add the scroll pane to the main panel
+    mainPanel.add(scrollPane);
+
+    // Refresh the frame to display the table
+    this.validate();
+    this.repaint();
+}
+
+
+public void mouseClicked(MouseEvent me){}
+public void mousePressed(MouseEvent me){}
+public void mouseReleased(MouseEvent me){}
+public void mouseEntered(MouseEvent me){}
+public void mouseExited(MouseEvent me){}
+
+public void actionPerformed(ActionEvent ae) {
+    if(ae.getSource() == Deletebtn){
+        int selectedRow = table.getSelectedRow();
+        if (selectedRow != -1) {
+            // Get the username of the selected row
+            String username = table.getValueAt(selectedRow, 0).toString();
+
+            // Remove the row from the table
+            model.removeRow(selectedRow);
+
+            // Remove the corresponding line from the file
+            try {
+                File inputFile = new File("userdatas.txt");
+                File tempFile = new File("tempfile.txt");
+
+                BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+                BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+                String currentLine;
+
+                while((currentLine = reader.readLine()) != null) {
+                    // trim newline when comparing with lineToRemove
+                    String trimmedLine = currentLine.trim();
+                    if(trimmedLine.startsWith(username)) continue;
+                    writer.write(currentLine + System.getProperty("line.separator"));
+                }
+                writer.close(); 
+                reader.close(); 
+                boolean successful = tempFile.renameTo(inputFile);
+                System.out.println(successful);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+	
+	else if(ae.getSource()==backbtn)
+		{
+			create l1=new create();
+			l1.setVisible(true);
+			this.setVisible(false);
+		}
+}
+
+
+}
+
+
+	
