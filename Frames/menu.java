@@ -75,7 +75,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
         userLabel = new JButton(s1.toUpperCase());
-        userLabel.setBounds(480,35,150,30);
+        userLabel.setBounds(480,35,180,30);
         userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);
@@ -84,6 +84,17 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         userLabel.addActionListener(this);
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
+
+        library = new JButton("LIBRARY");
+        library.setBounds(600,35,150,30);
+        library.setFont(new Font("Bahnschrift", Font.BOLD, 15));
+        library.setBackground(Color.GREEN);
+        library.setOpaque(false);
+        library.setForeground(new Color(177,179,182));
+        library.setContentAreaFilled(false);
+        library.addActionListener(this);
+        library.setBorderPainted(false);
+        upperPanel.add(library);        
 	
 
 
@@ -95,14 +106,14 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 game[0] = new JPanel();
 game[0].setLayout(null);
 game[0].setBackground(new Color(34,57,75));
-game[0].setBounds(100,150,250,350);
+game[0].setBounds(100,150,250,390);
 game[0].setVisible(true);
 mainPanel.add(game[0]);
 
 game[1] = new JPanel();
 game[1].setLayout(null);
 game[1].setBackground(new Color(34,57,75));
-game[1].setBounds(360,150,250,350);
+game[1].setBounds(360,150,250,390);
 game[1].setVisible(true);
 mainPanel.add(game[1]);
 
@@ -171,12 +182,12 @@ mainPanel.add(buy1);
 //images---------------------------------------------
 img000 = new ImageIcon("Images/farCry3.png");
 imgLabe000 = new JLabel(img000);
-imgLabe000.setBounds(0,0, 250, 350);
+imgLabe000.setBounds(0,0, 250, 390);
 game[0].add(imgLabe000);
 
 img111 = new ImageIcon("Images/falloutThree.png");
 imgLabe111 = new JLabel(img111);
-imgLabe111.setBounds(0,0, 250, 350);
+imgLabe111.setBounds(0,0, 250, 390);
 game[1].add(imgLabe111);
 
 img222 = new ImageIcon("Images/heads.png");
@@ -191,12 +202,12 @@ game[3].add(imgLabe333);
 
 img444 = new ImageIcon("Images/DH.png");
 imgLabe444 = new JLabel(img444);
-imgLabe444.setBounds(0,0, 250, 350);
+imgLabe444.setBounds(0,0, 250, 390);
 game[4].add(imgLabe444);
 
 img555 = new ImageIcon("Images/dyingL.png");
 imgLabe555 = new JLabel(img555);
-imgLabe555.setBounds(0,0, 250, 350);
+imgLabe555.setBounds(0,0, 250, 390);
 game[5].add(imgLabe555);
 
 img666 = new ImageIcon("Images/acbflag.png");
