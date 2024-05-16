@@ -15,7 +15,7 @@ import Classes.*;
 public class adminf extends JFrame implements  ActionListener
 {   
     ImageIcon img;
-    JLabel label1, label2, label3, label4, l1;
+    JLabel insert;
     JLabel imglabel;
     Color myColor,myColor1;
     JPanel upperPanel,mainPanel;
@@ -50,7 +50,7 @@ public adminf()
     upperPanel.setBackground(new Color(23,26,33));
     upperPanel.setBounds(0,0,1024,100);
     
-    img=new ImageIcon("logo_steam.png");
+    img=new ImageIcon("Images/logo_steam.png");
     imglabel=new JLabel(img);
     imglabel.setBounds(425,35,200,50);
     upperPanel.add(imglabel);
@@ -74,6 +74,14 @@ public adminf()
         Deletebtn.setBorderPainted(false);
         Deletebtn.addActionListener(this); // Moved this line here
         mainPanel.add(Deletebtn);
+		
+		insert=new JLabel("INSERT A NEW ACCOUNT");
+		insert.setBounds(650, 200, 282, 30);
+		insert.setForeground(new Color(250,250,250));
+		insert.setBackground(new Color(53,97,140));
+		insert.setFont(new Font("Arial",Font.PLAIN, 21));
+		insert.setOpaque(true);
+		mainPanel.add(insert);
     
     
     
