@@ -8,8 +8,8 @@ import Classes.*;
 public class logIn extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel,panelContributors;
-	JLabel namelabel, passlabel, imglabel, adminp, ContributorsImglabel, backgroundImglabel;
-	JTextField namefield;
+	JLabel namelabel,emaillabel, passlabel, imglabel, adminp, ContributorsImglabel, backgroundImglabel;
+	JTextField namefield,emailfield;
 	JPasswordField passfield;
 	JButton signBut,CreatAccnount,adminbtn,Contributors;
 	JButton signupbtn, backbtn;
@@ -33,7 +33,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 
 
 		JLabel signIntext = new JLabel("SIGN IN");
-		signIntext.setBounds(180,50,150,100);
+		signIntext.setBounds(180,90,150,100);
 		signIntext.setForeground(new Color(250,250,250));
 		signIntext.setFont(new Font("Arial", Font.BOLD, 30));
 		panel.add(signIntext);
@@ -41,54 +41,78 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 
 
 		JLabel creatNew = new JLabel("New to Steam?");
-		creatNew.setBounds(190,490,120,30);
+		creatNew.setBounds(70,490,120,30);
 		creatNew.setForeground(new Color(250,250,250));
 		creatNew.setFont(new Font("Arial", Font.BOLD, 15));
 		panel.add(creatNew);
+
+
+		CreatAccnount = new JButton ("Creat an account");
+		CreatAccnount.setBounds(30, 525, 195, 30);
+		CreatAccnount.setForeground(new Color(250,250,250));
+		CreatAccnount.setFont(new Font("Arial", Font.PLAIN, 15));
+		CreatAccnount.setBackground(new Color(7, 187, 255));
+		CreatAccnount.addActionListener(this);
+		panel.add(CreatAccnount);
+
 		
 		JLabel adminp = new JLabel("Log As Admin");
-		adminp.setBounds(190,420,120,30);
+		adminp.setBounds(310,490,120,30);
 		adminp.setForeground(new Color(250,250,250));
 		adminp.setFont(new Font("Arial", Font.BOLD, 15));
 		panel.add(adminp);
 
-		namelabel = new JLabel ("SIGN IN WITH ACCOUNT NAME");
-		namelabel.setBounds(140,180,195,30);
-		namelabel.setForeground(new Color(27,151,255));
-		panel.add(namelabel);
-		
-		namefield = new JTextField();
-		namefield.setBounds(140,205,195,30);
-		namefield.setBackground(new Color(232,240,254));
-		panel.add(namefield);
-		
+
 		adminbtn = new JButton("Log In");
-		adminbtn.setBounds(140, 450, 195, 30);
+		adminbtn.setBounds(260,525,195,30);
 		adminbtn.setForeground(new Color(250,250,250));
 		adminbtn.setFont(new Font("Arial", Font.PLAIN, 15));
 		adminbtn.setBackground(new Color(7, 187, 255));
 		adminbtn.addActionListener(this);
 		adminbtn.setOpaque(true);
-		panel.add(adminbtn);
+		panel.add(adminbtn);	
+
+
+		namelabel = new JLabel ("SIGN IN WITH ACCOUNT NAME");
+		namelabel.setBounds(140,190,195,30);
+		namelabel.setForeground(new Color(27,151,255));
+		panel.add(namelabel);
+
 		
+		namefield = new JTextField();
+		namefield.setBounds(140,215,195,30);
+		namefield.setBackground(new Color(232,240,254));
+		namefield.addActionListener(this);
+		panel.add(namefield);
+
+
 		passlabel = new JLabel ("PASSWORD");
 		passlabel.setForeground(new Color(27,151,255));
 		passlabel.setBounds(140,260,195,30);
 		panel.add(passlabel);
+
 		
 		passfield = new JPasswordField();
 		passfield.setBounds(140,285,195,30);
 		passfield.setBackground(new Color(232,240,254));
 		passfield.setEchoChar('•');
+		passfield.addActionListener(this);
 		panel.add(passfield);
+
+
+		emaillabel = new JLabel ("EMAIL");
+		emaillabel.setBounds(140,320,195,30);
+		emaillabel.setForeground(new Color(160,206,252));
+		panel.add(emaillabel);
 		
-		JCheckBox box = new JCheckBox("REMEMBER ME");
-		box.setBounds(140, 330, 105,20);
-		box.setFont(new Font("Arial", Font.PLAIN, 10));
-		panel.add(box);
-		
-		signBut = new JButton ("Sign up");
-		signBut.setBounds(140, 350, 195, 30);
+		emailfield = new JTextField();
+		emailfield.setBounds(140,345,195,30);
+		emailfield.setBackground(new Color(232,240,254));
+		panel.add(emailfield);
+
+
+		signBut = new JButton ("Sign in");
+		signBut.setBounds(140, 400, 195, 30);
 		signBut.setForeground(new Color(250,250,250));
 		signBut.setFont(new Font("Arial", Font.PLAIN, 15));
 		signBut.setBackground(new Color(7, 187, 255));
@@ -106,15 +130,6 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		Contributors.addActionListener(this);
 		panel.add(Contributors);
 
-		
-		CreatAccnount = new JButton ("Creat an account");
-		CreatAccnount.setBounds(140, 525, 195, 30);
-		CreatAccnount.setForeground(new Color(250,250,250));
-		CreatAccnount.setFont(new Font("Arial", Font.PLAIN, 15));
-		CreatAccnount.setBackground(new Color(7, 187, 255));
-		CreatAccnount.addActionListener(this);
-		panel.add(CreatAccnount);
-		
 		
 		
 		img=new ImageIcon("Images/logo_steam.png");
@@ -139,6 +154,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 	{
 		
 		String n=namefield.getText();
+		String e=emailfield.getText();
 		String p=passfield.getText();
 		String d=passfield.getText();
 		
@@ -156,8 +172,8 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 				
 			JOptionPane.showMessageDialog(this,"HAPPY GAMING");
 			
-			menu h1=new menu();
-			h1.setVisible(true);
+			menu m1=new menu(n,e,this);
+			m1.setVisible(true);
 			this.setVisible(false);
 			}
 			else
