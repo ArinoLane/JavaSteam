@@ -9,7 +9,7 @@ public class profile extends JFrame implements ActionListener
 {   
     ImageIcon img;
 	JLabel nameLabel,emailLabel,levelLabel;
-	JButton store,userLabel,EditProfileBtn;
+	JButton store,userLabel,LogOutbtn;
 	JLabel imglabel;
     Color myColor,myColor1;
     JPanel panel,panel1,panel2,mainPanel, upperPanel;
@@ -33,12 +33,12 @@ public profile(String s1, String s3, menu m1)
 
 		mainPanel = new JPanel();
         mainPanel.setLayout(null);
-        mainPanel.setBackground(new Color(53,97,140));
+        mainPanel.setBackground(new Color(25,28,35));
         mainPanel.setBounds(0,0,1024,7200);
  
         upperPanel=new JPanel();
         upperPanel.setLayout(null);
-        upperPanel.setBackground(new Color(23,26,33));
+        upperPanel.setBackground(new Color(53,97,140));
         upperPanel.setBounds(0,0,1024,100);
 
 
@@ -75,30 +75,25 @@ public profile(String s1, String s3, menu m1)
         mainPanel.add(upperPanel); 		
 		
 		
-		EditProfileBtn = new JButton("Edit Profile");
-		EditProfileBtn.setBounds(350, 600, 400, 50);
-		EditProfileBtn.setBackground(Color.WHITE);
-		//EditProfileBtn.addMouseListener(this);
-		//EditProfileBtn.addActionListener(this);
-		mainPanel.add(EditProfileBtn);
+		LogOutbtn = new JButton("Log Out");
+		LogOutbtn.setBounds(350, 600, 400, 50);
+		LogOutbtn.setForeground(new Color(250,250,250));
+		LogOutbtn.setBackground(new Color(7, 187, 255));
+		LogOutbtn.addActionListener(this);
+		mainPanel.add(LogOutbtn);
 		
 		nameLabel = new JLabel("Name: "+ s1);
 		nameLabel.setBounds(150, 160, 400, 100);
         nameLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
-		nameLabel.setForeground(Color.WHITE);
+		nameLabel.setForeground(new Color(27,151,255));
 		mainPanel.add(nameLabel);
 		
 		emailLabel = new JLabel("Email: "+s3);
 		emailLabel.setBounds(150, 290, 400, 70);
 	    emailLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
-		emailLabel.setForeground(Color.WHITE);
+		emailLabel.setForeground(new Color(27,151,255));
 		mainPanel.add(emailLabel);
 		
-		levelLabel = new JLabel("Level: ");
-		levelLabel.setBounds(150, 420, 400, 70);
-		levelLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
-		levelLabel.setForeground(Color.WHITE);
-		mainPanel.add(levelLabel);
 
 		this.add(mainPanel);
 
@@ -112,7 +107,17 @@ public profile(String s1, String s3, menu m1)
             m1.setVisible(true);
             this.setVisible(false);
         }
-    }
+		
+		else if (ae.getSource()==LogOutbtn)
+{
+    logIn l1 = new logIn();
+    l1.setVisible(true);
+    this.setVisible(false);
+
+    
+}
+
 	
 	
+}
 }

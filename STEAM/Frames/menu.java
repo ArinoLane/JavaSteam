@@ -62,7 +62,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         upperPanel.add(imglabel);
 		
 		store = new JButton("STORE");
-        store.setBounds(400,42,100,30);
+        store.setBounds(400,35,100,30);
         store.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
@@ -75,7 +75,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
         userLabel = new JButton(s1.toUpperCase());
-        userLabel.setBounds(480,40,150,30);
+        userLabel.setBounds(480,35,150,30);
         userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);
