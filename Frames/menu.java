@@ -12,8 +12,8 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 {
     JPanel MyProfilePanel,LibraryPanel;
     JPanel mainPanel, upperPanel, game0,game1,game2,game3,game4,game5,game6,game7,game8,game9,game10,game11,game12,game13,game14,game15,game16,game17,game18,game19,game20,game21,game22,game23,game24,game25,game26,game27,game28,game29,game30,game30_1, game31,game32,game33,game34,game35,game36,game37,game38,game39,game40,game41,game42,game43,game44,game45,game46,game47,game48,game49,game50,game51,game52,game53,game54;
-    ImageIcon img,img000,img111,img222,img333,img444,img555,img666,img777,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54,imgs;
-    JLabel imglabels,imglabel,imgLabe000,imgLabe111,imgLabe222,imgLabe333,imgLabe444,imgLabe555,imgLabe666,imgLabe777,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
+    ImageIcon imgback, img,img000,img111,img222,img333,img444,img555,img666,img777,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54,imgs;
+    JLabel imgbacklabel, imglabels,imglabel,imgLabe000,imgLabe111,imgLabe222,imgLabe333,imgLabe444,imgLabe555,imgLabe666,imgLabe777,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
     JScrollPane scrollPane;
     JButton userLabel,store,logOutbtn, left, right,storebtn;
     JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30,buy31,buy32,buy33,buy34,buy35,buy36,buy37,buy38,buy39,buy40,buy41,buy42,buy43,buy44,buy45,buy46,buy47,buy48,buy49,buy50,buy51,buy52,buy53,buy54;
@@ -54,7 +54,6 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setBounds(0, 0, 1010, 750); //it controls the scroll
         mainPanel.setPreferredSize(new Dimension(1024,7200)); ///it controls the JPanel that is attached with scrollPane
-
  
         upperPanel=new JPanel();
         upperPanel.setLayout(null);
@@ -105,6 +104,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
         mainPanel.add(upperPanel);  //this.add jemon sobar last e add korte hoy temni ei panel er mdode jehetu sob dukbe, tai sob kisu dukanor por .add korbo {()}. anekta, ekta bag er modde sob jinis dukanor por cain off kora. Oi jinis gulo nijera add/chain off hobe than amar bag er chain off hobe sobar last e .
+
 
 
 
@@ -1863,6 +1863,10 @@ game53.add(namep53);
  
 //----------------------------------------------------------------------------------------------------
 
+        imgback=new ImageIcon("Images/menubackgroud.png");
+        imgbacklabel=new JLabel(imgback);
+        imgbacklabel.setBounds(0,0,1024,7200);
+        mainPanel.add(imgbacklabel);
 
         this.getContentPane().add(scrollPane);  
           
