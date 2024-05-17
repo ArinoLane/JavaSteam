@@ -3,17 +3,25 @@ import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.util.*;
 import Classes.*;
+
 
 public class profile extends JFrame implements ActionListener 
 {   
     ImageIcon img;
 	JLabel nameLabel,emailLabel,levelLabel;
-	JButton store,userLabel,LogOutbtn;
+	JButton store,userLabel,editProfilebtn,editEmailbtn;
 	JLabel imglabel;
     Color myColor,myColor1;
-    JPanel panel,panel1,panel2,mainPanel, upperPanel;
+    JPanel panel,panel1,panel2,mainPanel, upperPanel,libraryPanel;
 	Font myFont;
+	
+	File file;
+    FileWriter fwrite;
+    
+    Scanner sc;
 
 	//codes for name and mail passing
     String s1;
@@ -33,7 +41,7 @@ public profile(String s1, String s3, menu m1)
 
 		mainPanel = new JPanel();
         mainPanel.setLayout(null);
-        mainPanel.setBackground(new Color(25,28,35));
+        mainPanel.setBackground(new Color (23,26,33));
         mainPanel.setBounds(0,0,1024,7200);
  
         upperPanel=new JPanel();
@@ -46,7 +54,6 @@ public profile(String s1, String s3, menu m1)
         imglabel=new JLabel(img);
         imglabel.setBounds(200,23,230,50);
         upperPanel.add(imglabel);
-		
 
 
         store = new JButton("STORE");
@@ -75,24 +82,46 @@ public profile(String s1, String s3, menu m1)
         mainPanel.add(upperPanel); 		
 		
 		
-		LogOutbtn = new JButton("Log Out");
-		LogOutbtn.setBounds(350, 600, 400, 50);
-		LogOutbtn.setForeground(new Color(250,250,250));
-		LogOutbtn.setBackground(new Color(7, 187, 255));
-		LogOutbtn.addActionListener(this);
-		mainPanel.add(LogOutbtn);
+		editProfilebtn = new JButton("EDIT PROFILE");
+		editProfilebtn.setBounds(150, 600, 200, 50);
+		editProfilebtn.setForeground(new Color(250,250,250));
+		editProfilebtn.setBackground(new Color(7, 187, 255));
+		editProfilebtn.addActionListener(this);
+		mainPanel.add(editProfilebtn);
+		
+		editEmailbtn = new JButton("EDIT EMAIL");
+        editEmailbtn.setBounds(150, 670, 200, 50);
+        editEmailbtn.setForeground(new Color(250,250,250));
+        editEmailbtn.setBackground(new Color(7, 187, 255));
+        editEmailbtn.addActionListener(this);
+        mainPanel.add(editEmailbtn);
 		
 		nameLabel = new JLabel("Name: "+ s1);
 		nameLabel.setBounds(150, 160, 400, 100);
-        nameLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
-		nameLabel.setForeground(new Color(27,151,255));
+        nameLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+        nameLabel.setForeground(Color.WHITE);
 		mainPanel.add(nameLabel);
 		
 		emailLabel = new JLabel("Email: "+s3);
 		emailLabel.setBounds(150, 290, 400, 70);
-	    emailLabel.setFont(new Font("Cascadia Code", Font.BOLD, 30));
-		emailLabel.setForeground(new Color(27,151,255));
+	    emailLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+        emailLabel.setForeground(Color.WHITE);
 		mainPanel.add(emailLabel);
+		
+		JLabel libraryName = new JLabel("LIBRARY");
+		libraryName.setBounds(512, 140, 150, 20);
+		libraryName.setFont(new Font("Arial", Font.BOLD, 18));
+		libraryName.setForeground(new Color(255,255,255));
+		mainPanel.add(libraryName);
+		
+		
+		libraryPanel = new JPanel();
+        libraryPanel.setLayout(new BoxLayout(libraryPanel, BoxLayout.Y_AXIS));
+        libraryPanel.setForeground(new Color(48,54,69));
+        libraryPanel.setBounds(512, 160, 400, 600);
+        mainPanel.add(libraryPanel);
+
+        refreshLibrary();
 		
 
 		this.add(mainPanel);
@@ -108,16 +137,97 @@ public profile(String s1, String s3, menu m1)
             this.setVisible(false);
         }
 		
-		else if (ae.getSource()==LogOutbtn)
-{
-    logIn l1 = new logIn();
-    l1.setVisible(true);
-    this.setVisible(false);
+		else if (ae.getSource()==editProfilebtn)
+        {
+            String newUsername = JOptionPane.showInputDialog("Enter new username:");
+            if (newUsername != null && !newUsername.trim().isEmpty()) {
+                editUsername(newUsername.trim());
+            }
+        }
+		 else if (ae.getSource()==editEmailbtn)
+        {
+            String newEmail = JOptionPane.showInputDialog("Enter new email:");
+            if (newEmail != null && !newEmail.trim().isEmpty()) {
+                editEmail(newEmail.trim());
+            }
+        }
+    }
 
-    
+    private void editUsername(String newUsername) {
+    File file = new File(".\\Datas\\userdata.txt");
+    StringBuilder fileContent = new StringBuilder();
+    try (Scanner scanner = new Scanner(file)) {
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] userData = line.split("    ");
+            if (userData[1].equals(s3)) { // if the email matches
+                userData[0] = newUsername; // replace the username
+            }
+            fileContent.append(String.join("    ", userData)).append("\n");
+        }
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+
+    try (FileWriter fwrite = new FileWriter(file)) {
+        fwrite.write(fileContent.toString());
+        fwrite.flush();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    // Update the username in the current session
+    s1 = newUsername;
+    nameLabel.setText("Name: " + s1);
 }
+private void editEmail(String newEmail) {
+        File file = new File(".\\Datas\\userdata.txt");
+        StringBuilder fileContent = new StringBuilder();
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] userData = line.split("    ");
+                if (userData[0].equals(s1)) { // if the username matches
+                    userData[1] = newEmail; // replace the email
+                }
+                fileContent.append(String.join("    ", userData)).append("\n");
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try (FileWriter fwrite = new FileWriter(file)) {
+            fwrite.write(fileContent.toString());
+            fwrite.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Update the email in the current session
+        s3 = newEmail;
+        emailLabel.setText("Email: " + s3);
+    }
+	private void refreshLibrary() {
+        libraryPanel.removeAll(); // Remove all existing labels
+
+        File file = new File(".\\Datas\\library_" + s1 + ".txt");
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String gameName = scanner.nextLine();
+                JLabel gameLabel = new JLabel(gameName);
+                gameLabel.setForeground(Color.BLACK);
+                gameLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+                libraryPanel.add(gameLabel);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        libraryPanel.revalidate();
+        libraryPanel.repaint();
+    }
+
 
 	
 	
-}
 }

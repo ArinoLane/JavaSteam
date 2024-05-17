@@ -3,6 +3,8 @@ import java.lang.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.util.*;
 import Classes.*;
 
  
@@ -16,6 +18,9 @@ public class menu extends JFrame implements  MouseListener, ActionListener
     JButton userLabel,store,library, left, right,storebtn;
     JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30,buy31,buy32,buy33,buy34,buy35,buy36,buy37,buy38,buy39,buy40,buy41,buy42,buy43,buy44,buy45,buy46,buy47,buy48,buy49,buy50,buy51,buy52,buy53,buy54;
     JPanel game[] = new JPanel[8];
+
+    File file;
+    FileWriter fwrite;
 
     //codes for name and mail passing 
     JFrame l1;
@@ -1904,12 +1909,18 @@ public void actionPerformed(ActionEvent ae){
 			}
 			isGame0Visible = !isGame0Visible;
 	}
-		else if(ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
-		{
-			MStore store1 =new MStore(s1,s3,this);
-            store1.setVisible(true);
-			this.setVisible(false);
-		}
+		// else if(ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
+		// {
+		// 	MStore store1 =new MStore(s1,s3,this);
+        //     store1.setVisible(true);
+		// 	this.setVisible(false);
+		// }
+        
+        else if (ae.getSource()==buy3)
+        {
+            addGameToLibrary("Assassin's Creed Revelations");
+        }
+
         else if (ae.getSource()==userLabel)
         {
             profile p1 = new profile(s1,s3,this);
@@ -1918,4 +1929,21 @@ public void actionPerformed(ActionEvent ae){
         }
 
 	}
+
+    private void addGameToLibrary(String gameName) 
+    {
+        File file = new File(".\\Datas\\library_" + s1 + ".txt"); // One library file per user
+        try (FileWriter fwrite = new FileWriter(file, true)) 
+        
+        { // Append to the file
+            fwrite.write(gameName + "\n");
+            fwrite.flush();
+        } 
+        catch (IOException e) 
+
+        {
+            e.printStackTrace();
+        }
+    }
+
 }
