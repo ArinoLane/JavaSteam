@@ -81,7 +81,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
         userLabel = new JButton(s1.toUpperCase());
-        userLabel.setBounds(550,35,150,30);
+        userLabel.setBounds(480,35,150,30);
         userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);
@@ -96,7 +96,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         logOutbtn.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         logOutbtn.setBackground(Color.GREEN);
         logOutbtn.setOpaque(false);
-        logOutbtn.setForeground(new Color(177,179,182));
+        logOutbtn.setForeground(new Color(251,187,197));
         logOutbtn.setContentAreaFilled(false);
         logOutbtn.addActionListener(this);
         logOutbtn.setBorderPainted(false);
