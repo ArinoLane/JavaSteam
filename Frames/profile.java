@@ -10,13 +10,14 @@ import Classes.*;
 
 public class profile extends JFrame implements ActionListener 
 {   
-    ImageIcon img;
-	JLabel nameLabel,emailLabel,levelLabel;
-	JButton store,userLabel,editProfilebtn,editEmailbtn;
+    ImageIcon img,imgbackground;
+	JLabel backgroundImglabel, nameLabel,emailLabel,levelLabel;
+	JButton store,userLabel,editProfilebtn,editEmailbtn,logOutbtn;
 	JLabel imglabel;
     Color myColor,myColor1;
     JPanel panel,panel1,panel2,mainPanel, upperPanel,libraryPanel;
 	Font myFont;
+
 	
 	File file;
     FileWriter fwrite;
@@ -58,11 +59,10 @@ public profile(String s1, String s2, menu m1)
 
         store = new JButton("STORE");
         store.setBounds(400,35,100,30);
-        store.setFont(new Font("Bahnschrift", Font.BOLD, 15));
+        store.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
-        store.setForeground(new Color(177,179,182));
-		store.setBackground(new Color(23,26,33));
+        store.setForeground(new Color(228,230,231));
         store.setBorderPainted(false);
         store.setContentAreaFilled(false);
         store.addActionListener(this);
@@ -70,46 +70,66 @@ public profile(String s1, String s2, menu m1)
 
         userLabel = new JButton(s1.toUpperCase());
         userLabel.setBounds(480,35,150,30);
-        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
-        userLabel.setBackground(Color.GREEN);
+        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         userLabel.setOpaque(false);
-        userLabel.setForeground(new Color(177,179,182));
+        userLabel.setForeground(new Color(228,230,231));
         userLabel.setContentAreaFilled(false);
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
 
+        logOutbtn = new JButton("LOG OUT");
+        logOutbtn.setBounds(680,35,150,30);
+        logOutbtn.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+        logOutbtn.setOpaque(false);
+        logOutbtn.setForeground(new Color(253,0,6));
+        logOutbtn.setContentAreaFilled(false);
+        logOutbtn.addActionListener(this);
+        logOutbtn.setBorderPainted(false);
+        upperPanel.add(logOutbtn); 
 
-        mainPanel.add(upperPanel); 		
-		
+        
+
+
+        mainPanel.add(upperPanel); 
+
+
 		
 		editProfilebtn = new JButton("EDIT PROFILE");
-		editProfilebtn.setBounds(150, 600, 200, 50);
+		editProfilebtn.setBounds(50, 600, 250, 50);
 		editProfilebtn.setForeground(new Color(250,250,250));
 		editProfilebtn.setBackground(new Color(7, 187, 255));
+        editProfilebtn.setFont(new Font("Arial", Font.BOLD, 18));
 		editProfilebtn.addActionListener(this);
 		mainPanel.add(editProfilebtn);
 		
 		editEmailbtn = new JButton("EDIT EMAIL");
-        editEmailbtn.setBounds(150, 670, 200, 50);
+        editEmailbtn.setBounds(50, 670, 250, 50);
         editEmailbtn.setForeground(new Color(250,250,250));
         editEmailbtn.setBackground(new Color(7, 187, 255));
+        editEmailbtn.setFont(new Font("Arial", Font.BOLD, 18));
         editEmailbtn.addActionListener(this);
         mainPanel.add(editEmailbtn);
 		
 		nameLabel = new JLabel("Name: "+ s1);
-		nameLabel.setBounds(150, 160, 400, 100);
-        nameLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+		nameLabel.setBounds(50, 160, 250, 30);
+        nameLabel.setBackground(new Color(7, 187, 255));
+        nameLabel.setOpaque(true);
+        nameLabel.setFont(new Font("Arial", Font.BOLD, 18));
         nameLabel.setForeground(Color.WHITE);
 		mainPanel.add(nameLabel);
 		
 		emailLabel = new JLabel("Email: "+s2);
-		emailLabel.setBounds(150, 290, 400, 70);
-	    emailLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+		emailLabel.setBounds(50, 290, 250, 30);
+        emailLabel.setBackground(new Color(7, 187, 255));
+        emailLabel.setOpaque(true);
+	    emailLabel.setFont(new Font("Arial", Font.BOLD, 18));
         emailLabel.setForeground(Color.WHITE);
 		mainPanel.add(emailLabel);
 		
-		JLabel libraryName = new JLabel("LIBRARY");
-		libraryName.setBounds(512, 140, 150, 20);
+		JLabel libraryName = new JLabel("LIBRARY:");
+		libraryName.setBounds(550, 120, 90, 20);
+        libraryName.setBackground(new Color(7, 187, 255));
+        libraryName.setOpaque(true);
 		libraryName.setFont(new Font("Arial", Font.BOLD, 18));
 		libraryName.setForeground(new Color(255,255,255));
 		mainPanel.add(libraryName);
@@ -117,12 +137,16 @@ public profile(String s1, String s2, menu m1)
 		
 		libraryPanel = new JPanel();
         libraryPanel.setLayout(new BoxLayout(libraryPanel, BoxLayout.Y_AXIS));
-        libraryPanel.setForeground(new Color(48,54,69));
-        libraryPanel.setBounds(512, 160, 400, 600);
+        libraryPanel.setBackground(new Color(48,54,69));
+        libraryPanel.setBounds(550, 160, 330, 400);
         mainPanel.add(libraryPanel);
 
         refreshLibrary();
-		
+
+        imgbackground = new ImageIcon ("Images/back3.gif");
+        backgroundImglabel = new JLabel (imgbackground);
+        backgroundImglabel.setBounds(0,0,1024, 768);
+        mainPanel.add(backgroundImglabel);      
 
 		this.add(mainPanel);
 
@@ -150,6 +174,12 @@ public profile(String s1, String s2, menu m1)
             if (newEmail != null && !newEmail.trim().isEmpty()) {
                 editEmail(newEmail.trim());
             }
+        }
+                else if (ae.getSource()==logOutbtn)
+        {
+            logIn l1=new logIn();
+            l1.setVisible(true);
+            this.setVisible(false);
         }
     }
 
@@ -215,7 +245,7 @@ private void editEmail(String newEmail) {
             while (scanner.hasNextLine()) {
                 String gameName = scanner.nextLine();
                 JLabel gameLabel = new JLabel(gameName);
-                gameLabel.setForeground(Color.BLACK);
+                gameLabel.setForeground(Color.WHITE);
                 gameLabel.setFont(new Font("Arial", Font.PLAIN, 18));
                 libraryPanel.add(gameLabel);
             }

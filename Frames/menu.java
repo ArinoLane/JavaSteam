@@ -12,10 +12,10 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 {
     JPanel MyProfilePanel,LibraryPanel;
     JPanel mainPanel, upperPanel, game0,game1,game2,game3,game4,game5,game6,game7,game8,game9,game10,game11,game12,game13,game14,game15,game16,game17,game18,game19,game20,game21,game22,game23,game24,game25,game26,game27,game28,game29,game30,game30_1, game31,game32,game33,game34,game35,game36,game37,game38,game39,game40,game41,game42,game43,game44,game45,game46,game47,game48,game49,game50,game51,game52,game53,game54;
-    ImageIcon img,img000,img111,img222,img333,img444,img555,img666,img777,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54,imgs;
-    JLabel imglabels,imglabel,imgLabe000,imgLabe111,imgLabe222,imgLabe333,imgLabe444,imgLabe555,imgLabe666,imgLabe777,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
+    ImageIcon imgback, img,img000,img111,img222,img333,img444,img555,img666,img777,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img30_1,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45,img46,img47,img48,img49,img50,img51,img52,img53,img54,imgs;
+    JLabel imgbacklabel, imglabels,imglabel,imgLabe000,imgLabe111,imgLabe222,imgLabe333,imgLabe444,imgLabe555,imgLabe666,imgLabe777,imgLabel1,imgLabel2,imgLabel3,imgLabel4,imgLabel5,imgLabel6,imgLabel7,imgLabel8,imgLabel9,imgLabel10,imgLabel11,imgLabel12,imgLabel13,imgLabel14,imgLabel15,imgLabel16,imgLabel17,imgLabel18,imgLabel19,imgLabel20,imgLabel21,imgLabel22,imgLabel23,imgLabel24,imgLabel25,imgLabel26,imgLabel27,imgLabel28,imgLabel29,imgLabel30,imgLabel30_1,imgLabel31,imgLabel32,imgLabel33,imgLabel34,imgLabel35,imgLabel36,imgLabel37,imgLabel38,imgLabel39,imgLabel40,imgLabel41,imgLabel42,imgLabel43,imgLabel44,imgLabel45,imgLabel46,imgLabel47,imgLabel48,imgLabel49,imgLabel50,imgLabel51,imgLabel52,imgLabel53,imgLabel54;
     JScrollPane scrollPane;
-    JButton userLabel,store,library, left, right,storebtn;
+    JButton userLabel,store,logOutbtn, left, right,storebtn;
     JButton buy0,buy1,buy2,buy3,buy4,buy5,buy6,buy7,buy8,buy9,buy10,buy11,buy12,buy13,buy14,buy15,buy16,buy17,buy18,buy19,buy20,buy21,buy22,buy23,buy24,buy25,buy26,buy27,buy28,buy29,buy30,buy31,buy32,buy33,buy34,buy35,buy36,buy37,buy38,buy39,buy40,buy41,buy42,buy43,buy44,buy45,buy46,buy47,buy48,buy49,buy50,buy51,buy52,buy53,buy54;
     JPanel game[] = new JPanel[8];
 
@@ -54,7 +54,6 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         scrollPane = new JScrollPane(mainPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setBounds(0, 0, 1010, 750); //it controls the scroll
         mainPanel.setPreferredSize(new Dimension(1024,7200)); ///it controls the JPanel that is attached with scrollPane
-
  
         upperPanel=new JPanel();
         upperPanel.setLayout(null);
@@ -69,7 +68,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 		
 		store = new JButton("STORE");
         store.setBounds(400,35,100,30);
-        store.setFont(new Font("Bahnschrift", Font.BOLD, 15));
+        store.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
         store.setForeground(new Color(177,179,182));
@@ -81,8 +80,8 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
         userLabel = new JButton(s1.toUpperCase());
-        userLabel.setBounds(480,35,180,30);
-        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
+        userLabel.setBounds(480,35,150,30);
+        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         userLabel.setBackground(Color.GREEN);
         userLabel.setOpaque(false);
         userLabel.setForeground(new Color(177,179,182));
@@ -91,16 +90,16 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
 
-        library = new JButton("LIBRARY");
-        library.setBounds(600,35,150,30);
-        library.setFont(new Font("Bahnschrift", Font.BOLD, 15));
-        library.setBackground(Color.GREEN);
-        library.setOpaque(false);
-        library.setForeground(new Color(177,179,182));
-        library.setContentAreaFilled(false);
-        library.addActionListener(this);
-        library.setBorderPainted(false);
-        upperPanel.add(library);        
+        logOutbtn = new JButton("LOG OUT");
+        logOutbtn.setBounds(680,35,150,30);
+        logOutbtn.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+        logOutbtn.setBackground(Color.GREEN);
+        logOutbtn.setOpaque(false);
+        logOutbtn.setForeground(new Color(251,187,197));
+        logOutbtn.setContentAreaFilled(false);
+        logOutbtn.addActionListener(this);
+        logOutbtn.setBorderPainted(false);
+        upperPanel.add(logOutbtn);        
 	
 
 
@@ -108,18 +107,19 @@ public class menu extends JFrame implements  MouseListener, ActionListener
 
 
 
+
 //images---------------------------------------------
 game[0] = new JPanel();
 game[0].setLayout(null);
 game[0].setBackground(new Color(34,57,75));
-game[0].setBounds(100,150,250,390);
+game[0].setBounds(90,150,250,390);
 game[0].setVisible(true);
 mainPanel.add(game[0]);
 
 game[1] = new JPanel();
 game[1].setLayout(null);
 game[1].setBackground(new Color(34,57,75));
-game[1].setBounds(360,150,250,390);
+game[1].setBounds(350,150,250,390);
 game[1].setVisible(true);
 mainPanel.add(game[1]);
 
@@ -140,14 +140,14 @@ mainPanel.add(game[3]);
 game[4] = new JPanel();
 game[4].setLayout(null);
 game[4].setBackground(new Color(34,57,75));
-game[4].setBounds(100,150,250,350);
+game[4].setBounds(90,150,250,390);
 game[4].setVisible(true);
 mainPanel.add(game[4]);
 
 game[5] = new JPanel();
 game[5].setLayout(null);
 game[5].setBackground(new Color(34,57,75));
-game[5].setBounds(360,150,250,350);
+game[5].setBounds(350,150,250,390);
 game[5].setVisible(true);
 mainPanel.add(game[5]);
 
@@ -249,7 +249,7 @@ imgLabel3.setBounds(-45,0, 340, 100);
 game3.add(imgLabel3);
  
 JLabel name3 = new JLabel ("Assassin's Creed Revelations");
-name3.setBounds(350,42,300,23);
+name3.setBounds(350,42,380,23);
 name3.setForeground(new Color(250,250,250));
 name3.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game3.add(name3);
@@ -281,7 +281,7 @@ imgLabel4.setBounds(-45,0, 340, 100);
 game4.add(imgLabel4);
 
 JLabel name4 = new JLabel ("Assassin's Creed III: Liberation");
-name4.setBounds(350,42,300,23);
+name4.setBounds(350,42,380,23);
 name4.setForeground(new Color(250,250,250));
 name4.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game4.add(name4);
@@ -313,7 +313,7 @@ imgLabel5.setBounds(-45,0, 340, 100);
 game5.add(imgLabel5);
 
 JLabel name5 = new JLabel ("Assassin's Creed IV: Black Flag");
-name5.setBounds(350,42,300,23);
+name5.setBounds(350,42,380,23);
 name5.setForeground(new Color(250,250,250));
 name5.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game5.add(name5);
@@ -345,7 +345,7 @@ imgLabel6.setBounds(-45,0, 340, 100);
 game6.add(imgLabel6);
 
 JLabel name6 = new JLabel ("Assassin's Creed Origins");
-name6.setBounds(350,42,300,23);
+name6.setBounds(350,42,380,23);
 name6.setForeground(new Color(250,250,250));
 name6.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game6.add(name6);
@@ -377,7 +377,7 @@ imgLabel7.setBounds(-45,0, 340, 100);
 game7.add(imgLabel7);
 
 JLabel name7 = new JLabel ("Assassin's Creed Rogue");
-name7.setBounds(350,42,300,23);
+name7.setBounds(350,42,380,23);
 name7.setForeground(new Color(250,250,250));
 name7.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game7.add(name7);
@@ -409,7 +409,7 @@ imgLabel8.setBounds(-45,0, 340, 100);
 game8.add(imgLabel8);
 
 JLabel name8 = new JLabel ("Assassin's Creed Unity");
-name8.setBounds(350,42,300,23);
+name8.setBounds(350,42,380,23);
 name8.setForeground(new Color(250,250,250));
 name8.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game8.add(name8);
@@ -441,7 +441,7 @@ imgLabel9.setBounds(-45,0, 340, 100);
 game9.add(imgLabel9);
 
 JLabel name9 = new JLabel ("Apex Legends");
-name9.setBounds(350,42,300,23);
+name9.setBounds(350,42,380,23);
 name9.setForeground(new Color(250,250,250));
 name9.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game9.add(name9);
@@ -473,7 +473,7 @@ imgLabel10.setBounds(-45,0, 340, 100);
 game10.add(imgLabel10);
 
 JLabel name10 = new JLabel ("Batman: Arkham Knight");
-name10.setBounds(350,42,300,23);
+name10.setBounds(350,42,380,23);
 name10.setForeground(new Color(250,250,250));
 name10.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game10.add(name10);
@@ -505,7 +505,7 @@ imgLabel11.setBounds(-45,0, 340, 100);
 game11.add(imgLabel11);
 
 JLabel name11 = new JLabel ("Black Squad");
-name11.setBounds(350,42,300,23);
+name11.setBounds(350,42,380,23);
 name11.setForeground(new Color(250,250,250));
 name11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game11.add(name11);
@@ -537,7 +537,7 @@ imgLabel12.setBounds(-45,0, 340, 100);
 game12.add(imgLabel12);
 
 JLabel name12 = new JLabel ("Counter-Strike 2");
-name12.setBounds(350,42,300,23);
+name12.setBounds(350,42,380,23);
 name12.setForeground(new Color(250,250,250));
 name12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game12.add(name12);
@@ -569,7 +569,7 @@ imgLabel13.setBounds(-45,0, 340, 100);
 game13.add(imgLabel13);
 
  JLabel name13 = new JLabel ("Cyberpunk 2077");
-name13.setBounds(350,42,300,23);
+name13.setBounds(350,42,380,23);
 name13.setForeground(new Color(250,250,250));
 name13.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game13.add(name13);
@@ -602,7 +602,7 @@ imgLabel14.setBounds(-45,0, 340, 100);
 game14.add(imgLabel14);
 
 JLabel name14 = new JLabel ("Dead Space");
-name14.setBounds(350,42,300,23);
+name14.setBounds(350,42,380,23);
 name14.setForeground(new Color(250,250,250));
 name14.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game14.add(name14);
@@ -634,7 +634,7 @@ imgLabel15.setBounds(-45,0, 340, 100);
 game15.add(imgLabel15);
  
  JLabel name15 = new JLabel ("Dishonored");
-name15.setBounds(350,42,300,23);
+name15.setBounds(350,42,380,23);
 name15.setForeground(new Color(250,250,250));
 name15.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game15.add(name15);
@@ -666,7 +666,7 @@ imgLabel16.setBounds(-45,0, 340, 100);
 game16.add(imgLabel16);
 
 JLabel name16 = new JLabel ("Dishonored 2");
-name16.setBounds(350,42,300,23);
+name16.setBounds(350,42,380,23);
 name16.setForeground(new Color(250,250,250));
 name16.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game16.add(name16);
@@ -698,7 +698,7 @@ imgLabel17.setBounds(-45,0, 340, 100);
 game17.add(imgLabel17);
 
 JLabel name17 = new JLabel ("Dishonored: Death of the Outsider");
-name17.setBounds(350,42,300,23);
+name17.setBounds(350,42,380,23);
 name17.setForeground(new Color(250,250,250));
 name17.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game17.add(name17);
@@ -730,7 +730,7 @@ imgLabel18.setBounds(-45,0, 340, 100);
 game18.add(imgLabel18);
 
 JLabel name18 = new JLabel ("Dota 2");
-name18.setBounds(350,42,300,23);
+name18.setBounds(350,42,380,23);
 name18.setForeground(new Color(250,250,250));
 name18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game18.add(name18);
@@ -762,7 +762,7 @@ imgLabel19.setBounds(-45,0, 340, 100);
 game19.add(imgLabel19);
 
 JLabel name19 = new JLabel ("Dying Light");
-name19.setBounds(350,42,300,23);
+name19.setBounds(350,42,380,23);
 name19.setForeground(new Color(250,250,250));
 name19.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game19.add(name19);
@@ -794,7 +794,7 @@ imgLabel20.setBounds(-45,0, 340, 100);
 game20.add(imgLabel20);
 
 JLabel name20 = new JLabel ("Fallout 3");
-name20.setBounds(350,42,300,23);
+name20.setBounds(350,42,380,23);
 name20.setForeground(new Color(250,250,250));
 name20.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game20.add(name20);
@@ -826,7 +826,7 @@ imgLabel21.setBounds(-45,0, 340, 100);
 game21.add(imgLabel21);
 
 JLabel name21 = new JLabel ("Fallout 4");
-name21.setBounds(350,42,300,23);
+name21.setBounds(350,42,380,23);
 name21.setForeground(new Color(250,250,250));
 name21.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game21.add(name21);
@@ -858,7 +858,7 @@ imgLabel22.setBounds(-45,0, 340, 100);
 game22.add(imgLabel22);
 
 JLabel name22 = new JLabel ("Fallout: New Vegas");
-name22.setBounds(350,42,300,23);
+name22.setBounds(350,42,380,23);
 name22.setForeground(new Color(250,250,250));
 name22.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game22.add(name22);
@@ -890,7 +890,7 @@ imgLabel23.setBounds(-45,0, 340, 100);
 game23.add(imgLabel23);
 
 JLabel name23 = new JLabel ("Far Cry");
-name23.setBounds(350,42,300,23);
+name23.setBounds(350,42,380,23);
 name23.setForeground(new Color(250,250,250));
 name23.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game23.add(name23);
@@ -922,7 +922,7 @@ imgLabel24.setBounds(-45,0, 340, 100);
 game24.add(imgLabel24);
 
 JLabel name24 = new JLabel ("Far Cry 2");
-name24.setBounds(350,42,300,23);
+name24.setBounds(350,42,380,23);
 name24.setForeground(new Color(250,250,250));
 name24.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game24.add(name24);
@@ -954,7 +954,7 @@ imgLabel25.setBounds(-45,0, 340, 100);
 game25.add(imgLabel25);
 
 JLabel name25 = new JLabel ("Far Cry 3");
-name25.setBounds(350,42,300,23);
+name25.setBounds(350,42,380,23);
 name25.setForeground(new Color(250,250,250));
 name25.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game25.add(name25);
@@ -986,7 +986,7 @@ imgLabel26.setBounds(-45,0, 340, 100);
 game26.add(imgLabel26);
 
 JLabel name26 = new JLabel ("Far Cry 4");
-name26.setBounds(350,42,300,23);
+name26.setBounds(350,42,380,23);
 name26.setForeground(new Color(250,250,250));
 name26.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game26.add(name26);
@@ -1018,7 +1018,7 @@ imgLabel27.setBounds(-45,0, 340, 100);
 game27.add(imgLabel27);
 
 JLabel name27 = new JLabel ("Far Cry 5");
-name27.setBounds(350,42,300,23);
+name27.setBounds(350,42,380,23);
 name27.setForeground(new Color(250,250,250));
 name27.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game27.add(name27);
@@ -1050,7 +1050,7 @@ imgLabel28.setBounds(-45,0, 340, 100);
 game28.add(imgLabel28);
 
 JLabel name28 = new JLabel ("Far Cry 6");
-name28.setBounds(350,42,300,23);
+name28.setBounds(350,42,380,23);
 name28.setForeground(new Color(250,250,250));
 name28.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game28.add(name28);
@@ -1082,7 +1082,7 @@ imgLabel29.setBounds(-45,0, 340, 100);
 game29.add(imgLabel29);
 
 JLabel name29 = new JLabel ("EA Sports FC 24");
-name29.setBounds(350,42,300,23);
+name29.setBounds(350,42,380,23);
 name29.setForeground(new Color(250,250,250));
 name29.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game29.add(name29);
@@ -1114,7 +1114,7 @@ imgLabel30.setBounds(-45,0, 340, 100);
 game30.add(imgLabel30);
 
 JLabel name30 = new JLabel ("Hades II");
-name30.setBounds(350,42,300,23);
+name30.setBounds(350,42,380,23);
 name30.setForeground(new Color(250,250,250));
 name30.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game30.add(name30);
@@ -1146,7 +1146,7 @@ imgLabel31.setBounds(-45,0, 340, 100);
 game31.add(imgLabel31);
 
 JLabel name31 = new JLabel ("Half-Life");
-name31.setBounds(350,42,300,23);
+name31.setBounds(350,42,380,23);
 name31.setForeground(new Color(250,250,250));
 name31.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game31.add(name31);
@@ -1178,7 +1178,7 @@ imgLabel32.setBounds(-45,0, 340, 100);
 game32.add(imgLabel32);
 
 JLabel name32 = new JLabel ("Hitman");
-name32.setBounds(350,42,300,23);
+name32.setBounds(350,42,380,23);
 name32.setForeground(new Color(250,250,250));
 name32.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game32.add(name32);
@@ -1210,7 +1210,7 @@ imgLabel33.setBounds(-45,0, 340, 100);
 game33.add(imgLabel33);
 
 JLabel name33 = new JLabel ("Hitman 2");
-name33.setBounds(350,42,300,23);
+name33.setBounds(350,42,380,23);
 name33.setForeground(new Color(250,250,250));
 name33.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game33.add(name33);
@@ -1242,7 +1242,7 @@ imgLabel34.setBounds(-45,0, 340, 100);
 game34.add(imgLabel34);
 
 JLabel name34 = new JLabel ("Kingdom Come: Deliverance");
-name34.setBounds(350,42,300,23);
+name34.setBounds(350,42,380,23);
 name34.setForeground(new Color(250,250,250));
 name34.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game34.add(name34);
@@ -1274,7 +1274,7 @@ imgLabel35.setBounds(-45,0, 340, 100);
 game35.add(imgLabel35);
 
 JLabel name35 = new JLabel ("Life is Strange");
-name35.setBounds(350,42,300,23);
+name35.setBounds(350,42,380,23);
 name35.setForeground(new Color(250,250,250));
 name35.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game35.add(name35);
@@ -1306,7 +1306,7 @@ imgLabel36.setBounds(-45,0, 340, 100);
 game36.add(imgLabel36);
 
 JLabel name36 = new JLabel ("Metro Exodus");
-name36.setBounds(350,42,300,23);
+name36.setBounds(350,42,380,23);
 name36.setForeground(new Color(250,250,250));
 name36.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game36.add(name36);
@@ -1338,7 +1338,7 @@ imgLabel37.setBounds(-45,0, 340, 100);
 game37.add(imgLabel37);
 
 JLabel name37 = new JLabel ("Metro 2033");
-name37.setBounds(350,42,300,23);
+name37.setBounds(350,42,380,23);
 name37.setForeground(new Color(250,250,250));
 name37.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game37.add(name37);
@@ -1370,7 +1370,7 @@ imgLabel38.setBounds(-45,0, 340, 100);
 game38.add(imgLabel38);
 
 JLabel name38 = new JLabel ("Metro: Redux");
-name38.setBounds(350,42,300,23);
+name38.setBounds(350,42,380,23);
 name38.setForeground(new Color(250,250,250));
 name38.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game38.add(name38);
@@ -1402,7 +1402,7 @@ imgLabel39.setBounds(-45,0, 340, 100);
 game39.add(imgLabel39);
 
 JLabel name39 = new JLabel ("Metro: Last Light");
-name39.setBounds(350,42,300,23);
+name39.setBounds(350,42,380,23);
 name39.setForeground(new Color(250,250,250));
 name39.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game39.add(name39);
@@ -1434,7 +1434,7 @@ imgLabel40.setBounds(-45,0, 340, 100);
 game40.add(imgLabel40);
 
 JLabel name40 = new JLabel ("Portal 2");
-name40.setBounds(350,42,300,23);
+name40.setBounds(350,42,380,23);
 name40.setForeground(new Color(250,250,250));
 name40.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game40.add(name40);
@@ -1466,7 +1466,7 @@ imgLabel41.setBounds(-45,0, 340, 100);
 game41.add(imgLabel41);
 
 JLabel name41 = new JLabel ("PlayerUnknown's Battlegrounds");
-name41.setBounds(350,42,300,23);
+name41.setBounds(350,42,380,23);
 name41.setForeground(new Color(250,250,250));
 name41.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game41.add(name41);
@@ -1498,7 +1498,7 @@ imgLabel42.setBounds(-45,0, 340, 100);
 game42.add(imgLabel42);
 
 JLabel name42 = new JLabel ("Tom Clancy's Rainbow Six Siege");
-name42.setBounds(350,42,300,23);
+name42.setBounds(350,42,380,23);
 name42.setForeground(new Color(250,250,250));
 name42.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game42.add(name42);
@@ -1530,7 +1530,7 @@ imgLabel43.setBounds(-45,0, 340, 100);
 game43.add(imgLabel43);
 
 JLabel name43 = new JLabel ("Resident Evil 2");
-name43.setBounds(350,42,300,23);
+name43.setBounds(350,42,380,23);
 name43.setForeground(new Color(250,250,250));
 name43.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game43.add(name43);
@@ -1562,7 +1562,7 @@ imgLabel44.setBounds(-45,0, 340, 100);
 game44.add(imgLabel44);
 
 JLabel name44 = new JLabel ("Resident Evil 3");
-name44.setBounds(350,42,300,23);
+name44.setBounds(350,42,380,23);
 name44.setForeground(new Color(250,250,250));
 name44.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game44.add(name44);
@@ -1594,7 +1594,7 @@ imgLabel45.setBounds(-45,0, 340, 100);
 game45.add(imgLabel45);
 
 JLabel name45 = new JLabel ("Resident Evil 4");
-name45.setBounds(350,42,300,23);
+name45.setBounds(350,42,380,23);
 name45.setForeground(new Color(250,250,250));
 name45.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game45.add(name45);
@@ -1626,7 +1626,7 @@ imgLabel46.setBounds(-45,0, 340, 100);
 game46.add(imgLabel46);
 
 JLabel name46 = new JLabel ("Resident Evil 7: Biohazard");
-name46.setBounds(350,42,300,23);
+name46.setBounds(350,42,380,23);
 name46.setForeground(new Color(250,250,250));
 name46.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game46.add(name46);
@@ -1658,7 +1658,7 @@ imgLabel47.setBounds(-45,0, 340, 100);
 game47.add(imgLabel47);
 
 JLabel name47 = new JLabel ("Resident Evil Village");
-name47.setBounds(350,42,300,23);
+name47.setBounds(350,42,380,23);
 name47.setForeground(new Color(250,250,250));
 name47.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game47.add(name47);
@@ -1690,7 +1690,7 @@ imgLabel48.setBounds(-45,0, 340, 100);
 game48.add(imgLabel48);
 
 JLabel name48 = new JLabel ("Red Dead Redemption 2");
-name48.setBounds(350,42,300,23);
+name48.setBounds(350,42,380,23);
 name48.setForeground(new Color(250,250,250));
 name48.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game48.add(name48);
@@ -1722,7 +1722,7 @@ imgLabel49.setBounds(-45,0, 340, 100);
 game49.add(imgLabel49);
 
 JLabel name49 = new JLabel ("Rust");
-name49.setBounds(350,42,300,23);
+name49.setBounds(350,42,380,23);
 name49.setForeground(new Color(250,250,250));
 name49.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game49.add(name49);
@@ -1754,7 +1754,7 @@ imgLabel50.setBounds(-45,0, 340, 100);
 game50.add(imgLabel50);
 
 JLabel name50 = new JLabel ("Warface");
-name50.setBounds(350,42,300,23);
+name50.setBounds(350,42,380,23);
 name50.setForeground(new Color(250,250,250));
 name50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game50.add(name50);
@@ -1786,7 +1786,7 @@ imgLabel51.setBounds(-45,0, 340, 100);
 game51.add(imgLabel51);
 
 JLabel name51 = new JLabel ("The Witcher 2: Assassins of Kings");
-name51.setBounds(350,42,300,23);
+name51.setBounds(350,42,380,23);
 name51.setForeground(new Color(250,250,250));
 name51.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game51.add(name51);
@@ -1818,7 +1818,7 @@ imgLabel52.setBounds(-45,0, 340, 100);
 game52.add(imgLabel52);
 
 JLabel name52 = new JLabel ("The Witcher");
-name52.setBounds(350,42,300,23);
+name52.setBounds(350,42,380,23);
 name52.setForeground(new Color(250,250,250));
 name52.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game52.add(name52);
@@ -1850,7 +1850,7 @@ imgLabel53.setBounds(-45,0, 340, 100);
 game53.add(imgLabel53);
 
 JLabel name53 = new JLabel ("The Witcher 3: Wild Hunt");
-name53.setBounds(350,42,300,23);
+name53.setBounds(350,42,380,23);
 name53.setForeground(new Color(250,250,250));
 name53.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game53.add(name53);
@@ -1863,6 +1863,10 @@ game53.add(namep53);
  
 //----------------------------------------------------------------------------------------------------
 
+        imgback=new ImageIcon("Images/menubackgroud.png");
+        imgbacklabel=new JLabel(imgback);
+        imgbacklabel.setBounds(0,0,1024,7200);
+        mainPanel.add(imgbacklabel);
 
         this.getContentPane().add(scrollPane);  
           
@@ -1909,12 +1913,7 @@ public void actionPerformed(ActionEvent ae){
 			}
 			isGame0Visible = !isGame0Visible;
 	}
-	
-	/*else if (ae.getSource()==buy3)
-        {
-            addGameToLibrary("Assassin's Creed Revelations");
-        }*/
-	
+
 		 else if(ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
 		 {
 		 	MStore store1 =new MStore(s1,s2,this);
@@ -1924,7 +1923,257 @@ public void actionPerformed(ActionEvent ae){
         {
             addGameToLibrary("Assassin's Creed Revelations");
         }
-			
+else if (ae.getSource()==buy4)
+{
+addGameToLibrary("Assassin's Creed III: Liberation" );
+}
+//--------------------------
+else if (ae.getSource()==buy5)
+{
+addGameToLibrary( "Assassin's Creed IV: Black Flag");
+}
+//--------------------------
+else if (ae.getSource()==buy6)
+{
+addGameToLibrary("Assassin's Creed Origins" );
+}
+//--------------------------
+else if (ae.getSource()==buy7)
+{
+addGameToLibrary( "Assassin's Creed Rogue");
+}
+//--------------------------
+else if (ae.getSource()==buy8)
+{
+addGameToLibrary("Assassin's Creed Unity" );
+}
+//--------------------------
+else if (ae.getSource()==buy9)
+{
+addGameToLibrary("Apex Legends" );
+}
+//--------------------------
+else if (ae.getSource()==buy10)
+{
+addGameToLibrary("Batman: Arkham Knight" );
+}
+//--------------------------
+else if (ae.getSource()==buy11)
+{
+addGameToLibrary("Black Squad" );
+}
+//--------------------------
+else if (ae.getSource()==buy12)
+{
+addGameToLibrary( "Counter-Strike 2");
+}
+//--------------------------
+else if (ae.getSource()==buy13)
+{
+addGameToLibrary( "Cyberpunk 2077");
+}
+//--------------------------
+else if (ae.getSource()==buy14)
+{
+addGameToLibrary("Images/deadspace.jpg" );
+}
+//--------------------------
+else if (ae.getSource()==buy15)
+{
+addGameToLibrary("Dishonored" );
+}
+//--------------------------
+else if (ae.getSource()==buy16)
+{
+addGameToLibrary("Dishonored 2" );
+}
+//--------------------------
+else if (ae.getSource()==buy17)
+{
+addGameToLibrary("Dishonored: Death of the Outsider" );
+}
+//--------------------------
+else if (ae.getSource()==buy18)
+{
+addGameToLibrary( "Dota 2");
+}
+//--------------------------
+else if (ae.getSource()==buy19)
+{
+addGameToLibrary("Dying Light" );
+}
+//--------------------------
+else if (ae.getSource()==buy20)
+{
+addGameToLibrary("Fallout 3" );
+}
+//--------------------------
+else if (ae.getSource()==buy21)
+{
+addGameToLibrary( "Fallout 4");
+}
+//--------------------------
+else if (ae.getSource()==buy22)
+{
+addGameToLibrary("Fallout: New Vegas" );
+}
+//--------------------------
+else if (ae.getSource()==buy23)
+{
+addGameToLibrary("Far Cry" );
+}
+//--------------------------
+else if (ae.getSource()==buy24)
+{
+addGameToLibrary( "Far Cry 2");
+}
+//--------------------------
+else if (ae.getSource()==buy25)
+{
+addGameToLibrary("Far Cry 3" );
+}
+//--------------------------
+else if (ae.getSource()==buy26)
+{
+addGameToLibrary("Far Cry 4" );
+}
+//--------------------------
+else if (ae.getSource()==buy27)
+{
+addGameToLibrary("Far Cry 5" );
+}
+//--------------------------
+else if (ae.getSource()==buy28)
+{
+addGameToLibrary( "Far Cry 6");
+}
+//--------------------------
+else if (ae.getSource()==buy29)
+{
+addGameToLibrary( "EA Sports FC 24");
+}
+//--------------------------
+else if (ae.getSource()==buy30)
+{
+addGameToLibrary( "Hades II");
+}
+//--------------------------
+else if (ae.getSource()==buy31)
+{
+addGameToLibrary( "Half-Life");
+}
+//--------------------------
+else if (ae.getSource()==buy32)
+{
+addGameToLibrary( "Hitman");
+}
+//--------------------------
+else if (ae.getSource()==buy33)
+{
+addGameToLibrary( "Hitman 2");
+}
+//--------------------------
+else if (ae.getSource()==buy34)
+{
+addGameToLibrary("Kingdom Come: Deliverance" );
+}
+//--------------------------
+else if (ae.getSource()==buy35)
+{
+addGameToLibrary("Life is Strange" );
+}
+//--------------------------
+else if (ae.getSource()==buy36)
+{
+addGameToLibrary( "Metro Exodus");
+}
+//--------------------------
+else if (ae.getSource()==buy37)
+{
+addGameToLibrary( "Metro 2033");
+}
+//--------------------------
+else if (ae.getSource()==buy38)
+{
+addGameToLibrary("Metro: Redux" );
+}
+//--------------------------
+else if (ae.getSource()==buy39)
+{
+addGameToLibrary( "Metro: Last Light");
+}
+//--------------------------
+else if (ae.getSource()==buy40)
+{
+addGameToLibrary( "Portal 2");
+}
+//--------------------------
+else if (ae.getSource()==buy41)
+{
+addGameToLibrary( "PlayerUnknown's Battlegrounds");
+}
+//--------------------------
+else if (ae.getSource()==buy42)
+{
+addGameToLibrary("Tom Clancy's Rainbow Six Siege");
+}
+//--------------------------
+else if (ae.getSource()==buy43)
+{
+addGameToLibrary("Resident Evil 2");
+}
+//--------------------------
+else if (ae.getSource()==buy44)
+{
+addGameToLibrary("Resident Evil 3");
+}
+//--------------------------
+else if (ae.getSource()==buy45)
+{
+addGameToLibrary("Resident Evil 4");
+}
+//--------------------------
+else if (ae.getSource()==buy46)
+{
+addGameToLibrary("Resident Evil 7: Biohazard");
+}
+//--------------------------
+else if (ae.getSource()==buy47)
+{
+addGameToLibrary("Resident Evil Village");
+}
+//--------------------------
+else if (ae.getSource()==buy48)
+{
+addGameToLibrary("Red Dead Redemption 2");
+}
+//--------------------------
+else if (ae.getSource()==buy49)
+{
+addGameToLibrary("Rust");
+}
+//--------------------------
+else if (ae.getSource()==buy50)
+{
+addGameToLibrary("Warface");
+}
+//--------------------------
+else if (ae.getSource()==buy51)
+{
+addGameToLibrary("The Witcher 2: Assassins of Kings");
+}
+//--------------------------
+else if (ae.getSource()==buy52)
+{
+addGameToLibrary("The Witcher");
+}
+//--------------------------
+else if (ae.getSource()==buy53)
+{
+addGameToLibrary( "The Witcher 3: Wild Hunt");
+}
+//--------------------------
+
 		 }
         
        
@@ -1932,6 +2181,12 @@ public void actionPerformed(ActionEvent ae){
         {
             profile p1 = new profile(s1,s2,this);
             p1.setVisible(true);
+            this.setVisible(false);
+        }
+        else if (ae.getSource()==logOutbtn)
+        {
+            logIn l1=new logIn();
+            l1.setVisible(true);
             this.setVisible(false);
         }
 

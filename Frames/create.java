@@ -114,7 +114,7 @@ public class create extends JFrame implements MouseListener, ActionListener
 		s1.setBounds(100, 540, 500, 20);
 		panel.add(s1);
 
-		imgbackground = new ImageIcon ("Images/background.jpg");
+		imgbackground = new ImageIcon ("Images/background.gif");
 		backgroundImglabel = new JLabel (imgbackground);
 		backgroundImglabel.setBounds(0,0,500,700);
 		panel.add(backgroundImglabel);

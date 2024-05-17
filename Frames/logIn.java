@@ -137,7 +137,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		imglabel.setBounds(150,20,200,50);
 		panel.add(imglabel);
 
-		imgbackground = new ImageIcon ("Images/background.jpg");
+		imgbackground = new ImageIcon ("Images/background.gif");
 		backgroundImglabel = new JLabel (imgbackground);
 		backgroundImglabel.setBounds(0,0,500,700);
 		panel.add(backgroundImglabel);
@@ -195,6 +195,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 				
 				admin a1 = new admin ();
 				a1.setVisible(true);
+				this.setVisible(false);
 			}
 		else if (ae.getSource() == Contributors)
 			{
