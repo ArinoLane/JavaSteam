@@ -63,7 +63,7 @@ public class adminacc
 			while(sc.hasNextLine())
 			{
 				String line=sc.nextLine();
-				String[] value=line.split("\t");
+				String[] value=line.split("    ");
 				if(value[0].equals(adminname)&&value[1].equals(adminpass))
 				{
 					flag=true;
