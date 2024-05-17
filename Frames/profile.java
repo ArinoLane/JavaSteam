@@ -12,7 +12,7 @@ public class profile extends JFrame implements ActionListener
 {   
     ImageIcon img;
 	JLabel nameLabel,emailLabel,levelLabel;
-	JButton store,userLabel,editProfilebtn,editEmailbtn;
+	JButton store,userLabel,editProfilebtn,editEmailbtn,logOutbtn;
 	JLabel imglabel;
     Color myColor,myColor1;
     JPanel panel,panel1,panel2,mainPanel, upperPanel,libraryPanel;
@@ -58,25 +58,33 @@ public profile(String s1, String s2, menu m1)
 
         store = new JButton("STORE");
         store.setBounds(400,35,100,30);
-        store.setFont(new Font("Bahnschrift", Font.BOLD, 15));
+        store.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
-        store.setForeground(new Color(177,179,182));
-		store.setBackground(new Color(23,26,33));
+        store.setForeground(new Color(228,230,231));
         store.setBorderPainted(false);
         store.setContentAreaFilled(false);
         store.addActionListener(this);
         upperPanel.add(store);
 
         userLabel = new JButton(s1.toUpperCase());
-        userLabel.setBounds(480,35,150,30);
-        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 15));
-        userLabel.setBackground(Color.GREEN);
+        userLabel.setBounds(550,35,150,30);
+        userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         userLabel.setOpaque(false);
-        userLabel.setForeground(new Color(177,179,182));
+        userLabel.setForeground(new Color(228,230,231));
         userLabel.setContentAreaFilled(false);
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
+
+        logOutbtn = new JButton("LOG OUT");
+        logOutbtn.setBounds(680,35,150,30);
+        logOutbtn.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+        logOutbtn.setOpaque(false);
+        logOutbtn.setForeground(new Color(228,230,231));
+        logOutbtn.setContentAreaFilled(false);
+        logOutbtn.addActionListener(this);
+        logOutbtn.setBorderPainted(false);
+        upperPanel.add(logOutbtn); 
 
 
         mainPanel.add(upperPanel); 		
@@ -150,6 +158,12 @@ public profile(String s1, String s2, menu m1)
             if (newEmail != null && !newEmail.trim().isEmpty()) {
                 editEmail(newEmail.trim());
             }
+        }
+                else if (ae.getSource()==logOutbtn)
+        {
+            logIn l1=new logIn();
+            l1.setVisible(true);
+            this.setVisible(false);
         }
     }
 
