@@ -37,11 +37,8 @@ public class admincreate extends JFrame implements MouseListener, ActionListener
 		panel.add(createIntext);
 		
 		name=new JLabel("Create A Steam Account Name");
-		name.setForeground(new Color(250,250,250));
-		name.setOpaque(true);
 		name.setBounds(100, 210, 284, 30);
 		name.setForeground(new Color(27,151,255));
-		name.setBackground(new Color(25,28,35));
 		name.setFont(new Font("Arial",Font.PLAIN, 17));
 		panel.add(name);
 		
@@ -51,11 +48,8 @@ public class admincreate extends JFrame implements MouseListener, ActionListener
 		
 		
 		email=new JLabel("Enter Your Email Address");
-		email.setForeground(new Color(250,250,250));
-		email.setOpaque(true);
 		email.setBounds(100, 290, 284, 30);
 		email.setForeground(new Color(27,151,255));
-		email.setBackground(new Color(25,28,35));
 		email.setFont(new Font("Arial",Font.PLAIN, 17));
 		panel.add(email);
 		
@@ -66,9 +60,7 @@ public class admincreate extends JFrame implements MouseListener, ActionListener
 		pass=new JLabel("Choose A Password");
 		pass.setBounds(100, 370, 282, 30);
 		pass.setForeground(new Color(27,151,255));
-		pass.setBackground(new Color(25,28,35));
 		pass.setFont(new Font("Arial",Font.PLAIN, 17));
-		pass.setOpaque(true);
 		panel.add(pass);
 		
 		passf=new JPasswordField();
@@ -79,9 +71,7 @@ public class admincreate extends JFrame implements MouseListener, ActionListener
 		rpass=new JLabel("Re-Enter The Password");
 		rpass.setBounds(100, 450, 282, 30);
 		rpass.setForeground(new Color(27,151,255));
-		rpass.setBackground(new Color(25,28,35));
 		rpass.setFont(new Font("Arial",Font.PLAIN, 17));
-		rpass.setOpaque(true);
 		panel.add(rpass);
 		
 		rpassf=new JPasswordField();
@@ -113,7 +103,7 @@ public class admincreate extends JFrame implements MouseListener, ActionListener
 		
 		s1 = new JCheckBox("I agree to the terms and privacy policy of Steam");
 		s1.setForeground(new Color(27,151,255));
-		s1.setBackground(new Color(25,28,35));
+		s1.setOpaque(false);
 		s1.setBounds(100, 540, 500, 20);
 		panel.add(s1);
 

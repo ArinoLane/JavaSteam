@@ -102,7 +102,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 
 		emaillabel = new JLabel ("EMAIL");
 		emaillabel.setBounds(140,320,195,30);
-		emaillabel.setForeground(new Color(160,206,252));
+		emaillabel.setForeground(new Color(27,151,255));
 		panel.add(emaillabel);
 		
 		emailfield = new JTextField();

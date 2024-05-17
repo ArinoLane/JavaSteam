@@ -34,11 +34,8 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		panel.add(createIntext);
 		
 		name=new JLabel("ADMIN NAME");
-		name.setForeground(new Color(250,250,250));
-		name.setOpaque(true);
 		name.setBounds(100, 250, 284, 30);
 		name.setForeground(new Color(27,151,255));
-		name.setBackground(new Color(25,28,35));
 		name.setFont(new Font("Arial",Font.PLAIN, 17));
 		panel.add(name);
 		
@@ -49,9 +46,7 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		pass=new JLabel("ENTER PASSWORD");
 		pass.setBounds(100, 370, 282, 30);
 		pass.setForeground(new Color(27,151,255));
-		pass.setBackground(new Color(25,28,35));
 		pass.setFont(new Font("Arial",Font.PLAIN, 17));
-		pass.setOpaque(true);
 		panel.add(pass);
 		
 		passf=new JPasswordField();
