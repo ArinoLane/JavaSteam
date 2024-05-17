@@ -25,7 +25,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
     //codes for name and mail passing 
     JFrame l1;
     String s1;
-    String s3;
+    String s2;
 
 
 
@@ -33,7 +33,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
     { }
 
 
-    public menu (String s1, String s3,JFrame l1) //parameter constructor 
+    public menu (String s1, String s2,JFrame l1) //parameter constructor 
     {        
         super("STEAM");
         this.setSize(1024, 768);
@@ -44,7 +44,7 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         //name and email passing
         this.l1=l1;
         this.s1=s1; //Username
-        this.s3=s3; //User email
+        this.s2=s2; //User email
 		
 
  
@@ -1909,21 +1909,28 @@ public void actionPerformed(ActionEvent ae){
 			}
 			isGame0Visible = !isGame0Visible;
 	}
-		// else if(ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
-		// {
-		// 	MStore store1 =new MStore(s1,s3,this);
-        //     store1.setVisible(true);
-		// 	this.setVisible(false);
-		// }
-        
-        else if (ae.getSource()==buy3)
+	
+	/*else if (ae.getSource()==buy3)
+        {
+            addGameToLibrary("Assassin's Creed Revelations");
+        }*/
+	
+		 else if(ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
+		 {
+		 	MStore store1 =new MStore(s1,s2,this);
+             store1.setVisible(true);
+		 	this.setVisible(false);
+			if (ae.getSource()==buy3)
         {
             addGameToLibrary("Assassin's Creed Revelations");
         }
-
+			
+		 }
+        
+       
         else if (ae.getSource()==userLabel)
         {
-            profile p1 = new profile(s1,s3,this);
+            profile p1 = new profile(s1,s2,this);
             p1.setVisible(true);
             this.setVisible(false);
         }

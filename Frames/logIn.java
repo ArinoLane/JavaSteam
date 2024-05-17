@@ -153,26 +153,26 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 	public void actionPerformed(ActionEvent ae)
 	{
 		
-		String n=namefield.getText();
-		String e=emailfield.getText();
-		String p=passfield.getText();
-		String d=passfield.getText();
+		String s1=namefield.getText();
+		String s3=emailfield.getText();
+		String s2=passfield.getText();
+		
 		
 		useracc ac=new useracc();
 		
 		if(ae.getSource()==signBut)
 		 
 		{
-			if(n.isEmpty()||p.isEmpty())
+			if(s1.isEmpty()||s2.isEmpty()||s3.isEmpty())
 			{
 				JOptionPane.showMessageDialog(this,"FILL UP EVERY REQUIREMENTS");
 			}
-			else if(ac.check(n,p)==true)
+			else if(ac.check(s1,s2,s3)==true)
 			{
 				
 			JOptionPane.showMessageDialog(this,"HAPPY GAMING");
 			
-			menu m1=new menu(n,e,this);
+			menu m1=new menu(s1,s3,this);
 			m1.setVisible(true);
 			this.setVisible(false);
 			}

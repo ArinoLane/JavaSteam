@@ -78,8 +78,8 @@ public class useracc
             fwrite=new FileWriter(file,true);
             
             fwrite.write(getUserName()+"    ");
-            fwrite.write(getUserEmail()+"    ");
-            fwrite.write(getUserpass()+"\n");
+            fwrite.write(getUserpass()+"    ");
+            fwrite.write(getUserEmail()+"\n");
             
             fwrite.flush();
             fwrite.close();
@@ -91,7 +91,7 @@ public class useracc
         }
     }
     
-    public boolean check(String username,String userpass)
+    public boolean check(String username,String userpass,String useremail)
     {
         boolean flag=false;
         file=new File(".\\Datas\\userdata.txt");
@@ -103,7 +103,7 @@ public class useracc
             {
                 String line=sc.nextLine();
                 String[] value=line.split("    ");
-                if(value[0].equals(username)&&value[1].equals(userpass))
+                if(value[0].equals(username)&&value[1].equals(userpass)&&value[2].equals(useremail))
                 {
                     flag=true;
                 }

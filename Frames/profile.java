@@ -25,10 +25,10 @@ public class profile extends JFrame implements ActionListener
 
 	//codes for name and mail passing
     String s1;
-    String s3;
+    String s2;
     menu m1;
 	
-public profile(String s1, String s3, menu m1)
+public profile(String s1, String s2, menu m1)
 {
         super("My First GUI");
 		this.setSize(1024, 768);
@@ -36,7 +36,7 @@ public profile(String s1, String s3, menu m1)
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.s1 = s1; //username
-        this.s3 = s3; //user email
+        this.s2 = s2; //user email
         this.m1 = m1; //from menu class
 
 		mainPanel = new JPanel();
@@ -102,7 +102,7 @@ public profile(String s1, String s3, menu m1)
         nameLabel.setForeground(Color.WHITE);
 		mainPanel.add(nameLabel);
 		
-		emailLabel = new JLabel("Email: "+s3);
+		emailLabel = new JLabel("Email: "+s2);
 		emailLabel.setBounds(150, 290, 400, 70);
 	    emailLabel.setFont(new Font("Arial", Font.PLAIN, 18));
         emailLabel.setForeground(Color.WHITE);
@@ -132,7 +132,7 @@ public profile(String s1, String s3, menu m1)
 	{
 	if (ae.getSource()==store)
         {
-            menu m1 = new menu(s1,s3,this);
+            menu m1 = new menu(s1,s2,this);
             m1.setVisible(true);
             this.setVisible(false);
         }
@@ -160,7 +160,7 @@ public profile(String s1, String s3, menu m1)
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] userData = line.split("    ");
-            if (userData[1].equals(s3)) { // if the email matches
+            if (userData[2].equals(s2)) { // if the email matches
                 userData[0] = newUsername; // replace the username
             }
             fileContent.append(String.join("    ", userData)).append("\n");
@@ -188,7 +188,7 @@ private void editEmail(String newEmail) {
                 String line = scanner.nextLine();
                 String[] userData = line.split("    ");
                 if (userData[0].equals(s1)) { // if the username matches
-                    userData[1] = newEmail; // replace the email
+                    userData[2] = newEmail; // replace the email
                 }
                 fileContent.append(String.join("    ", userData)).append("\n");
             }
@@ -204,8 +204,8 @@ private void editEmail(String newEmail) {
         }
 
         // Update the email in the current session
-        s3 = newEmail;
-        emailLabel.setText("Email: " + s3);
+        s2 = newEmail;
+        emailLabel.setText("Email: " + s2);
     }
 	private void refreshLibrary() {
         libraryPanel.removeAll(); // Remove all existing labels
