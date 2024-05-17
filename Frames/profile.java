@@ -31,7 +31,7 @@ public class profile extends JFrame implements ActionListener
 	
 public profile(String s1, String s2, menu m1)
 {
-        super("My First GUI");
+        super("User Details");
 		this.setSize(1024, 768);
 		this.setLocation(250,40);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

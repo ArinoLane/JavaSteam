@@ -19,7 +19,7 @@ public class admincreate extends JFrame implements MouseListener, ActionListener
 	JFrame j1;
 	public admincreate(String a1,JFrame j1)
 	{
-		super("Create Account");
+		super("Create Account By Admin");
 		this.setSize(500,700);
 		this.setLocation(550,100);
 		this.a1=a1;
