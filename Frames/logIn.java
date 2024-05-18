@@ -172,7 +172,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 				
 			JOptionPane.showMessageDialog(this,"HAPPY GAMING");
 			
-			menu m1=new menu(s1,s3,this);
+			menu m1=new menu(s1,s2,s3,this);
 			m1.setVisible(true);
 			this.setVisible(false);
 			}

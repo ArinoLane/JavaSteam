@@ -25,19 +25,21 @@ public class profile extends JFrame implements ActionListener
     Scanner sc;
 
 	//codes for name and mail passing
-    String s1;
-    String s2;
+    String s1UserName;
+    String s2UserPass;
+    String s3UserEmail;
     menu m1;
 	
-public profile(String s1, String s2, menu m1)
+public profile(String s1UserName, String s2UserPass, String s3UserEmail, menu m1)
 {
         super("User Details");
 		this.setSize(1024, 768);
 		this.setLocation(250,40);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.s1 = s1; //username
-        this.s2 = s2; //user email
+        this.s1UserName = s1UserName; //user Name
+        this.s2UserPass = s2UserPass; //user Pass
+        this.s3UserEmail = s3UserEmail; //user Email
         this.m1 = m1; //from menu class
 
 		mainPanel = new JPanel();
@@ -68,7 +70,7 @@ public profile(String s1, String s2, menu m1)
         store.addActionListener(this);
         upperPanel.add(store);
 
-        userLabel = new JButton(s1.toUpperCase());
+        userLabel = new JButton(s1UserName.toUpperCase());
         userLabel.setBounds(480,35,150,30);
         userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         userLabel.setOpaque(false);
@@ -94,7 +96,7 @@ public profile(String s1, String s2, menu m1)
 
 
 		
-		editProfilebtn = new JButton("EDIT PROFILE");
+		editProfilebtn = new JButton("EDIT USERNAME");
 		editProfilebtn.setBounds(50, 600, 250, 50);
 		editProfilebtn.setForeground(new Color(250,250,250));
 		editProfilebtn.setBackground(new Color(7, 187, 255));
@@ -110,7 +112,7 @@ public profile(String s1, String s2, menu m1)
         editEmailbtn.addActionListener(this);
         mainPanel.add(editEmailbtn);
 		
-		nameLabel = new JLabel("Name: "+ s1);
+		nameLabel = new JLabel("Name: "+ s1UserName);
 		nameLabel.setBounds(50, 160, 250, 30);
         nameLabel.setBackground(new Color(7, 187, 255));
         nameLabel.setOpaque(true);
@@ -118,7 +120,7 @@ public profile(String s1, String s2, menu m1)
         nameLabel.setForeground(Color.WHITE);
 		mainPanel.add(nameLabel);
 		
-		emailLabel = new JLabel("Email: "+s2);
+		emailLabel = new JLabel("Email: "+s3UserEmail);
 		emailLabel.setBounds(50, 290, 250, 30);
         emailLabel.setBackground(new Color(7, 187, 255));
         emailLabel.setOpaque(true);
@@ -156,7 +158,7 @@ public profile(String s1, String s2, menu m1)
 	{
 	if (ae.getSource()==store)
         {
-            menu m1 = new menu(s1,s2,this);
+            menu m1 = new menu(s1UserName,s2UserPass,s3UserEmail,this);
             m1.setVisible(true);
             this.setVisible(false);
         }
@@ -164,14 +166,16 @@ public profile(String s1, String s2, menu m1)
 		else if (ae.getSource()==editProfilebtn)
         {
             String newUsername = JOptionPane.showInputDialog("Enter new username:");
-            if (newUsername != null && !newUsername.trim().isEmpty()) {
-                editUsername(newUsername.trim());
+            if (newUsername.length() > 0) {
+                editUsername(newUsername);
+
             }
+            refreshLibrary();
         }
 		 else if (ae.getSource()==editEmailbtn)
         {
             String newEmail = JOptionPane.showInputDialog("Enter new email:");
-            if (newEmail != null && !newEmail.trim().isEmpty()) {
+            if (newEmail.length() > 0) {
                 editEmail(newEmail.trim());
             }
         }
@@ -190,7 +194,7 @@ public profile(String s1, String s2, menu m1)
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] userData = line.split("    ");
-            if (userData[2].equals(s2)) { // if the email matches
+            if (userData[2].equals(s3UserEmail)) { // if the email matches
                 userData[0] = newUsername; // replace the username
             }
             fileContent.append(String.join("    ", userData)).append("\n");
@@ -207,8 +211,8 @@ public profile(String s1, String s2, menu m1)
     }
 
     // Update the username in the current session
-    s1 = newUsername;
-    nameLabel.setText("Name: " + s1);
+    s1UserName = newUsername;
+    nameLabel.setText("Name: " + s1UserName);
 }
 private void editEmail(String newEmail) {
         File file = new File(".\\Datas\\userdata.txt");
@@ -217,7 +221,7 @@ private void editEmail(String newEmail) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] userData = line.split("    ");
-                if (userData[0].equals(s1)) { // if the username matches
+                if (userData[0].equals(s1UserName)) { // if the username matches
                     userData[2] = newEmail; // replace the email
                 }
                 fileContent.append(String.join("    ", userData)).append("\n");
@@ -234,13 +238,13 @@ private void editEmail(String newEmail) {
         }
 
         // Update the email in the current session
-        s2 = newEmail;
-        emailLabel.setText("Email: " + s2);
+        s3UserEmail = newEmail;
+        emailLabel.setText("Email: " + s3UserEmail);
     }
 	private void refreshLibrary() {
         libraryPanel.removeAll(); // Remove all existing labels
 
-        File file = new File(".\\Datas\\library_" + s1 + ".txt");
+        File file = new File(".\\Datas\\library_" + s2UserPass + ".txt");
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String gameName = scanner.nextLine();
