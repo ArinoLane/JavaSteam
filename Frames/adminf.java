@@ -152,7 +152,7 @@ public adminf(String s1){
 
 public adminf(String s1,JFrame ad1)
 {
-    super("My First GUI");
+    super("Admin Control");
     this.setSize(1024, 768);
     this.setLocation(250,40);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
