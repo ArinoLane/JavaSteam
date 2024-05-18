@@ -9,7 +9,7 @@ public class create extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel;
 	Color mycolor;
-	ImageIcon img,imgbackground;
+	ImageIcon icon,img,imgbackground;
 	JLabel name,pass,email,rpass,imglabel,createIntext,backgroundImglabel;
 	JTextField namef,emailf;
 	JPasswordField passf,rpassf;
@@ -20,6 +20,8 @@ public class create extends JFrame implements MouseListener, ActionListener
 		super("Create Account");
 		this.setSize(500,700);
 		this.setLocation(550,100);
+		ImageIcon icon = new ImageIcon("Images/icon.png");
+		this.setIconImage(icon.getImage());
 		
 		mycolor=new Color(25,28,35);
 		

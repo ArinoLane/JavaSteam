@@ -9,7 +9,7 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel;
 	Color mycolor;
-	ImageIcon img,img1;
+	ImageIcon icon,img,img1;
 	JLabel  createIntext ,amount,card,carddetails,cardnumber,imglabel,imglabel1,namecard;
 	JTextField namef,money;
 	JPasswordField numberf;
@@ -27,6 +27,8 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 		super("Steam Store");
 		this.setSize(500,700);
 		this.setLocation(550,100);
+		ImageIcon icon = new ImageIcon("Images/icon.png");
+		this.setIconImage(icon.getImage());
 
 
 		this.s1UserName = s1UserName;

@@ -14,7 +14,7 @@ import Classes.*;
 
 public class adminf extends JFrame implements  ActionListener
 {   
-    ImageIcon img;
+    ImageIcon icon,img;
     JLabel insert,deletef,nameLabel;
     JLabel imglabel;
     Color myColor,myColor1;
@@ -37,6 +37,8 @@ public adminf(String s1){
     this.setSize(1024, 768);
     this.setLocation(250,40);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+    ImageIcon icon = new ImageIcon("Images/icon.png");
+    this.setIconImage(icon.getImage());
 	
 	this.s1 = s1;
 	this.ad1 = ad1;
@@ -156,6 +158,8 @@ public adminf(String s1,JFrame ad1)
     this.setSize(1024, 768);
     this.setLocation(250,40);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        ImageIcon icon = new ImageIcon("Images/icon.png");
+    this.setIconImage(icon.getImage());
 	
 	this.s1 = s1;
 	this.ad1 = ad1;

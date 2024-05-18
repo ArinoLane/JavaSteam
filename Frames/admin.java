@@ -10,7 +10,7 @@ public class admin extends JFrame implements MouseListener, ActionListener
 {
 	JPanel panel;
 	Color mycolor;
-	ImageIcon img,imgbackground;
+	ImageIcon icon,img,imgbackground;
 	JLabel name,pass,imglabel,backgroundImglabel;
 	JTextField namef;
 	JPasswordField passf,rpassf;
@@ -20,6 +20,8 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		super("Admin Login");
 		this.setSize(500,700);
 		this.setLocation(550,100);
+		ImageIcon icon = new ImageIcon("Images/icon.png");
+		this.setIconImage(icon.getImage());
 		
 		mycolor=new Color(25,28,35);
 		

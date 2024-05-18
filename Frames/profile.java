@@ -10,7 +10,7 @@ import Classes.*;
 
 public class profile extends JFrame implements ActionListener 
 {   
-    ImageIcon img,imgbackground;
+    ImageIcon icon,img,imgbackground;
 	JLabel backgroundImglabel, nameLabel,emailLabel,levelLabel;
 	JButton store,userLabel,editProfilebtn,editEmailbtn,logOutbtn;
 	JLabel imglabel;
@@ -28,19 +28,22 @@ public class profile extends JFrame implements ActionListener
     String s1UserName;
     String s2UserPass;
     String s3UserEmail;
-    menu m1;
+    JFrame m1;
 	
-public profile(String s1UserName, String s2UserPass, String s3UserEmail, menu m1)
+public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame m1)
 {
         super("User Details");
 		this.setSize(1024, 768);
 		this.setLocation(250,40);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ImageIcon icon = new ImageIcon("Images/icon.png");
+        this.setIconImage(icon.getImage());
 
         this.s1UserName = s1UserName; //user Name
         this.s2UserPass = s2UserPass; //user Pass
         this.s3UserEmail = s3UserEmail; //user Email
         this.m1 = m1; //from menu class
+
 
 		mainPanel = new JPanel();
         mainPanel.setLayout(null);
@@ -170,7 +173,6 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, menu m1
                 editUsername(newUsername);
 
             }
-            refreshLibrary();
         }
 		 else if (ae.getSource()==editEmailbtn)
         {
@@ -189,26 +191,28 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, menu m1
 
     private void editUsername(String newUsername) {
     File file = new File(".\\Datas\\userdata.txt");
-    StringBuilder fileContent = new StringBuilder();
-    try (Scanner scanner = new Scanner(file)) {
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            String[] userData = line.split("    ");
-            if (userData[2].equals(s3UserEmail)) { // if the email matches
-                userData[0] = newUsername; // replace the username
-            }
-            fileContent.append(String.join("    ", userData)).append("\n");
-        }
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    }
+        StringBuilder fileContent = new StringBuilder();
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] userData = line.split("    ");
+                if (userData[2].equals(s3UserEmail)) { // if the email matches
+                    userData[0] = newUsername; // replace the username
+                }
 
-    try (FileWriter fwrite = new FileWriter(file)) {
-        fwrite.write(fileContent.toString());
-        fwrite.flush();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
+                fileContent.append(String.join("    ", userData)).append("\n");
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try (FileWriter fwrite = new FileWriter(file)) {
+            fwrite.write(fileContent.toString());
+            fwrite.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     // Update the username in the current session
     s1UserName = newUsername;

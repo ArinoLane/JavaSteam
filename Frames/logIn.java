@@ -13,7 +13,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 	JPasswordField passfield;
 	JButton signBut,CreatAccnount,adminbtn,Contributors;
 	JButton signupbtn, backbtn;
-	ImageIcon img,imgContributors,imgbackground;
+	ImageIcon img,imgContributors,imgbackground,icon;
 	JScrollPane scrollPane;
 	
 
@@ -24,6 +24,10 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		this.setSize(500,700);
 		this.setLocation(550,100);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ImageIcon icon = new ImageIcon("Images/icon.png");
+		this.setIconImage(icon.getImage());
+		
+
 
 		panel = new JPanel ();
 		panel.setLayout(null);
@@ -144,6 +148,8 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		
 		this.add(panel);
 	}
+
+
 	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}

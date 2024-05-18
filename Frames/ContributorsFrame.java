@@ -8,7 +8,7 @@ public class ContributorsFrame extends JFrame
 {
 	JPanel panelContributors;
 	JLabel ContributorsImglabel;
-	ImageIcon imgContributors;
+	ImageIcon icon,imgContributors;
 	
 	
 	
@@ -19,6 +19,8 @@ public class ContributorsFrame extends JFrame
 		this.setSize(500,700);
 		this.setLocation(550,100);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		ImageIcon icon = new ImageIcon("Images/icon.png");
+		this.setIconImage(icon.getImage());
 
 		panelContributors = new JPanel();
 		panelContributors.setLayout(null);
