@@ -4035,7 +4035,7 @@ addGameToLibrary( "The Witcher 3: Wild Hunt");
 
     private void addGameToLibrary(String gameName) 
     {
-        File file = new File(".\\Datas\\library_" + s1UserName + ".txt"); // One library file per user
+        File file = new File(".\\Datas\\library_" + s2UserPass + ".txt"); // One library file per user
         try (FileWriter fwrite = new FileWriter(file, true)) 
         
         { // Append to the file
