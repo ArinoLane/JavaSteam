@@ -196,9 +196,9 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] userData = line.split("    ");
-                if (userData[2].equals(s3UserEmail)) { // if the email matches
-                    userData[0] = newUsername; // replace the username
-                }
+                if (userData[0].equals(s1UserName)) { // if the username matches
+                userData[0] = newUsername; // replace the username
+            }
 
                 fileContent.append(String.join("    ", userData)).append("\n");
             }
