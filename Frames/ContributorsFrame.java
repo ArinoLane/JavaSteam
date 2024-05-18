@@ -16,7 +16,7 @@ public class ContributorsFrame extends JFrame
 	public ContributorsFrame()
 	{
 		super("Contributors");
-		this.setSize(500,670);
+		this.setSize(500,700);
 		this.setLocation(550,100);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 

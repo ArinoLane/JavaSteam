@@ -3753,7 +3753,7 @@ public void actionPerformed(ActionEvent ae){
 
 		 else if(ae.getSource()==buy3||ae.getSource()==buy4||ae.getSource()==buy5||ae.getSource()==buy6||ae.getSource()==buy7||ae.getSource()==buy8||ae.getSource()==buy9||ae.getSource()==buy10||ae.getSource()==buy11||ae.getSource()==buy12||ae.getSource()==buy13||ae.getSource()==buy14||ae.getSource()==buy15||ae.getSource()==buy16||ae.getSource()==buy17||ae.getSource()==buy18||ae.getSource()==buy19||ae.getSource()==buy20||ae.getSource()==buy21||ae.getSource()==buy22||ae.getSource()==buy23||ae.getSource()==buy24||ae.getSource()==buy25||ae.getSource()==buy26||ae.getSource()==buy27||ae.getSource()==buy28||ae.getSource()==buy29||ae.getSource()==buy30||ae.getSource()==buy31||ae.getSource()==buy32||ae.getSource()==buy33||ae.getSource()==buy34||ae.getSource()==buy35||ae.getSource()==buy36||ae.getSource()==buy37||ae.getSource()==buy38||ae.getSource()==buy39||ae.getSource()==buy40||ae.getSource()==buy41||ae.getSource()==buy42||ae.getSource()==buy43||ae.getSource()==buy44||ae.getSource()==buy45||ae.getSource()==buy46||ae.getSource()==buy47||ae.getSource()==buy48||ae.getSource()==buy49||ae.getSource()==buy50||ae.getSource()==buy51||ae.getSource()==buy52||ae.getSource()==buy53)
 		 {
-		 	MStore store1 =new MStore(s1UserName,s3UserEmail,this);
+		 	MStore store1 = new MStore(s1UserName,s2UserPass,s3UserEmail,this);
              store1.setVisible(true);
 		 	this.setVisible(false);
 			if (ae.getSource()==buy3)
