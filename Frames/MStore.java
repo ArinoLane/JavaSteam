@@ -140,7 +140,7 @@ public class MStore extends JFrame implements MouseListener, ActionListener
 		}
 		else if(ae.getSource()==backbtn)
 		{
-			menu l1=new menu(s1UserName,s2UserPass,s1UserName,this);
+			menu l1=new menu(s1UserName,s2UserPass,this);
 			l1.setVisible(true);
 			this.setVisible(false);
 		}

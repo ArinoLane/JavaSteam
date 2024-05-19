@@ -118,11 +118,11 @@ public adminf(String s1){
     this.add(upperPanel);
     this.add(mainPanel);
     
-    // Table model with column names
+    
     model = new DefaultTableModel();
     model.setColumnIdentifiers(column);
 
-    // Try to read data from the file
+  
     try (BufferedReader br = new BufferedReader(new FileReader(".\\Datas\\userdata.txt"))) {
         String line;
         while ((line = br.readLine()) != null) {
@@ -131,23 +131,23 @@ public adminf(String s1){
         }
     } catch (IOException e) {
         e.printStackTrace();
-        // Handle exception (e.g., file not found, error while reading)
+       
         JOptionPane.showMessageDialog(this, "Error reading data file: " + e.getMessage());
     }
 
-    // Table with the model
+    
     table = new JTable(model);
     table.setPreferredScrollableViewportSize(new Dimension(512, this.getHeight() / 2));
     table.setFillsViewportHeight(true);
 
-    // Scroll pane that contains the table
+    
     JScrollPane scrollPane = new JScrollPane(table);
-    scrollPane.setBounds(0, 100, 512, this.getHeight() / 2); // Set to half the width and height of the frame
+    scrollPane.setBounds(0, 100, 512, this.getHeight() / 2); 
 
-    // Add the scroll pane to the main panel
+   
     mainPanel.add(scrollPane);
 
-    // Refresh the frame to display the table
+    
     this.validate();
     this.repaint();
 }
@@ -239,11 +239,11 @@ public adminf(String s1,JFrame ad1)
     this.add(upperPanel);
     this.add(mainPanel);
     
-    // Table model with column names
+    
     model = new DefaultTableModel();
     model.setColumnIdentifiers(column);
 
-    // Try to read data from the file
+    
     try (BufferedReader br = new BufferedReader(new FileReader(".\\Datas\\userdata.txt"))) {
         String line;
         while ((line = br.readLine()) != null) {
@@ -252,23 +252,23 @@ public adminf(String s1,JFrame ad1)
         }
     } catch (IOException e) {
         e.printStackTrace();
-        // Handle exception (e.g., file not found, error while reading)
+       
         JOptionPane.showMessageDialog(this, "Error reading data file: " + e.getMessage());
     }
 
-    // Table with the model
+    
     table = new JTable(model);
     table.setPreferredScrollableViewportSize(new Dimension(512, this.getHeight() / 2));
     table.setFillsViewportHeight(true);
 
-    // Scroll pane that contains the table
+    
     JScrollPane scrollPane = new JScrollPane(table);
-    scrollPane.setBounds(0, 100, 512, this.getHeight() / 2); // Set to half the width and height of the frame
+    scrollPane.setBounds(0, 100, 512, this.getHeight() / 2); 
 
-    // Add the scroll pane to the main panel
+    
     mainPanel.add(scrollPane);
 
-    // Refresh the frame to display the table
+   
     this.validate();
     this.repaint();
 }
@@ -284,13 +284,13 @@ public void actionPerformed(ActionEvent ae) {
     if(ae.getSource() == Deletebtn){
         int selectedRow = table.getSelectedRow();
         if (selectedRow != -1) {
-            // Get the username of the selected row
+            
             String username = table.getValueAt(selectedRow, 0).toString();
 
-            // Remove the row from the table
+           
             model.removeRow(selectedRow);
 
-            // Remove the corresponding line from the file
+            
             try {
                 File inputFile = new File(".\\Datas\\userdata.txt");
                 File tempFile = new File(".\\Datas\\tempfile.txt");
@@ -301,7 +301,7 @@ public void actionPerformed(ActionEvent ae) {
                 String currentLine;
 
                 while((currentLine = reader.readLine()) != null) {
-                    // trim newline when comparing with lineToRemove
+                   
                     String trimmedLine = currentLine.trim();
                     if(trimmedLine.startsWith(username)) continue;
                     writer.write(currentLine + System.getProperty("line.separator"));
@@ -309,13 +309,13 @@ public void actionPerformed(ActionEvent ae) {
                 writer.close(); 
                 reader.close(); 
 
-                // Delete the original file
+               
                 if (!inputFile.delete()) {
                     System.out.println("Could not delete file");
                     return;
                 }
 
-                // Rename the new file to the filename the original file had.
+                
                 if (!tempFile.renameTo(inputFile))
                     System.out.println("Could not rename file");
 

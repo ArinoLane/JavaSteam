@@ -512,7 +512,7 @@ name11.setForeground(new Color(250,250,250));
 name11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game11.add(name11);
 
-JLabel namep11 = new JLabel ("$11.99");
+JLabel namep11 = new JLabel ("FREE");
 namep11.setBounds(820,42,300,23);
 namep11.setForeground(new Color(250,250,250));
 namep11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -544,7 +544,7 @@ name12.setForeground(new Color(250,250,250));
 name12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game12.add(name12);
 
-JLabel namep12 = new JLabel ("$20.99");
+JLabel namep12 = new JLabel ("FREE");
 namep12.setBounds(820,42,300,23);
 namep12.setForeground(new Color(250,250,250));
 namep12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -737,7 +737,7 @@ name18.setForeground(new Color(250,250,250));
 name18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game18.add(name18);
 
-JLabel namep18 = new JLabel ("$28.99");
+JLabel namep18 = new JLabel ("FREE");
 namep18.setBounds(820,42,300,23);
 namep18.setForeground(new Color(250,250,250));
 namep18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -1761,7 +1761,7 @@ name50.setForeground(new Color(250,250,250));
 name50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game50.add(name50);
 
-JLabel namep50 = new JLabel ("$50.99");
+JLabel namep50 = new JLabel ("FREE");
 namep50.setBounds(820,42,300,23);
 namep50.setForeground(new Color(250,250,250));
 namep50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2353,7 +2353,7 @@ name11.setForeground(new Color(250,250,250));
 name11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game11.add(name11);
 
-JLabel namep11 = new JLabel ("$11.99");
+JLabel namep11 = new JLabel ("FREE");
 namep11.setBounds(820,42,300,23);
 namep11.setForeground(new Color(250,250,250));
 namep11.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2385,7 +2385,7 @@ name12.setForeground(new Color(250,250,250));
 name12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game12.add(name12);
 
-JLabel namep12 = new JLabel ("$20.99");
+JLabel namep12 = new JLabel ("FREE");
 namep12.setBounds(820,42,300,23);
 namep12.setForeground(new Color(250,250,250));
 namep12.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2578,7 +2578,7 @@ name18.setForeground(new Color(250,250,250));
 name18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game18.add(name18);
 
-JLabel namep18 = new JLabel ("$28.99");
+JLabel namep18 = new JLabel ("FREE");
 namep18.setBounds(820,42,300,23);
 namep18.setForeground(new Color(250,250,250));
 namep18.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2642,7 +2642,7 @@ name20.setForeground(new Color(250,250,250));
 name20.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game20.add(name20);
 
-JLabel namep20 = new JLabel ("$25.99");
+JLabel namep20 = new JLabel ("$8.39");
 namep20.setBounds(820,42,300,23);
 namep20.setForeground(new Color(250,250,250));
 namep20.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2802,7 +2802,7 @@ name25.setForeground(new Color(250,250,250));
 name25.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game25.add(name25);
 
-JLabel namep25 = new JLabel ("$23.99");
+JLabel namep25 = new JLabel ("$9.99");
 namep25.setBounds(820,42,300,23);
 namep25.setForeground(new Color(250,250,250));
 namep25.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2930,7 +2930,7 @@ name29.setForeground(new Color(250,250,250));
 name29.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game29.add(name29);
 
-JLabel namep29 = new JLabel ("$29.99");
+JLabel namep29 = new JLabel ("$13.99");
 namep29.setBounds(820,42,300,23);
 namep29.setForeground(new Color(250,250,250));
 namep29.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -2962,7 +2962,7 @@ name30.setForeground(new Color(250,250,250));
 name30.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game30.add(name30);
 
-JLabel namep30 = new JLabel ("$30.99");
+JLabel namep30 = new JLabel ("$2.88");
 namep30.setBounds(820,42,300,23);
 namep30.setForeground(new Color(250,250,250));
 namep30.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -3602,7 +3602,7 @@ name50.setForeground(new Color(250,250,250));
 name50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
 game50.add(name50);
 
-JLabel namep50 = new JLabel ("$50.99");
+JLabel namep50 = new JLabel ("FREE");
 namep50.setBounds(820,42,300,23);
 namep50.setForeground(new Color(250,250,250));
 namep50.setFont(new Font("Bahnschrift", Font.PLAIN, 23));
@@ -4068,10 +4068,10 @@ addGameToLibrary( "The Witcher 3: Wild Hunt");
 
     private void addGameToLibrary(String gameName) 
     {
-        File file = new File(".\\Datas\\library_" + s2UserPass + ".txt"); // One library file per user
+        File file = new File(".\\Datas\\library_" + s2UserPass + ".txt"); 
         try (FileWriter fwrite = new FileWriter(file, true)) 
         
-        { // Append to the file
+        { 
             fwrite.write(gameName + "\n");
             fwrite.flush();
         } 
