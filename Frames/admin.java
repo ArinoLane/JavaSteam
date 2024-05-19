@@ -67,6 +67,7 @@ public class admin extends JFrame implements MouseListener, ActionListener
 		
 		backbtn=new JButton("Back");
 		backbtn.setBounds(260,490, 80, 30);
+		backbtn.setFont(new Font("Arial", Font.PLAIN, 15));
 		backbtn.setForeground(new Color(250,250,250));
 		backbtn.setBackground(new Color(7, 187, 255));
 		backbtn.addMouseListener(this);

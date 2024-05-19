@@ -189,63 +189,53 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
         }
     }
 
-    private void editUsername(String newUsername) {
+private void editUsername(String newUsername) {
     File file = new File(".\\Datas\\userdata.txt");
-        StringBuilder fileContent = new StringBuilder();
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] userData = line.split("    ");
-                if (userData[0].equals(s1UserName)) { // if the username matches
+    try (Scanner scanner = new Scanner(file)) {
+        FileWriter fwrite = new FileWriter(file, true);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] userData = line.split("    ");
+            if (userData[0].equals(s1UserName)) { // if the username matches
                 userData[0] = newUsername; // replace the username
+                fwrite.write(String.join("    ", userData) + "\n");
             }
-
-                fileContent.append(String.join("    ", userData)).append("\n");
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
-
-        try (FileWriter fwrite = new FileWriter(file)) {
-            fwrite.write(fileContent.toString());
-            fwrite.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        fwrite.flush();
+        fwrite.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 
     // Update the username in the current session
     s1UserName = newUsername;
     nameLabel.setText("Name: " + s1UserName);
 }
+
 private void editEmail(String newEmail) {
-        File file = new File(".\\Datas\\userdata.txt");
-        StringBuilder fileContent = new StringBuilder();
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] userData = line.split("    ");
-                if (userData[0].equals(s1UserName)) { // if the username matches
-                    userData[2] = newEmail; // replace the email
-                }
-                fileContent.append(String.join("    ", userData)).append("\n");
+    File file = new File(".\\Datas\\userdata.txt");
+    try (Scanner scanner = new Scanner(file)) {
+        FileWriter fwrite = new FileWriter(file, true);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] userData = line.split("    ");
+            if (userData[0].equals(s1UserName)) { // if the username matches
+                userData[2] = newEmail; // replace the email
+                fwrite.write(String.join("    ", userData) + "\n");
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
-
-        try (FileWriter fwrite = new FileWriter(file)) {
-            fwrite.write(fileContent.toString());
-            fwrite.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Update the email in the current session
-        s3UserEmail = newEmail;
-        emailLabel.setText("Email: " + s3UserEmail);
+        fwrite.flush();
+        fwrite.close();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
-	private void refreshLibrary() {
+
+    // Update the email in the current session
+    s3UserEmail = newEmail;
+    emailLabel.setText("Email: " + s3UserEmail);
+}
+	private void refreshLibrary() 
+    {
         libraryPanel.removeAll(); // Remove all existing labels
 
         File file = new File(".\\Datas\\library_" + s2UserPass + ".txt");
@@ -264,8 +254,4 @@ private void editEmail(String newEmail) {
         libraryPanel.revalidate();
         libraryPanel.repaint();
     }
-
-
-	
-	
 }

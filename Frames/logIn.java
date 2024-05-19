@@ -77,7 +77,8 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		panel.add(adminbtn);	
 
 
-		namelabel = new JLabel ("SIGN IN WITH ACCOUNT NAME");
+		namelabel = new JLabel ("ACCOUNT NAME");
+		namelabel.setFont(new Font("Arial", Font.PLAIN, 15));
 		namelabel.setBounds(140,190,195,30);
 		namelabel.setForeground(new Color(27,151,255));
 		panel.add(namelabel);
@@ -92,6 +93,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 
 		passlabel = new JLabel ("PASSWORD");
 		passlabel.setForeground(new Color(27,151,255));
+		passlabel.setFont(new Font("Arial", Font.PLAIN, 15));
 		passlabel.setBounds(140,260,195,30);
 		panel.add(passlabel);
 
@@ -107,6 +109,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		emaillabel = new JLabel ("EMAIL");
 		emaillabel.setBounds(140,320,195,30);
 		emaillabel.setForeground(new Color(27,151,255));
+		emaillabel.setFont(new Font("Arial", Font.PLAIN, 15));
 		panel.add(emaillabel);
 		
 		emailfield = new JTextField();
@@ -131,6 +134,7 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 		Contributors.setFont(new Font("Arial", Font.PLAIN, 15));
 		Contributors.setBackground(new Color(7, 187, 255));
 		Contributors.setOpaque(true);
+		Contributors.addMouseListener(this);
 		Contributors.addActionListener(this);
 		panel.add(Contributors);
 
@@ -153,8 +157,18 @@ public class logIn extends JFrame implements MouseListener, ActionListener
 	public void mouseClicked(MouseEvent me){}
 	public void mousePressed(MouseEvent me){}
 	public void mouseReleased(MouseEvent me){}
-	public void mouseEntered(MouseEvent me){}
-	public void mouseExited(MouseEvent me){}
+	public void mouseEntered(MouseEvent me)
+	{
+		Contributors.setBackground(new Color(255,127,39));
+		Contributors.setForeground(new Color(255,255,255));
+		Contributors.setFont(new Font("Arial", Font.PLAIN, 20));
+	}
+	public void mouseExited(MouseEvent me)
+	{
+		Contributors.setForeground(new Color(37,51,118));
+		Contributors.setBackground(new Color(7, 187, 255));
+		Contributors.setFont(new Font("Arial", Font.PLAIN, 15));
+	}
 	
 	public void actionPerformed(ActionEvent ae)
 	{
