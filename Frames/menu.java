@@ -71,10 +71,10 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         store.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
-        store.setForeground(new Color(177,179,182));
-        store.setBackground(new Color(23,26,33));
+        store.setForeground(new Color(26,159,255));
         store.setBorderPainted(false);
         store.setContentAreaFilled(false);
+        store.addMouseListener(this);
         store.addActionListener(this);
         upperPanel.add(store);
 
@@ -87,17 +87,19 @@ public class menu extends JFrame implements  MouseListener, ActionListener
         userLabel.setForeground(new Color(177,179,182));
         userLabel.setContentAreaFilled(false);
         userLabel.addActionListener(this);
+        userLabel.addMouseListener(this);
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
 
         logOutbtn = new JButton("LOG OUT");
-        logOutbtn.setBounds(680,35,150,30);
+        logOutbtn.setBounds(850,35,170,30);
         logOutbtn.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         logOutbtn.setBackground(Color.GREEN);
         logOutbtn.setOpaque(false);
-        logOutbtn.setForeground(new Color(251,187,197));
+        logOutbtn.setForeground(new Color(255,255,255));
         logOutbtn.setContentAreaFilled(false);
         logOutbtn.addActionListener(this);
+        logOutbtn.addMouseListener(this);
         logOutbtn.setBorderPainted(false);
         upperPanel.add(logOutbtn);        
     
@@ -3718,11 +3720,42 @@ game53.add(namep53);
         return game0;
      }
 
-    public void mouseClicked(MouseEvent me){}
+public void mouseClicked(MouseEvent me){
+    if(me.getSource()== userLabel)
+        { 
+        userLabel.setForeground(new Color(26,159,255));
+    }
+
+        else if(me.getSource()== logOutbtn)
+        {
+            logOutbtn.setForeground(new Color(253,0,6));
+        }
+    }
     public void mousePressed(MouseEvent me){}
     public void mouseReleased(MouseEvent me){}
-    public void mouseEntered(MouseEvent me){}
-    public void mouseExited(MouseEvent me){}
+    public void mouseEntered(MouseEvent me)
+    {
+        if(me.getSource()== userLabel)
+        { 
+        userLabel.setForeground(new Color(26,159,255));
+    }
+        else if(me.getSource()== logOutbtn)
+        {
+            logOutbtn.setForeground(new Color(253,0,6));
+        }
+
+    }
+    public void mouseExited(MouseEvent me)
+    {
+        if(me.getSource()== userLabel)
+        { 
+        userLabel.setForeground(new Color(177,179,182));
+    }
+        else if(me.getSource()== logOutbtn)
+        {
+        logOutbtn.setForeground(new Color(255,255,255));
+        }   
+    }
 
 boolean isGame0Visible = true;
 public void actionPerformed(ActionEvent ae){

@@ -8,7 +8,7 @@ import java.util.*;
 import Classes.*;
 
 
-public class profile extends JFrame implements ActionListener 
+public class profile extends JFrame implements MouseListener, ActionListener 
 {   
     ImageIcon icon,img,imgbackground;
 	JLabel backgroundImglabel, nameLabel,emailLabel,levelLabel;
@@ -52,11 +52,11 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
  
         upperPanel=new JPanel();
         upperPanel.setLayout(null);
-        upperPanel.setBackground(new Color(53,97,140));
+        upperPanel.setBackground(new Color(42,100,126)); //30,73,91
         upperPanel.setBounds(0,0,1024,100);
 
 
-        img=new ImageIcon("Images/logo_steam.png");
+        img=new ImageIcon("Images/logo_steam_white.png");
         imglabel=new JLabel(img);
         imglabel.setBounds(200,23,230,50);
         upperPanel.add(imglabel);
@@ -67,9 +67,10 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
         store.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         store.setBackground(Color.GREEN);
         store.setOpaque(false);
-        store.setForeground(new Color(228,230,231));
+        store.setForeground(new Color(255,255,255));
         store.setBorderPainted(false);
         store.setContentAreaFilled(false);
+        store.addMouseListener(this);
         store.addActionListener(this);
         upperPanel.add(store);
 
@@ -77,17 +78,18 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
         userLabel.setBounds(480,35,150,30);
         userLabel.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         userLabel.setOpaque(false);
-        userLabel.setForeground(new Color(228,230,231));
+        userLabel.setForeground(new Color(91,206,255));
         userLabel.setContentAreaFilled(false);
         userLabel.setBorderPainted(false);
         upperPanel.add(userLabel);
 
         logOutbtn = new JButton("LOG OUT");
-        logOutbtn.setBounds(680,35,150,30);
+        logOutbtn.setBounds(850,35,170,30);
         logOutbtn.setFont(new Font("Bahnschrift", Font.BOLD, 20));
         logOutbtn.setOpaque(false);
-        logOutbtn.setForeground(new Color(253,0,6));
+        logOutbtn.setForeground(new Color(255,255,255));
         logOutbtn.setContentAreaFilled(false);
+        logOutbtn.addMouseListener(this);
         logOutbtn.addActionListener(this);
         logOutbtn.setBorderPainted(false);
         upperPanel.add(logOutbtn); 
@@ -156,6 +158,39 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
 		this.add(mainPanel);
 
 	}
+    public void mouseClicked(MouseEvent me)
+    {
+           if(me.getSource()== store)
+        { 
+            store.setForeground(new Color(91,206,255));
+        }
+        else if(me.getSource()== logOutbtn)
+        {
+            logOutbtn.setForeground(new Color(253,0,6));
+        }
+    }
+    public void mousePressed(MouseEvent me){}
+    public void mouseReleased(MouseEvent me){}
+    public void mouseEntered(MouseEvent me){
+        if(me.getSource()== store)
+        { 
+        store.setForeground(new Color(91,206,255));
+        }
+        else if(me.getSource()== logOutbtn)
+        {
+        logOutbtn.setForeground(new Color(253,0,6));
+        }
+    }
+    public void mouseExited(MouseEvent me){
+        if(me.getSource()== store)
+        {
+        store.setForeground(new Color(255,255,255));
+        }
+        else if(me.getSource()== logOutbtn)
+        {
+        logOutbtn.setForeground(new Color(255,255,255));
+        }
+    }
 
 	public void actionPerformed(ActionEvent ae)
 	{
@@ -191,49 +226,60 @@ public profile(String s1UserName, String s2UserPass, String s3UserEmail, JFrame 
 
 private void editUsername(String newUsername) {
     File file = new File(".\\Datas\\userdata.txt");
-    try (Scanner scanner = new Scanner(file)) {
-        FileWriter fwrite = new FileWriter(file, true);
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            String[] userData = line.split("    ");
-            if (userData[0].equals(s1UserName)) { // if the username matches
+        StringBuilder fileContent = new StringBuilder();
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] userData = line.split("    ");
+                if (userData[0].equals(s1UserName)) { // if the username matches
                 userData[0] = newUsername; // replace the username
-                fwrite.write(String.join("    ", userData) + "\n");
             }
+
+                fileContent.append(String.join("    ", userData)).append("\n");
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        fwrite.flush();
-        fwrite.close();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
+
+        try (FileWriter fwrite = new FileWriter(file)) {
+            fwrite.write(fileContent.toString());
+            fwrite.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     // Update the username in the current session
     s1UserName = newUsername;
     nameLabel.setText("Name: " + s1UserName);
 }
-
 private void editEmail(String newEmail) {
-    File file = new File(".\\Datas\\userdata.txt");
-    try (Scanner scanner = new Scanner(file)) {
-        FileWriter fwrite = new FileWriter(file, true);
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            String[] userData = line.split("    ");
-            if (userData[0].equals(s1UserName)) { // if the username matches
-                userData[2] = newEmail; // replace the email
-                fwrite.write(String.join("    ", userData) + "\n");
+        File file = new File(".\\Datas\\userdata.txt");
+        StringBuilder fileContent = new StringBuilder();
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] userData = line.split("    ");
+                if (userData[0].equals(s1UserName)) { // if the username matches
+                    userData[2] = newEmail; // replace the email
+                }
+                fileContent.append(String.join("    ", userData)).append("\n");
             }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        fwrite.flush();
-        fwrite.close();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
 
-    // Update the email in the current session
-    s3UserEmail = newEmail;
-    emailLabel.setText("Email: " + s3UserEmail);
-}
+        try (FileWriter fwrite = new FileWriter(file)) {
+            fwrite.write(fileContent.toString());
+            fwrite.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Update the email in the current session
+        s3UserEmail = newEmail;
+        emailLabel.setText("Email: " + s3UserEmail);
+    }
 	private void refreshLibrary() 
     {
         libraryPanel.removeAll(); // Remove all existing labels
